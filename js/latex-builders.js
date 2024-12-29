@@ -136,6 +136,13 @@ class LaTeXParagraph {
 
 class LaTeXDoc {
 
+	constructor(dc = "article", omitFrontMatter=true){
+		this.content = [];
+		this.packages = [];
+		this.documentclass = dc;
+		this.omitFrontMatter = omitFrontMatter;
+	}
+
 	tabular(r,c, tda){
 		return new LaTeXTabular(r,c,tda);
 	}
@@ -144,11 +151,7 @@ class LaTeXDoc {
 		return new RawText(content);
 	}
 
-	constructor(dc = "article"){
-		this.content = [];
-		this.packages = [];
-		this.documentclass = dc;
-	}
+	
 	clear(){
 		this.content = [];
 		this.packages = [];
@@ -179,6 +182,7 @@ class LaTeXDoc {
 	}
 
 	frontMatter(){
+		if (this.omitFrontMatter) return "";
 		let fm = "\\documentclass{" + this.documentclass + "}\n";
 		for (let i in this.packages){
 			fm += this.packages[i].build() + "\n";
