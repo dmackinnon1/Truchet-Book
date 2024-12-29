@@ -143,6 +143,24 @@ class LaTeXDoc {
 		this.omitFrontMatter = omitFrontMatter;
 	}
 
+	section(title){
+		let s = new LaTeXCommand("section", title, true);
+		this.addContent(s);
+		return this;
+	}
+
+	input(fileName){
+		let s = new LaTeXCommand("input", fileName, true);
+		this.addContent(s);
+		return this;
+	}
+
+	chapter(title){
+		let s = new LaTeXCommand("chapter", title, true);
+		this.addContent(s);
+		return this;
+	}
+
 	tabular(r,c, tda){
 		return new LaTeXTabular(r,c,tda);
 	}

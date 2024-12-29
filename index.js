@@ -33,7 +33,6 @@ function parentFromSequence(sequence){
 
 function truchetFrom(sequence, theTruchet){
 	let sarray = Array.from(sequence)
-	console.log(sequence);
 	theTruchet.tiles.tiles[0][0] = parseInt(sarray[0]);
 	theTruchet.tiles.applyRules(0,0);
 	theTruchet.tiles.tiles[0][1] = parseInt(sarray[1]);
@@ -47,7 +46,6 @@ function truchetFrom(sequence, theTruchet){
 
 truchetModule.truchet.start(0.5,4);
 
-// Generate all sequences for 2x2 truchet
 let sequences = allSequences(4);
 
 let parents = [];
@@ -74,29 +72,39 @@ for (var i = 0; i < 16; i++){
 }
 
 
-let tab = new doc.LaTeXTabular(4,4,children[0]);
 //let tab = doc.tabular(4,4,children[0]);
 
-
-
-// Build the document
-/*let docEnv = doc.defaultPackages()
-	.command("pagestyle","empty",true)
-	.package("tikz").env()
-	.begin("document");
-*/
-docEnv = new doc.LaTeXDoc();
-docEnv.env().begin("center").command("Huge","Truchet Test2", true);
-
-docEnv.addContent(new doc.RawText(tab.build()));
-
-//write out the puzzle file
+let mainDoc = new doc.LaTeXDoc();
 let mainFile = 'main.tex';
-fs.writeFile(mainFile, docEnv.build(), function(err) {
+
+for (let p = 0; p < 16; p++){
+
+	let parent = parents.pop();
+	let kids = children.pop();
+	let docEnv = new doc.LaTeXDoc();
+	
+	docEnv.chapter(parent);
+
+	let tab = new doc.LaTeXTabular(4,4,kids);
+	docEnv.env().begin("center").command("Huge","Truchet Test2", true);
+	docEnv.addContent(new doc.RawText(tab.build()));
+
+	let childFile = ""+parent+".tex";
+	mainDoc.input(childFile);
+
+	fs.writeFile(childFile, docEnv.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 
+}
+
+fs.writeFile(mainFile, mainDoc.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
 		process.exit(1);
     }
 }); 
-console.log('wrote  file at ' + mainFile);
