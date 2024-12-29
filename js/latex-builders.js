@@ -169,6 +169,11 @@ class LaTeXDoc {
 		return new RawText(content);
 	}
 
+	newPage(){
+		let s = new LaTeXCommand("newPage", null, true);
+		this.addContent(s);
+		return this;
+	}
 	
 	clear(){
 		this.content = [];

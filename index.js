@@ -50,6 +50,7 @@ let sequences = allSequences(4);
 
 let parents = [];
 let children = [];
+let childrenLabels = [];
 let raw = "";
 
 // Create all Truchet tiles from sequences and group them.
@@ -64,8 +65,10 @@ for (var i = 0; i < 16; i++){
 			tikz.reset();
 			parents.push(parentFromSequence(sequence));
 			children.push([raw]);
+			childrenLabels.push([sequence]);
 		} else {
 				children[pindex].push(raw);
+				childrenLabels[pindex].push(sequence);
 		}
 					
 	} 
@@ -81,14 +84,18 @@ for (let p = 0; p < 16; p++){
 
 	let parent = parents.pop();
 	let kids = children.pop();
+	let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
 	
-	docEnv.chapter(parent);
+	docEnv.section(parent);
 
 	let tab = new doc.LaTeXTabular(4,4,kids);
-	docEnv.env().begin("center").command("Huge","Truchet Test2", true);
+	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
+	docEnv.env().begin("center");
 	docEnv.addContent(new doc.RawText(tab.build()));
-
+	docEnv.addContent(new doc.RawText(labelTab.build()));
+	docEnv.newPage();
+	
 	let childFile = ""+parent+".tex";
 	mainDoc.input(childFile);
 
