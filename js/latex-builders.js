@@ -52,6 +52,7 @@ class LaTeXEnv {
 	}
 	addContent(toAdd){
 		this.content.push(toAdd);
+		return this;
 	}
 }
 
@@ -223,6 +224,7 @@ class LaTeXDoc {
 
 	addContent(toAdd){
 		this.content.push(toAdd);
+		return this;
 	}
 
 }
