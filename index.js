@@ -26,7 +26,7 @@ function parentFromSequence(sequence){
 	let length = sequence.length;
 	sequence = Array.from(sequence);
 	for (let i=0; i<length;i++){
-		parent += "" + ((Number(sequence.pop()))%2);
+		parent = "" + ((Number(sequence.pop()))%2 + parent);
 	} 
 	return parent;
 }
@@ -91,7 +91,9 @@ for (let p = 0; p < 16; p++){
 
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
-	docEnv.env().begin("center").addContent(new doc.RawText(tab.build())).addContent(new doc.RawText(labelTab.build()));
+	docEnv.env().begin("center")
+		.addContent(new doc.RawText(tab.build()))
+		.addContent(new doc.RawText(labelTab.build()));
 	docEnv.newPage();
 	
 	let childFile = ""+parent+".tex";
