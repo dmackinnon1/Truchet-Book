@@ -46,22 +46,15 @@ function truchetFrom(sequence, theTruchet){
 
 
 truchetModule.truchet.start(0.5,4);
-truchetModule.truchet.tiles.applyAll();
-truchetFrom("0123",truchetModule.truchet);
 
-
+// Generate all sequences for 2x2 truchet
 let sequences = allSequences(4);
-	/*
-	for (var i=0; i<256; i++){
-		let pattern = truchetFrom(sequences.pop(),truchet);
-		truchetList += "</br>" + pattern;
-	}
-	*/
 
 let parents = [];
 let children = [];
 let raw = "";
 
+// Create all Truchet tiles from sequences and group them.
 for (var i = 0; i < 16; i++){
 	for (var j = 0; j < 16; j ++) {
 		var sequence = sequences.pop();
@@ -80,22 +73,26 @@ for (var i = 0; i < 16; i++){
 	} 
 }
 
-let tab = doc.tabular(4,4,children[0]);
 
-let docEnv = doc.defaultPackages()
+let tab = new doc.LaTeXTabular(4,4,children[0]);
+//let tab = doc.tabular(4,4,children[0]);
+
+
+
+// Build the document
+/*let docEnv = doc.defaultPackages()
 	.command("pagestyle","empty",true)
 	.package("tikz").env()
 	.begin("document");
+*/
+docEnv = new doc.LaTeXDoc();
 docEnv.env().begin("center").command("Huge","Truchet Test2", true);
 
-//docEnv.addContent(truchetModule.truchet.tiles.latexGrid());
-
-//docEnv.addContent("Hello World");
-docEnv.addContent(doc.rawText(tab.build()));
+docEnv.addContent(new doc.RawText(tab.build()));
 
 //write out the puzzle file
 let mainFile = 'main.tex';
-fs.writeFile(mainFile, doc.build(), function(err) {
+fs.writeFile(mainFile, docEnv.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");

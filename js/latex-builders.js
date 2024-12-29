@@ -194,6 +194,10 @@ class LaTeXDoc {
 		return result;
 	}
 
+	addContent(toAdd){
+		this.content.push(toAdd);
+	}
+
 }
 class LaTeXPackage {
 	constructor(n, a = null){
@@ -212,7 +216,9 @@ class LaTeXPackage {
 
 //for node export
 try{
-    module.exports = new LaTeXDoc();
+    module.exports.LaTeXDoc = LaTeXDoc;
+    module.exports.LaTeXTabular = LaTeXTabular;
+    module.exports.RawText = RawText;
 } catch(err){
     console.log("non-node execution context");
 }
