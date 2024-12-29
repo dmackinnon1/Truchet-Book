@@ -170,7 +170,7 @@ class LaTeXDoc {
 	}
 
 	newPage(){
-		let s = new LaTeXCommand("newPage", null, true);
+		let s = new LaTeXCommand("newpage", null, true);
 		this.addContent(s);
 		return this;
 	}
