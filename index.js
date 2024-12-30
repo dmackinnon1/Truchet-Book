@@ -44,7 +44,7 @@ function truchetFrom(sequence, theTruchet){
 }
 
 
-truchetModule.truchet.start(0.75,4);
+truchetModule.truchet.start(0.6,4);
 
 let sequences = allSequences(4);
 
@@ -88,12 +88,13 @@ for (let p = 0; p < 16; p++){
 	let docEnv = new doc.LaTeXDoc();
 	
 	docEnv.section(parent);
-
+	docEnv.command("vspace","1cm");
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText(tab.build()))
 		.addContent(new doc.RawText("{\\Large\n"))
+		.command("vspace","1cm")
 		.addContent(new doc.RawText(labelTab.build()))
 		.addContent(new doc.RawText("}\n"));
 	docEnv.newPage();
