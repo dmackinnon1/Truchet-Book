@@ -93,11 +93,20 @@ for (let p = 0; p < 16; p++){
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText(tab.build()))
-		.addContent(new doc.RawText(labelTab.build()));
+		.marginNote(new doc.RawText(labelTab.build()));
 	docEnv.newPage();
 	
-	let childFile = ""+parent+".tex";
+	const folderName = 'tiles';
+	let childFile = folderName+"/"+parent+".tex";
 	mainDoc.input(childFile);
+	
+	try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
     if(err) {

@@ -54,6 +54,11 @@ class LaTeXEnv {
 		this.content.push(toAdd);
 		return this;
 	}
+	marginNote(note, offset=null){
+		let s = new LaTeXCommand("marginnote", note, true);
+		this.addContent(s);
+		return this;
+	}
 }
 
 class LaTeXCommand{
@@ -61,13 +66,24 @@ class LaTeXCommand{
 		this.command = c;
 		this.argument = a;
 		this.newline = nl;
+		this.optionals = [];
+	}
+
+	addOptional(key,value){
+		this.optionals.push(""+key + "=" + "value");
 	}
 
 	build(){
 		let result = "\\" + this.command;
+		
+		if (this.optionals.length >0){
+			result += "" + this.optionals;
+		}
+
 		if (this.argument !== null){
 			result += "{" + this.argument + "}";
 		}
+
 		if (this.newline){
 			result +="\n";
 		}
@@ -142,6 +158,12 @@ class LaTeXDoc {
 		this.packages = [];
 		this.documentclass = dc;
 		this.omitFrontMatter = omitFrontMatter;
+	}
+
+	marginNote(note, offset=null){
+		let s = new LaTeXCommand("marginnote", note, true);
+		this.addContent(s);
+		return this;
 	}
 
 	section(title){
