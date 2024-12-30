@@ -60,7 +60,7 @@ truchetModule.truchet.start(1,1);
 let bigTiles = [];
 let raw = "";
 
-let tileDoc = 'tileList.tex'; //folderName +"/"+
+let tileDoc = folderName +"/"+'tileList.tex'; //folderName +"/"+
 
 for (let t1 = 0; t1 <4; t1 ++){
 	truchetModule.truchet.tiles.tiles[0][0] = t1;
@@ -71,7 +71,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 
 let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
 
-fs.writeFile(folderName +"/"+tileDoc, bigTilesRow.build(), function(err) {
+fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
@@ -140,7 +140,7 @@ for (let p = 0; p < 16; p++){
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
 		.command("vspace","1cm",true)
-		.command("input","tileList");		
+		.command("input",tileDoc);		
 	docEnv.newPage();
 	
 	
