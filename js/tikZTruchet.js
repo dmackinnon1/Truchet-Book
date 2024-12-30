@@ -1,16 +1,15 @@
 "use strict";
-let tikZModule = require('./tikZBldr.js');
+let tikz = require('./tikZBldr.js');
 
 var truchet = {};
 truchet.tiles = null;
 truchet.border = false;
-let tikz = new tikZModule.TikZBuilder();
 
 truchet.start = function(size, rows) {
 	tikz.scale = size;
 	truchet.tiles = new Tiles(size,rows);
 	truchet.tiles.init();
-	tikz = new tikZModule.TikZBuilder();
+	tikz.reset();
 };
 
 

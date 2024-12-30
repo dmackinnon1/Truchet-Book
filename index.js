@@ -93,6 +93,7 @@ let childrenLabels = [];
 for (var i = 0; i < 16; i++){
 	for (var j = 0; j < 16; j ++) {
 		var sequence = sequences.pop();
+		tikz.reset();
 		truchetModule.truchet.tiles.init();
 		truchetFrom(sequence,truchetModule.truchet);
 		raw = truchetModule.truchet.tiles.latexGrid().build();

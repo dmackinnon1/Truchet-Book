@@ -148,7 +148,7 @@ class TikZPoint {
 
 //for node export
 try{
-    module.exports.TikZBuilder = TikZBuilder;
+   module.exports = new TikZBuilder();
 } catch(err){
     console.log("non-node execution context");
 }
