@@ -44,6 +44,41 @@ function truchetFrom(sequence, theTruchet){
 }
 
 
+//set up folder for files
+const folderName = 'tiles';
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
+
+//create image for tile rotations
+truchetModule.truchet.start(1,1);
+let bigTiles = [];
+let raw = "";
+
+let tileDoc = 'tileList.tex'; //folderName +"/"+
+
+for (let t1 = 0; t1 <4; t1 ++){
+	truchetModule.truchet.tiles.tiles[0][0] = t1;
+	raw = truchetModule.truchet.tiles.latexGrid().build();
+	bigTiles.push(raw);
+}
+
+let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
+
+fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
+//main tile generation
+
 truchetModule.truchet.start(0.6,4);
 
 let sequences = allSequences(4);
@@ -51,7 +86,7 @@ let sequences = allSequences(4);
 let parents = [];
 let children = [];
 let childrenLabels = [];
-let raw = "";
+
 
 // Create all Truchet tiles from sequences and group them.
 for (var i = 0; i < 16; i++){
@@ -99,20 +134,17 @@ for (let p = 0; p < 16; p++){
 		.command("vspace","1cm",true)
 		.addContent(new doc.RawText("{\\Large\n"))
 		.addContent(new doc.RawText(labelTab.build()))
-		.addContent(new doc.RawText("}\n"));
+		.addContent(new doc.RawText("}\n"))
+		.command(",")
+		.command("newline")
+		.addContent(new doc.RawText("\n"))
+		.command("vspace","1cm",true)
+		.command("input","tileList");		
 	docEnv.newPage();
 	
-	const folderName = 'tiles';
+	
 	let childFile = folderName+"/"+parent+".tex";
 	mainDoc.input(childFile);
-	
-	try {
-  		if (!fs.existsSync(folderName)) {
-    	fs.mkdirSync(folderName);
-  	}
-	}	catch (err) {
-  		console.error(err);
-	}
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
     if(err) {
