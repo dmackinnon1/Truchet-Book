@@ -44,7 +44,7 @@ function truchetFrom(sequence, theTruchet){
 }
 
 
-truchetModule.truchet.start(0.5,4);
+truchetModule.truchet.start(0.75,4);
 
 let sequences = allSequences(4);
 
