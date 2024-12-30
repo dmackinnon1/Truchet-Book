@@ -64,6 +64,7 @@ let tileDoc = 'tileList.tex'; //folderName +"/"+
 for (let t1 = 0; t1 <4; t1 ++){
 	truchetModule.truchet.tiles.tiles[0][0] = t1;
 	raw = truchetModule.truchet.tiles.latexGrid().build();
+	truchetModule.truchet.tiles.init();
 	bigTiles.push(raw);
 }
 
@@ -92,12 +93,11 @@ let childrenLabels = [];
 for (var i = 0; i < 16; i++){
 	for (var j = 0; j < 16; j ++) {
 		var sequence = sequences.pop();
-		tikz.reset();
+		truchetModule.truchet.tiles.init();
 		truchetFrom(sequence,truchetModule.truchet);
 		raw = truchetModule.truchet.tiles.latexGrid().build();
 		var pindex = parents.indexOf(parentFromSequence(sequence));
 		if (pindex == -1){
-			tikz.reset();
 			parents.push(parentFromSequence(sequence));
 			children.push([raw]);
 			childrenLabels.push([sequence]);
