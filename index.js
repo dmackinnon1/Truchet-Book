@@ -93,6 +93,9 @@ for (let p = 0; p < 16; p++){
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText(tab.build()))
+		.command(",")
+		.command("newline")
+		.addContent(new doc.RawText("\n"))
 		.command("vspace","1cm",true)
 		.addContent(new doc.RawText("{\\Large\n"))
 		.addContent(new doc.RawText(labelTab.build()))
