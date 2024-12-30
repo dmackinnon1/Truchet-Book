@@ -65,7 +65,7 @@ let tileDoc = 'tileList.tex'; //folderName +"/"+
 for (let t1 = 0; t1 <4; t1 ++){
 	truchetModule.truchet.tiles.tiles[0][0] = t1;
 	raw = truchetModule.truchet.tiles.latexGrid().build();
-	truchetModule.truchet.tiles.init();
+	tikz.reset();
 	bigTiles.push(raw);
 }
 
