@@ -88,13 +88,13 @@ for (let p = 0; p < 16; p++){
 	let docEnv = new doc.LaTeXDoc();
 	
 	docEnv.section(parent);
-	docEnv.command("vspace","1cm");
+	docEnv.command("vspace","1cm",true);
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText(tab.build()))
+		.command("vspace","1cm",true)
 		.addContent(new doc.RawText("{\\Large\n"))
-		.command("vspace","1cm")
 		.addContent(new doc.RawText(labelTab.build()))
 		.addContent(new doc.RawText("}\n"));
 	docEnv.newPage();
