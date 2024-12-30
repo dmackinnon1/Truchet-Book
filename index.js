@@ -54,6 +54,7 @@ try {
   		console.error(err);
 	}
 
+
 //create image for tile rotations
 truchetModule.truchet.start(1,1);
 let bigTiles = [];
@@ -70,7 +71,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 
 let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
 
-fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
+fs.writeFile(folderName +"/"+tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
@@ -94,7 +95,6 @@ for (var i = 0; i < 16; i++){
 	for (var j = 0; j < 16; j ++) {
 		var sequence = sequences.pop();
 		tikz.reset();
-		truchetModule.truchet.tiles.init();
 		truchetFrom(sequence,truchetModule.truchet);
 		raw = truchetModule.truchet.tiles.latexGrid().build();
 		var pindex = parents.indexOf(parentFromSequence(sequence));
