@@ -93,7 +93,9 @@ for (let p = 0; p < 16; p++){
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText(tab.build()))
-		.marginNote(labelTab.build());
+		.addContent(new doc.RawText("{\\Large\n"))
+		.addContent(new doc.RawText(labelTab.build()))
+		.addContent(new doc.RawText("}\n"));
 	docEnv.newPage();
 	
 	const folderName = 'tiles';
