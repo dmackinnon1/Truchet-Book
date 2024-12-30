@@ -99,7 +99,9 @@ class Tiles {
 	}
 
 	latexGrid() {
-		tikz.drawGrid(0,-1,this.rows, this.rows-1);
+		if (this.rows>1){
+			tikz.drawGrid(0,-1,this.rows, this.rows-1);
+		}
 		for (var i = 0; i < this.rows; i++){
 			for (var j = 0; j < this.cols; j ++) {
 				this.latexTile(i,j,this.tiles[i][j],tikz);
