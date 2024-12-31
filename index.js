@@ -60,7 +60,7 @@ truchetModule.truchet.start(1,1);
 let bigTiles = [];
 let raw = "";
 
-let tileDoc = folderName +"/"+'tileList.tex'; //folderName +"/"+
+let tileDoc = folderName +"/"+'tileList.gtex'; //folderName +"/"+
 
 for (let t1 = 0; t1 <4; t1 ++){
 	truchetModule.truchet.tiles.tiles[0][0] = (t1 + 1)%4;
@@ -144,7 +144,7 @@ for (let p = 0; p < 16; p++){
 	docEnv.newPage();
 	
 	
-	let childFile = folderName+"/"+parent+".tex";
+	let childFile = folderName+"/"+parent+".gtex";
 	mainDoc.input(childFile);
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
