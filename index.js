@@ -63,7 +63,7 @@ let raw = "";
 let tileDoc = folderName +"/"+'tileList.gtex'; //folderName +"/"+
 
 for (let t1 = 0; t1 <4; t1 ++){
-	let adjusted = (4-t1) %4;
+	let adjusted = (t1+3) %4;
 	truchetModule.truchet.tiles.tiles[0][0] = adjusted;
 	raw = truchetModule.truchet.tiles.latexGrid().build();
 	raw += "\n" + adjusted;
