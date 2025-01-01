@@ -64,11 +64,11 @@ let tileDoc = folderName +"/"+'tileList.gtex'; //folderName +"/"+
 
 for (let t1 = 0; t1 <4; t1 ++){
 	let adjusted = (4-t1) %4;
-	truchetModule.truchet.tiles.tiles[0][0] = t1;
+	truchetModule.truchet.tiles.tiles[0][0] = adjusted;
 	raw = truchetModule.truchet.tiles.latexGrid().build();
-	raw += "\n" + t1;
+	raw += "\n" + adjusted;
 	tikz.reset();
-	bigTiles[t1] = raw;
+	bigTiles[adjusted] = raw;
 }
 
 let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
