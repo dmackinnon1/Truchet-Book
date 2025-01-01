@@ -66,7 +66,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 	let adjusted = (4-t1) %4;
 	truchetModule.truchet.tiles.tiles[0][0] = adjusted;
 	raw = truchetModule.truchet.tiles.latexGrid().build();
-	raw += "\n \n" + adjusted;
+	raw += "\n \\vspace{0.25cm} \n" + (adjusted-1 %4);
 	tikz.reset();
 	bigTiles.push(raw);
 }
