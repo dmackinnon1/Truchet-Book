@@ -99,21 +99,25 @@ class Tiles {
 		return total;
 	}
 
-	latexGrid() {
+	latexGrid(diagonal = false) {
 		//if (this.rows>1){
 			tikz.drawGrid(0,-1,this.rows, this.rows-1);
 		//}
 		for (var i = 0; i < this.rows; i++){
 			for (var j = 0; j < this.cols; j ++) {
-				this.latexTile(i,j,this.tiles[i][j],tikz);
+				this.latexTile(i,j,this.tiles[i][j],tikz,diagonal);
 			} 
 		}
 		return tikz;	
 
 	}
 
-	latexTile(i,j,k,builder){
-		builder.drawTriangle(i,j,k);
+	latexTile(i,j,k,builder, diagonal=false){
+		if (diagonal){
+			builder.drawDiagonal(i,j,k);
+		} else {
+			builder.drawTriangle(i,j,k);
+		}
 
 	}
 

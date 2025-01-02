@@ -111,6 +111,24 @@ for (var i = 0; i < 16; i++){
 	} 
 }
 
+// Create all parent tile patterns from sequences
+
+for (var i = 0; i < 16; i++){	
+	var psequence = parents[i];
+	var pfile = folderName + "/parent-" + psequence +".gtex";
+	tikz.reset();
+	truchetFrom(psequence,truchetModule.truchet);
+	raw = truchetModule.truchet.tiles.latexGrid(true).build();
+	fs.writeFile(pfile, raw, function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 				
+	 
+}
+
 
 //let tab = doc.tabular(4,4,children[0]);
 

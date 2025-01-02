@@ -56,6 +56,11 @@ class TikZBuilder {
 		let topLeft = new TikZPoint(x1, y1,r);
 		this.components.push(new TikZRightTriangle(topLeft,r,scale));
 	}
+
+	drawDiagonal(x1, y1, r=0,scale=1){
+		let topLeft = new TikZPoint(x1, y1,r);
+		this.components.push(new TikZRightDiagonal(topLeft,r,scale));
+	}
 }
 
 //\draw[opacity=0.5,fill=gray] (0,0)--(0,1)--(1,1)--(0,0);
@@ -86,6 +91,40 @@ constructor(topLeft, rotation=0, size=1,color="black"){
 		}
 		if (this.rotation==3){
 			s = "\\draw[opacity=1,fill=black]" +  bottomLeft.build()+ dash + topLeft.build() + dash + topRight.build() +"; \n";
+		}
+		return s;
+
+	}
+
+}
+
+class TikZRightDiagonal{
+
+constructor(topLeft, rotation=0, size=1,color="black"){
+		this.color = color;
+		this.size= size;
+		this.topLeft = topLeft;
+		this.rotation = rotation;
+		}
+	
+	build(){
+		let dash = "--";
+		let topLeft = this.topLeft;
+		let topRight = new TikZPoint(topLeft.x + this.size, topLeft.y);
+		let bottomLeft = new TikZPoint(topLeft.x, topLeft.y - this.size);
+		let bottomRight = new TikZPoint(topLeft.x + this.size, topLeft.y - this.size);
+		let s = "";
+		if (this.rotation==0){
+			s = "\\draw " +  topLeft.build() + dash + bottomRight.build()+"; \n";
+		}
+		if (this.rotation==1){
+			s = "\\draw " +  topRight.build() + dash + bottomLeft.build()+"; \n";
+		}
+		if (this.rotation==2){
+			s = "\\draw " +  bottomRight.build() + dash + topLeft.build() +"; \n";
+		}
+		if (this.rotation==3){
+			s = "\\draw " +  bottomLeft.build() + dash + topRight.build() +"; \n";
 		}
 		return s;
 
