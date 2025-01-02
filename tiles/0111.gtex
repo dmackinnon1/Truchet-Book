@@ -313,7 +313,7 @@
 \\ 
  \end{tabular} 
 \,\newline
-\vspace{1cm}
+\vspace{0.5cm}
 {\Large
 \begin{tabular}{cccc} 
 0111 & 0113 & 0131 & 0133\\ 
@@ -324,7 +324,7 @@
 }
 \,\newline
 \vspace{1cm}
-\input{tiles/tileList.gtex}\includegraphics[width=0.6\linewidth]{rotationkey.png}\end{center}
+\input{tiles/tileList.gtex}\includegraphics[width=0.5\linewidth]{tiles/rotationkey.png}\end{center}
 
 \newpage
 

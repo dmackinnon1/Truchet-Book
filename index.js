@@ -133,7 +133,7 @@ for (let p = 0; p < 16; p++){
 		.command(",")
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
-		.command("vspace","1cm",true)
+		.command("vspace","0.5cm",true)
 		.addContent(new doc.RawText("{\\Large\n"))
 		.addContent(new doc.RawText(labelTab.build()))
 		.addContent(new doc.RawText("}\n"))
@@ -142,7 +142,7 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("\n"))
 		.command("vspace","1cm",true)
 		.command("input",tileDoc)
-		.addContent(new doc.RawText("\\includegraphics[width=0.6\\linewidth]{rotationkey.png}"));		
+		.addContent(new doc.RawText("\\includegraphics[width=0.5\\linewidth]{tiles/rotationkey.png}"));		
 	docEnv.newPage();
 	
 	
