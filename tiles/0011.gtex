@@ -1,6 +1,6 @@
 \section{0011}
 
-\vspace{1cm}
+\vspace{0.5cm}
 \begin{center}
 \begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
@@ -323,8 +323,8 @@
  \end{tabular} 
 }
 \,\newline
-\vspace{1cm}
-\input{tiles/tileList.gtex}\includegraphics[width=0.5\linewidth]{tiles/rotationkey.png}\end{center}
+\vspace{0.5cm}
+\input{tiles/tileList.gtex}\includegraphics[width=0.3\linewidth]{tiles/rotationkey.png}\end{center}
 
 \newpage
 
