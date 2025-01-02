@@ -115,16 +115,16 @@ constructor(topLeft, rotation=0, size=1,color="black"){
 		let bottomRight = new TikZPoint(topLeft.x + this.size, topLeft.y - this.size);
 		let s = "";
 		if (this.rotation==0){
-			s = "\\draw " +  topLeft.build() + dash + bottomRight.build()+"; \n";
+			s = "\\draw [ultra thick] " +  topLeft.build() + dash + bottomRight.build()+"; \n";
 		}
 		if (this.rotation==1){
-			s = "\\draw " +  topRight.build() + dash + bottomLeft.build()+"; \n";
+			s = "\\draw [ultra thick] " +  topRight.build() + dash + bottomLeft.build()+"; \n";
 		}
 		if (this.rotation==2){
-			s = "\\draw " +  bottomRight.build() + dash + topLeft.build() +"; \n";
+			s = "\\draw [ultra thick] " +  bottomRight.build() + dash + topLeft.build() +"; \n";
 		}
 		if (this.rotation==3){
-			s = "\\draw " +  bottomLeft.build() + dash + topRight.build() +"; \n";
+			s = "\\draw [ultra thick] " +  bottomLeft.build() + dash + topRight.build() +"; \n";
 		}
 		return s;
 

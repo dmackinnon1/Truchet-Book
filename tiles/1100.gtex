@@ -2,7 +2,7 @@
 
 \vspace{0.5cm}
 \begin{center}
-\begin{tabular}{cccc} 
+\marginnote{\centering\input{tiles/parent-1100.gtex}}\begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -312,7 +312,7 @@
 \end{tikzpicture} 
 \\ 
  \end{tabular} 
-\,\marginnote{\centering\input{tiles/parent-1100.gtex}}))\newline
+\,\newline
 \vspace{0.5cm}
 {\Large
 \begin{tabular}{cccc} 

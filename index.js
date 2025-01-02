@@ -147,9 +147,9 @@ for (let p = 0; p < 16; p++){
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
+		.addContent(new doc.RawText("\\marginnote{\\centering\\input{tiles/parent-" + parent+ ".gtex}}"))
 		.addContent(new doc.RawText(tab.build()))
 		.command(",")
-		.addContent(new doc.RawText("\\marginnote{\\centering\\input{tiles/parent-" + parent+ ".gtex}}))"))
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
 		.command("vspace","0.5cm",true)
