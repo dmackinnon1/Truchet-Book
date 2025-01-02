@@ -3,10 +3,7 @@
 \hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
 %%
-% Book metadata
-\title{Truchet Book}
-\author[]{}
-\publisher{}
+
 
 \usepackage{microtype}
 
@@ -135,9 +132,43 @@
 \newcommand{\docfilehook}[2]{\texttt{#1}\index{file hooks!#2}\index{#1@\texttt{#1}}}
 \newcommand{\doccounter}[1]{\texttt{#1}\index{#1 counter@\texttt{#1} counter}}
 
+\makeatletter
+\newcommand{\plainsubtitle}{}%     plain-text-only subtitle
+\newcommand{\subtitle}[1]{%
+  \gdef\@subtitle{#1}%
+  \renewcommand{\plainsubtitle}{#1}% use provided plain-text title
+  \ifthenelse{\isundefined{\hypersetup}}%
+    {}% hyperref is not loaded; do nothing
+    {\hypersetup{pdftitle={\plaintitle: \plainsubtitle{}}}}% set the PDF metadata title
+}
+\renewcommand{\maketitlepage}[0]{%
+  \cleardoublepage%
+  {%
+  \sffamily%
+  \begin{fullwidth}%
+  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+  \vspace{11.5pc}%
+  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+  \vspace{5pc}%
+  \fontsize{24}{28}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\plainsubtitle}}%
+  \vfill%
+  \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
+  \end{fullwidth}%
+  }
+  \thispagestyle{empty}%
+  \clearpage%
+}
+\makeatother
+
 % Generates the index
-\usepackage{makeidx}
-\makeindex
+%\usepackage{makeidx}
+%\makeindex
+
+% Book metadata
+\title{Truchet Book (I)}
+\subtitle{4x4 patterns with rotational symmetry}
+\author[]{}
+\publisher{}
 
 \begin{document}
 
@@ -212,6 +243,6 @@ We can group these tile patterns into families where Truchet tile patterns are c
 \nocite{*}
 \bibliography{references}
 \bibliographystyle{plainnat}
-\printindex
+%\printindex
 
 \end{document}
