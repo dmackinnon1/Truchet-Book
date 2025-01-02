@@ -141,7 +141,8 @@ for (let p = 0; p < 16; p++){
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
 		.command("vspace","1cm",true)
-		.command("input",tileDoc);		
+		.command("input",tileDoc)
+		.addContent(new doc.RawText("\\includegraphics[width=0.6\\linewidth]{rotationkey.png}"));		
 	docEnv.newPage();
 	
 	
