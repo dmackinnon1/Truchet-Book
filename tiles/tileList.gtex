@@ -1,6 +1,11 @@
 \begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=1]
  \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
+ \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
+\end{tikzpicture} 
+
+0 & \begin{tikzpicture}[scale=1]
+ \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
 \end{tikzpicture} 
 
@@ -14,10 +19,5 @@
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
 \end{tikzpicture} 
 
-3 & \begin{tikzpicture}[scale=1]
- \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
- \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
-\end{tikzpicture} 
-
-0\\ 
+3\\ 
  \end{tabular} 
