@@ -312,7 +312,7 @@
 \end{tikzpicture} 
 \\ 
  \end{tabular} 
-\,\newline
+\,\marginnote{\centering\input{tiles/parent-0101.gtex}))\newline
 \vspace{0.5cm}
 {\Large
 \begin{tabular}{cccc} 
