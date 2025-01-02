@@ -68,7 +68,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 	raw = truchetModule.truchet.tiles.latexGrid().build();
 	raw += "\n" + adjusted;
 	tikz.reset();
-	bigTiles[t1] = raw;
+	bigTiles[4-t1] = raw;
 }
 
 let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
