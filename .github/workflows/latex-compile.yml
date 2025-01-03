@@ -1,4 +1,4 @@
-name: LaTeX Compile Action
+name: latex compile
 on:
   workflow_dispatch:
 
