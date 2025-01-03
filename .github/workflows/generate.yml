@@ -18,7 +18,9 @@ jobs:
           git config --global user.email "dmackinnon1@gmail.com"
           git config --global user.name "Dan MacKinnon"
       - name: generate diagrams and document pages
-        run: ./index.js 
+        run: 
+          git update-index --chmod=+x ./index.js
+          node ./index.js 
       - name: commit 
         run: |
           git add .
