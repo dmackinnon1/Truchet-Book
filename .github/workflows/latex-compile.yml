@@ -6,9 +6,9 @@ permissions:
   contents: write
 jobs:
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
- 
+    container: texlive/texlive:latest 
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
@@ -24,12 +24,8 @@ jobs:
           git rm --ignore-unmatch *.pdf
           git commit --allow-empty -m 'removing old pdfs, github action'
           git push
-      - name: Run LaTeX action
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: book.tex
-          latexmk_use_lualatex: true
-          texlive_version: 2022
+      - name: Run latexmk
+        run: "latexmk --pdflatex book.tex"
       - name: Store build timestamp
         run: echo "BUILD_TIME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
       - name: change file name
