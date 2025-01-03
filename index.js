@@ -229,7 +229,7 @@ fs.writeFile(bigTable, tab2.build(), function(err) {
 }); 
 
 console.log("creating a single array of parent tiles");
-truchetModule.truchet.start(0.3,4);
+truchetModule.truchet.start(0.15,4);
 
 let plist = [];
 for (var i = 0; i < 16; i++){	
@@ -240,7 +240,7 @@ for (var i = 0; i < 16; i++){
 	plist.push(raw);					 
 }
 
-let tab3 = new doc.LaTeXTabular(8,2,plist);
+let tab3 = new doc.LaTeXTabular(16,1,plist);
 
 let parentTable = folderName +"/"+'parentTable.gtex'; //folderName +"/"+
 
