@@ -200,7 +200,7 @@ fs.writeFile(mainFile, mainDoc.build(), function(err) {
 console.log("creating a big table");
 
 let children2 =[]; //just a straight array not grouped
-truchetModule.truchet.start(0.3,4);
+truchetModule.truchet.start(0.25,4);
 sequences = allSequences(4);
 
 
