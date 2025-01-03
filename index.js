@@ -95,6 +95,7 @@ truchetModule.truchet.start(0.6,4);
 let sequences = allSequences(4);
 
 let parents = [];
+let parents2 = [];
 let children = []; //array of arrays grouped
 let childrenLabels = [];
 
@@ -109,6 +110,7 @@ for (var i = 0; i < 16; i++){
 		var pindex = parents.indexOf(parentFromSequence(sequence));
 		if (pindex == -1){
 			parents.push(parentFromSequence(sequence));
+			parents2.push(parentFromSequence(sequence));
 			children.push([raw]);
 			childrenLabels.push([sequence]);
 		} else {
@@ -219,6 +221,30 @@ let bigTable = folderName +"/"+'bigTable.gtex'; //folderName +"/"+
 
 
 fs.writeFile(bigTable, tab2.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
+console.log("creating a single array of parent tiles");
+truchetModule.truchet.start(0.4,4);
+
+let plist = [];
+for (var i = 0; i < 16; i++){	
+	var psequence = parents2[i];
+	tikz.reset();
+	truchetFrom(psequence,truchetModule.truchet);
+	raw = truchetModule.truchet.tiles.latexGrid(true).build();
+	plist.push(raw);					 
+}
+
+let tab3 = new doc.LaTeXTabular(16,1,plist);
+
+let parentTable = folderName +"/"+'parentTable.gtex'; //folderName +"/"+
+
+fs.writeFile(parentTable, tab3.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
