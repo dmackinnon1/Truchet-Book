@@ -142,12 +142,12 @@ for (let p = 0; p < 16; p++){
 	let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
 	
-	docEnv.section(parent);
+	//docEnv.section(parent);
 	docEnv.command("vspace","0.5cm",true);
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
-		.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\Large" +parent +"}"))
+		.addContent(new doc.RawText("\\marginnote[-1\\baselineskip]{\\centering\\fontsize{36}{40}" +parent +"}"))
 		.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}"))
 		.addContent(new doc.RawText(tab.build()))
 		.command(",")

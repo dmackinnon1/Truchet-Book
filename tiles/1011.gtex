@@ -1,8 +1,6 @@
-\section{1011}
-
 \vspace{0.5cm}
 \begin{center}
-\marginnote[2\baselineskip]{\centering\Large1011}\marginnote[2\baselineskip]{\centering\input{tiles/parent-1011.gtex}}\begin{tabular}{cccc} 
+\marginnote[-1\baselineskip]{\centering\fontsize{36}{40}1011}\marginnote[2\baselineskip]{\centering\input{tiles/parent-1011.gtex}}\begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
