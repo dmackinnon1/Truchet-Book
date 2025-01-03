@@ -1,4 +1,4 @@
-name: run node js to build
+name: js build
 on:
   workflow_dispatch:
 
