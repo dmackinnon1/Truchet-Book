@@ -5,6 +5,12 @@ let truchetModule = require('./js/tikZTruchet.js');
 let doc = require('./js/latex-builders.js');
 let tikz = require('./js/tikZBldr.js');
 
+function getTimestamp () {
+  const pad = (n,s=2) => (`${new Array(s).fill(0)}${n}`).slice(-s);
+  const d = new Date();
+  
+  return `${pad(d.getFullYear(),4)}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+}
 
 function allSequences(max){
 	let list = [];
@@ -46,6 +52,8 @@ function truchetFrom(sequence, theTruchet){
 
 //set up folder for files
 const folderName = 'tiles';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
 try {
   		if (!fs.existsSync(folderName)) {
     	fs.mkdirSync(folderName);
@@ -54,7 +62,7 @@ try {
   		console.error(err);
 	}
 
-
+console.log("creating single tile images");
 //create image for tile rotations
 truchetModule.truchet.start(1,1);
 let bigTiles = ['a','b','c','d'];
@@ -81,7 +89,7 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 }); 
 
 //main tile generation
-
+console.log("creating tile patterns and parent groupings");
 truchetModule.truchet.start(0.6,4);
 
 let sequences = allSequences(4);
@@ -112,7 +120,7 @@ for (var i = 0; i < 16; i++){
 }
 
 // Create all parent tile patterns from sequences
-
+console.log("creating parent tiles");
 for (var i = 0; i < 16; i++){	
 	var psequence = parents[i];
 	var pfile = folderName + "/parent-" + psequence +".gtex";
@@ -130,8 +138,7 @@ for (var i = 0; i < 16; i++){
 }
 
 
-//let tab = doc.tabular(4,4,children[0]);
-
+console.log("creating each family page");
 let mainDoc = new doc.LaTeXDoc();
 let mainFile = 'main.tex';
 
@@ -147,6 +154,7 @@ for (let p = 0; p < 16; p++){
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
+		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"))
 		.addContent(new doc.RawText(tab.build()))
