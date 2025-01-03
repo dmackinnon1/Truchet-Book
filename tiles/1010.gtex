@@ -1,7 +1,7 @@
 \vspace{0.5cm}
 \begin{center}
-\marginnote[-1\baselineskip]{\centering\fontsize{36}{40}\selectfont1010\par}
-\marginnote[2\baselineskip]{\centering\input{tiles/parent-1010.gtex}}
+\marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont1010\par}
+\marginnote[3\baselineskip]{\centering\input{tiles/parent-1010.gtex}}
 \begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
