@@ -129,28 +129,6 @@ class LaTeXTabular{
 	}
 }
 
-
-class LaTeXParagraph {
-	constructor(t, lb=false){
-		this.text = t;
-		this.linebreak = lb;
-		return this;		
-	}
-
-	build(){
-		let result = ""
-		if (this.linebreak){
-			result += "\n";
-		}
-		result += this.text;
-		if (this.linebreak){
-			result += "\\\\";
-			result += "\n ";
-		}
-		return result;
-	}
-}
-
 class LaTeXDoc {
 
 	constructor(dc = "article", omitFrontMatter=true){
