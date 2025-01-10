@@ -174,7 +174,7 @@ for (let p = 0; p < 16; p++){
 		.command("input",tileDoc)
 		.command(",")
 		.command("newline")
-		.command("vspace","0.2cm",true)
+		.command("vspace","0.8cm",true)
 		.addContent(new doc.RawText("\\input{positions}"));		
 	docEnv.newPage();
 	

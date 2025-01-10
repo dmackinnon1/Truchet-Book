@@ -1,6 +1,6 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-09 23:37:03
+% file generated at 2025-01-09 23:39:48
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont1101\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-1101.gtex}}
 \begin{tabular}{cccc} 
@@ -325,7 +325,7 @@
 }
 \,\newline
 \vspace{1cm}
-\input{tiles/tileList.gtex}\,\newline\vspace{0.2cm}
+\input{tiles/tileList.gtex}\,\newline\vspace{0.8cm}
 \input{positions}\end{center}
 
 \newpage
