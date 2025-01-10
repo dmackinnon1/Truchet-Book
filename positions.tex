@@ -1,0 +1,47 @@
+\begin{tikzpicture}[node distance=-0.7em]
+    \matrix (xA) [anchor=west]
+    {% 
+        \node(xA1) [draw,right,font=\Large, minimum width=3em,minimum height=3em,fill=lightgray,
+        , fill opacity=0.2, text opacity=1] {b} ;  \\
+        \node(xA2) [draw,right,font=\Large, minimum width=3em,minimum height=3em,fill=lightgray,
+        , fill opacity=0.2, text opacity=1] {a} ;  \\
+    };
+    \matrix (xB) [right=of xA]
+    {% 
+        \node(xB1) [draw,right,font=\Large, minimum width=3em,minimum height=3em,fill=lightgray,
+        , fill opacity=0.2, text opacity=1] {d} ;  \\
+        \node(xB2) [draw,right,font=\Large, minimum width=3em,minimum height=3em,fill=lightgray,
+        , fill opacity=0.2, text opacity=1] {c} ;  \\
+        %\node(xB3) [draw,anchor=west,font=\Large, minimum width=3em,minimum height=3em] {c} ;  \\
+    };
+    \matrix (yA) [above=of xA]
+    {% 
+        \node(yA1) [rotate=-90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {a} ;  \\
+        \node(yA2) [rotate=-90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {c} ;  \\
+     };
+     \matrix (yB) [above=of xB]
+    {% 
+        \node(yB1) [rotate=-90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {b} ;  \\
+        \node(yB2) [rotate=-90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {d} ;  \\
+     };
+    \matrix (xC) [right=of xB]
+    {% 
+        \node(xC1) [rotate=90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {d} ;  \\
+        \node(xC2) [rotate=90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {b} ;  \\
+    };
+    \matrix (yC) [right=of xC]
+    {% 
+        \node(yC1) [rotate=90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {c} ;  \\
+        \node(yC2) [rotate=90,draw,right,font=\Large, minimum width=3em,minimum height=3em] {a} ;  \\
+    };
+ \matrix (xD) [above=of xC]
+    {% 
+        \node(xD1) [rotate=180,draw,right,font=\Large, minimum width=3em,minimum height=3em] {c} ;  \\
+        \node(xD2) [rotate=180,draw,right,font=\Large, minimum width=3em,minimum height=3em] {d} ;  \\
+    };
+    \matrix (yD) [right=of xD]
+    {% 
+        \node(yD1) [rotate=180,draw,right,font=\Large, minimum width=3em,minimum height=3em] {a} ;  \\
+        \node(yD2) [rotate=180,draw,right,font=\Large, minimum width=3em,minimum height=3em] {b} ;  \\
+    };
+\end{tikzpicture}
