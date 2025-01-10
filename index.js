@@ -152,7 +152,7 @@ for (let p = 0; p < 16; p++){
 	let docEnv = new doc.LaTeXDoc();
 	
 	//docEnv.section(parent);
-	docEnv.command("vspace","0.5cm",true);
+	docEnv.command("vspace","1cm",true);
 	let tab = new doc.LaTeXTabular(4,4,kids);
 	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
@@ -163,19 +163,19 @@ for (let p = 0; p < 16; p++){
 		.command(",")
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
-		.command("vspace","0.5cm",true)
+		.command("vspace","1cm",true)
 		.addContent(new doc.RawText("{\\Large\n"))
 		.addContent(new doc.RawText(labelTab.build()))
 		.addContent(new doc.RawText("}\n"))
 		.command(",")
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
-		.command("vspace","0.5cm",true)
+		.command("vspace","1cm",true)
 		.command("input",tileDoc)
 		.command(",")
 		.command("newline")
 		.command("vspace","0.2cm",true)
-		.addContent(new doc.RawText("\\includegraphics[width=0.3\\linewidth]{tiles/rotationkey.png}"));		
+		.addContent(new doc.RawText("\\input{positions}"));		
 	docEnv.newPage();
 	
 	

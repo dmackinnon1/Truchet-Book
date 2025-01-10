@@ -1,6 +1,6 @@
-\vspace{0.5cm}
+\vspace{1cm}
 \begin{center}
-% file generated at 2025-01-04 17:37:10
+% file generated at 2025-01-09 23:37:03
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont1100\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-1100.gtex}}
 \begin{tabular}{cccc} 
@@ -314,7 +314,7 @@
 \\ 
  \end{tabular} 
 \,\newline
-\vspace{0.5cm}
+\vspace{1cm}
 {\Large
 \begin{tabular}{cccc} 
 1100 & 1102 & 1120 & 1122\\ 
@@ -324,9 +324,9 @@
  \end{tabular} 
 }
 \,\newline
-\vspace{0.5cm}
+\vspace{1cm}
 \input{tiles/tileList.gtex}\,\newline\vspace{0.2cm}
-\includegraphics[width=0.3\linewidth]{tiles/rotationkey.png}\end{center}
+\input{positions}\end{center}
 
 \newpage
 
