@@ -66,7 +66,9 @@ console.log("creating single tile images");
 //create image for tile rotations
 truchetModule.truchet.start(1,1);
 let bigTiles = ['a','b','c','d'];
+let bigTiles2 = ['a','b','c','d'];
 let raw = "";
+
 
 let tileDoc = folderName +"/"+'tileList.gtex'; //folderName +"/"+
 
@@ -76,9 +78,10 @@ for (let t1 = 0; t1 <4; t1 ++){
 	raw += "\n" + t1;
 	tikz.reset();
 	bigTiles[4-t1] = raw;
+	bigTiles2[4-t1] = raw
 }
 
-let bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles);
+let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);//1,4
 
 fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
@@ -87,6 +90,18 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 		process.exit(1);
     }
 }); 
+
+bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles2);//1,4
+tileDoc = folderName +"/"+'tileList2.gtex';
+
+fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
 
 //main tile generation
 console.log("creating tile patterns and parent groupings");
