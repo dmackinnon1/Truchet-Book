@@ -70,7 +70,7 @@ let bigTiles2 = ['a','b','c','d'];
 let raw = "";
 
 
-let tileDoc = folderName +"/"+'tileList.gtex'; //folderName +"/"+
+let tileDoc = folderName +"/"+'tileList2.gtex'; //folderName +"/"+
 
 for (let t1 = 0; t1 <4; t1 ++){
 	truchetModule.truchet.tiles.tiles[0][0] = t1;
@@ -81,7 +81,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 	bigTiles2[4-t1] = raw
 }
 
-let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);//1,4
+let bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles);//1,4
 
 fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
@@ -92,7 +92,7 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 }); 
 
 bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles2);//1,4
-tileDoc = folderName +"/"+'tileList2.gtex';
+tileDoc = folderName +"/"+'tileList.gtex';
 
 fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
