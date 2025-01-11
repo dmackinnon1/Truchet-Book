@@ -91,7 +91,7 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     }
 }); 
 
-bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles2);//1,4
+bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles2);//1,4
 tileDoc = folderName +"/"+'tileList2.gtex';
 
 fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
