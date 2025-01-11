@@ -78,7 +78,7 @@ for (let t1 = 0; t1 <4; t1 ++){
 	bigTiles[4-t1] = raw;
 }
 
-let bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles);
+let bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles);
 
 fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     if(err) {
