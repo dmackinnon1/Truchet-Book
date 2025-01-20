@@ -81,6 +81,16 @@ class Tiles {
 			} 
 		}	
 	}
+
+	copyFromOther(other){
+
+		for (var i = 0; i < other.rows; i++){
+			for (var j = 0; j < other.cols; j ++) {
+				this.tiles[i][j] = other.tiles[i][j];
+			} 
+		}	
+
+	}
 	
 	distance(another) {
 		if (another.rows !== this.rows && another.cols !== this.cols) {
@@ -120,45 +130,7 @@ class Tiles {
 		}
 
 	}
-
-	htmlTable() {
-		var html = new Bldr("table").att("align", "center"); 
-		for (var i = 0; i < this.rows; i++){
-			var row = new Bldr("tr");
-			for (var j = 0; j < this.cols; j ++) {
-				var cell = new Bldr("td");
-				cell.elem(this.newTruchet(i,j,this.tiles[i][j]));
-				row.elem(cell); 
-			} 
-			html.elem(row);
-		}
-		return html.build();	
-	}
 	
-	newTruchet(i,j,k) {
-		var frame = new Bldr("svg").att("id", "tile_"+i+"_"+j)
-					.att("data-row", i).att("data-col", j)
-					.att("align", "center").att("width", this.size).att("height", this.size);		
-		
-		var tile = truchet.tileStyle(k, this);
-		
-		if (truchet.border) {
-			var border = new Bldr("rect").att("stroke-width",1).att("fill","none");
-			border.att("height", this.size).att("width", this.size).att("stroke","grey")
-				.att("x", 0).att("y",0);
-			frame.elem(border);
-		}
-		tile.attOnAllElements("data-row", i).attOnAllElements("data-col", j);
-		frame.elem(tile);
-		if (!this.static){
-			frame.att("onclick","elementClick(event)");
-		}
-		return frame;
-	}
-
-	element(i,j) {
-		return $("#" + "tile_"+i+"_"+j);
-	}		
 
 	rotate(i,j) {
 		this.tiles[i][j] = (this.tiles[i][j] + 1) % 4;
@@ -192,14 +164,6 @@ function randomInt(lessThan){
 	return selection;
 };
 
-function elementClick(event) {
-	var i = parseInt(event.target.getAttribute("data-row"));
-	var j = parseInt(event.target.getAttribute("data-col"));	
-	truchet.tiles.rotate(i,j);
-	truchet.tiles.applyRules(i,j);
-	evnts.fireEvent("refresh");
-	$('#tileBoard').html(truchet.tiles.htmlTable());
-};
 
 try{
     module.exports.truchet = truchet; 
