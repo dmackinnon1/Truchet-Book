@@ -116,7 +116,10 @@ for (var i = 0; i < 16; i++){
 // }
 
 
-console.log("creating each family page");
+console.log("creating each frieze family 2-page spread");
+
+let ch2Doc = new doc.LaTeXDoc();
+let ch2File = 'ch2_friezes.tex';
 
 for (let p = 0; p < 16; p++){
 
@@ -131,7 +134,7 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.command("newpage")
 		.addContent(new doc.RawText("\n"))
-		.section(parent);
+		.section("Frieze patters for family " +parent);
 		// .addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
 		// .addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"));
 
@@ -142,7 +145,7 @@ for (let p = 0; p < 16; p++){
 			friezelist.push(kids[f]);
 		}
 		let tab = new doc.LaTeXTabular(2,8,friezelist);
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[3\\baselineskip]{" + kids[f] +"}\n"))
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + kids[f] +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(tab.build()))
 			.addContent(new doc.RawText("}"))
@@ -162,7 +165,7 @@ for (let p = 0; p < 16; p++){
 	
 	
 	let childFile = folderName+"/frieze_"+parent+".gtex";
-	
+	ch2Doc.input(childFile);
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
     if(err) {
@@ -170,6 +173,14 @@ for (let p = 0; p < 16; p++){
         console.log("exiting");
 		process.exit(1);
     }
-	}); 
+	});
+
+	fs.writeFile(ch2File, ch2Doc.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+});  
 }
 
