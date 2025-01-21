@@ -1,12 +1,9 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-17 10:29:59
+% file generated at 2025-01-20 21:00:02
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont0000\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-0000.gtex}}
-{
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{2}
-\begin{tabular}{cccc} 
+{\setlength{\tabcolsep}{4pt}\n\renewcommand{\arraystretch}{2}\begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
@@ -316,8 +313,7 @@
 \end{tikzpicture} 
 \\ 
  \end{tabular} 
-}
-\,\newline
+}\,\newline
 \vspace{0.8cm}
 {\Large
 \begin{tabular}{cccc} 
