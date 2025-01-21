@@ -142,7 +142,7 @@ for (let p = 0; p < 16; p++){
 			friezelist.push(kids[f]);
 		}
 		let tab = new doc.LaTeXTabular(2,8,friezelist);
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote{" + kids[f] +"}\n"))
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[3\\baselineskip]{" + kids[f] +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(tab.build()))
 			.addContent(new doc.RawText("}"))
