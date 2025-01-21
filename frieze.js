@@ -97,28 +97,26 @@ for (var i = 0; i < 16; i++){
 	} 
 }
 
-// Create all parent tile patterns from sequences
-console.log("creating parent tiles");
-for (var i = 0; i < 16; i++){	
-	var psequence = parents[i];
-	var pfile = folderName + "/parent-" + psequence +".gtex";
-	tikz.reset();
-	truchetFrom(psequence,truchetModule.truchet);
-	raw = truchetModule.truchet.tiles.latexGrid(true).build();
-	fs.writeFile(pfile, raw, function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-	}); 				
+// // Create all parent tile patterns from sequences
+// console.log("creating parent tiles");
+// for (var i = 0; i < 16; i++){	
+// 	var psequence = parents[i];
+// 	var pfile = folderName + "/parent-" + psequence +".gtex";
+// 	tikz.reset();
+// 	truchetFrom(psequence,truchetModule.truchet);
+// 	raw = truchetModule.truchet.tiles.latexGrid(true).build();
+// 	fs.writeFile(pfile, raw, function(err) {
+//     if(err) {
+//         return console.log("There was an error" + err);
+//         console.log("exiting");
+// 		process.exit(1);
+//     }
+// 	}); 				
 	 
-}
+// }
 
 
 console.log("creating each family page");
-let mainDoc = new doc.LaTeXDoc();
-let mainFile = 'main.tex';
 
 for (let p = 0; p < 16; p++){
 
@@ -152,7 +150,7 @@ for (let p = 0; p < 16; p++){
 	
 	
 	let childFile = folderName+"/frieze_"+parent+".gtex";
-	mainDoc.input(childFile);
+	
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
     if(err) {
@@ -163,10 +161,3 @@ for (let p = 0; p < 16; p++){
 	}); 
 }
 
-fs.writeFile(mainFile, mainDoc.build(), function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-}); 
