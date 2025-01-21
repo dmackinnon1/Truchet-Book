@@ -142,7 +142,7 @@ for (let p = 0; p < 16; p++){
 		}
 		let tab = new doc.LaTeXTabular(2,8,friezelist);
 		docEnv.env().addContent(new doc.RawText(tab.build()))
-			.addContent(new doc.RawText("\\marginnote{kids[f]}}\n"))
+			.addContent(new doc.RawText("\\marginnote{" + kids[f] +"}\n"))
 			.command(",")
 			.command("newline")
 			.addContent(new doc.RawText("\n"));
