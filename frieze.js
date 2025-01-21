@@ -66,7 +66,7 @@ try {
 
 //main tile generation
 console.log("creating tile patterns and parent groupings");
-truchetModule.truchet.start(0.3,4);
+truchetModule.truchet.start(0.25,4);
 
 let sequences = allSequences(4);
 
@@ -129,6 +129,8 @@ for (let p = 0; p < 16; p++){
 	docEnv.command("vspace","1cm",true);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
+		.command("newpage")
+		.addContent(new doc.RawText("\n"))
 		.section(parent);
 		// .addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
 		// .addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"));
@@ -141,14 +143,16 @@ for (let p = 0; p < 16; p++){
 		}
 		let tab = new doc.LaTeXTabular(2,8,friezelist);
 		docEnv.env().addContent(new doc.RawText("\\marginnote{" + kids[f] +"}\n"))
+			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(tab.build()))
+			.addContent(new doc.RawText("}"))
 			.addContent(new doc.RawText("\n"))
 			.command(",")
 			.addContent(new doc.RawText("\n"))
 			.command("newline")
 			.command("vspace","0.2cm",true);	
 			if (f==7){
-				docEnv.env().addContent(new doc.RawText("\n"))
+				docEnv.addContent(new doc.RawText("\n"))
 				.command("newpage")
 				.addContent(new doc.RawText("\n"));
 			}
