@@ -1,10 +1,11 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-21 08:55:40
+% file generated at 2025-01-21 08:58:38
 \newpage
 \section{1111}
 \end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -337,7 +338,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -670,7 +673,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -1003,7 +1008,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -1336,7 +1343,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -1669,7 +1678,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -2002,7 +2013,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -2335,7 +2348,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
@@ -2668,12 +2683,14 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
 
 
 \newpage
 
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -3006,7 +3023,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -3339,7 +3358,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -3672,7 +3693,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -4005,7 +4028,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -4338,7 +4363,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -4671,7 +4698,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -5004,7 +5033,9 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
+\begin{center}
 \marginnote{\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
@@ -5337,6 +5368,7 @@
 }
 \,
 \newline\vspace{0.2cm}
+\end{center}
 
 \newpage
 
