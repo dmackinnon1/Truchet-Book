@@ -59,6 +59,11 @@ class LaTeXEnv {
 		this.addContent(s);
 		return this;
 	}
+	section(title){
+		let s = new LaTeXCommand("section", title, true);
+		this.addContent(s);
+		return this;
+	}
 }
 
 class LaTeXCommand{
