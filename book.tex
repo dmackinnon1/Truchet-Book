@@ -52,17 +52,45 @@
 % \cleardoublepage
 \chapter*{Introduction}
 
-This booklet presents a complete listing of $4x4$ Truchet tile patterns with rotational symmetry.  \marginnote{\centering\input{tiles/tileList2.gtex}} Truchet tiles are, traditionally, square tiles that are divided by a diagonal line, and coloured with two colours, one on either side of the diagonal. Each tile can be rotated to one of four positions.
+This booklet presents a complete listing of $4x4$ Truchet tile patterns with rotational symmetry.  \marginnote{\centering\input{tiles/tileList2.gtex}} Truchet tiles are, traditionally, square tiles that are divided by a diagonal line, and coloured with two colours with a different colour on either side of the diagonal. Each tile can be rotated to one of four positions. Patterns are formed by placing tiles next to each other, often rotating tiles to create repeated motifs.
 
 \vspace{0.5cm}
 \noindent
 Each $4x4$
 Truchet tile pattern with rotational symmetry has a core $2x2$ pattern in one of its quadrants that is rotated to produce the overall pattern. \marginnote{\centering\input{positions}} In this booklet, the core pattern is assumed to be in the lower left. Each pattern can identified as a sequence of 4 digits $abcd$ that list the rotational positions of each tile in the lower left quadrant.
 
+\vspace{2cm}
 
-\vspace{0.5cm}
+\begin{center}
+{
+\begin{tikzpicture}[scale=0.6]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
+ \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
+ \draw[opacity=1,fill=black](1,1)--(0,1)--(0,2); 
+ \draw[opacity=1,fill=black](1,3)--(1,2)--(0,2); 
+ \draw[opacity=1,fill=black](2,0)--(2,-1)--(1,-1); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](2,3)--(2,2)--(1,2); 
+ \draw[opacity=1,fill=black](2,-1)--(2,0)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](2,2)--(2,3)--(3,3); 
+ \draw[opacity=1,fill=black](3,-1)--(3,0)--(4,0); 
+ \draw[opacity=1,fill=black](3,1)--(4,1)--(4,0); 
+ \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
+ \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
+\end{tikzpicture}
+
+\textit{The 0011 pattern}
+}
+\end{center}
+
+\chapter{Pattern families}
+
 \noindent
-We can group these tile patterns into families where Truchet tile patterns are considered to be in the same family if they would look the same without colour -- if each corresponding tile shares the same diagonal direction. The sequence that represents the family of a tile pattern can be found by taking the sequence of the tile pattern \textit{modulo} $2$. So, for example, the 16 tile patterns below are all members of the 0110 family. 
+We can group the 4x4 Truchet tile patterns with rotational symmetry into families where  tile patterns are considered to be in the same family if they would look the same without colour -- if each corresponding tile shares the same diagonal direction. The sequence that represents the family of a tile pattern can be found by taking the sequence of the tile pattern \textit{modulo} $2$. So, for example, the 16 tile patterns below are all members of the 0110 family. 
 
 \vspace{0.4cm}
 
@@ -74,6 +102,8 @@ We can group these tile patterns into families where Truchet tile patterns are c
 \input{example_family}
 {\begin{center} \textit{The 0110 pattern family}\end{center}}
 }
+
+\newpage
 
 %%
 % Start the main matter (normal chapters)
@@ -92,7 +122,13 @@ We can group these tile patterns into families where Truchet tile patterns are c
 }
 \input{tiles/bigTable.gtex}
 \end{center}
+\chapter{Friezes of Truchet patterns}
+
+\noindent
+Each 4x4 Truchet pattern can be treated like a tile and used in a larger pattern. A \textit{frieze} is a horizontal strip of tiles. Laying each of the 256 tiles in a frieze of the same tiles reveals other symmetrical patterns.
+
 \newpage
+
 \input{ch2_friezes}
 
 \backmatter
