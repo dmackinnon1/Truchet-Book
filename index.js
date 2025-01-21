@@ -174,7 +174,7 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"))
-		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\\n\\renewcommand{\\arraystretch}{2}"))
+		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
 		.addContent(new doc.RawText(tab.build()))
 		.addContent(new doc.RawText("}"))
 		.command(",")
