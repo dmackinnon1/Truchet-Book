@@ -62,45 +62,6 @@ try {
   		console.error(err);
 	}
 
-console.log("creating single tile images");
-//create image for tile rotations
-truchetModule.truchet.start(1,1);
-let bigTiles = ['a','b','c','d'];
-let bigTiles2 = ['a','b','c','d'];
-let raw = "";
-
-
-let tileDoc = folderName +"/"+'tileList2.gtex'; //folderName +"/"+
-
-for (let t1 = 0; t1 <4; t1 ++){
-	truchetModule.truchet.tiles.tiles[0][0] = t1;
-	raw = truchetModule.truchet.tiles.latexGrid().build();
-	raw += "\n" + t1;
-	tikz.reset();
-	bigTiles[4-t1] = raw;
-	bigTiles2[4-t1] = raw
-}
-
-let bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles);//1,4
-
-fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-}); 
-
-bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles2);//1,4
-tileDoc = folderName +"/"+'tileList.gtex';
-
-fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-}); 
 
 
 //main tile generation
@@ -165,36 +126,32 @@ for (let p = 0; p < 16; p++){
 	let kids = children.pop();
 	let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
-	
+
 	//docEnv.section(parent);
 	docEnv.command("vspace","1cm",true);
-	let tab = new doc.LaTeXTabular(4,4,kids);
-	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
-		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"))
-		.addContent(new doc.RawText(tab.build()))
-		.command(",")
-		.command("newline")
-		.addContent(new doc.RawText("\n"))
-		.command("vspace","1cm",true)
-		.addContent(new doc.RawText("{\\Large\n"))
-		.addContent(new doc.RawText(labelTab.build()))
-		.addContent(new doc.RawText("}\n"))
-		.command(",")
-		.command("newline")
-		.addContent(new doc.RawText("\n"))
-		.command("vspace","1cm",true)
-		.command("input",tileDoc)
-		.command(",")
-		.command("newline")
-		.command("vspace","0.4cm",true)
-		.addContent(new doc.RawText("\\input{positions}"));		
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"));
+
+	
+	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
+		let friezelist = []	;
+		for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
+			friezelist.push(kids[f]);
+		}
+		let tab = new doc.LaTeXTabular(2,8,friezelist);
+		docEnv.env().addContent(new doc.RawText(tab.build()))
+			.addContent(new doc.RawText("\\marginnote{kids[f]}}\n"))
+			.command(",")
+			.command("newline")
+			.addContent(new doc.RawText("\n"));
+	}
+		
 	docEnv.newPage();
 	
 	
-	let childFile = folderName+"/"+parent+".gtex";
+	let childFile = folderName+"/frieze_"+parent+".gtex";
 	mainDoc.input(childFile);
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
@@ -207,59 +164,6 @@ for (let p = 0; p < 16; p++){
 }
 
 fs.writeFile(mainFile, mainDoc.build(), function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-}); 
-
-console.log("creating a big table");
-
-let children2 =[]; //just a straight array not grouped
-truchetModule.truchet.start(0.15,4);
-sequences = allSequences(4);
-
-
-// Create all Truchet tiles from sequences and group them.
-for (var i = 0; i < 256; i++){
-	var sequence = sequences.pop();
-	tikz.reset();
-	truchetFrom(sequence,truchetModule.truchet);
-	raw = truchetModule.truchet.tiles.latexGrid().build();
-	children2.push(raw);
-}
-
-let tab2 = new doc.LaTeXTabular(16,16,children2);
-
-let bigTable = folderName +"/"+'bigTable.gtex'; //folderName +"/"+
-
-
-fs.writeFile(bigTable, tab2.build(), function(err) {
-    if(err) {
-        return console.log("There was an error" + err);
-        console.log("exiting");
-		process.exit(1);
-    }
-}); 
-
-console.log("creating a single array of parent tiles");
-truchetModule.truchet.start(0.15,4);
-
-let plist = [];
-for (var i = 0; i < 16; i++){	
-	var psequence = parents2[i];
-	tikz.reset();
-	truchetFrom(psequence,truchetModule.truchet);
-	raw = truchetModule.truchet.tiles.latexGrid(true).build();
-	plist.push(raw);					 
-}
-
-let tab3 = new doc.LaTeXTabular(16,1,plist);
-
-let parentTable = folderName +"/"+'parentTable.gtex'; //folderName +"/"+
-
-fs.writeFile(parentTable, tab3.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
