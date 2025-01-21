@@ -132,7 +132,7 @@ for (let p = 0; p < 16; p++){
 	docEnv.command("vspace","1cm",true);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
-		.command("newpage")
+		//.command("newpage")
 		.addContent(new doc.RawText("\n"))
 		.section("Frieze patters for family " +parent);
 		// .addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
