@@ -197,7 +197,7 @@ for (let p = 0; p < 16; p++){
 		// }
 		// let tab = new doc.LaTeXTabular(2,8,friezelist);
 		let currentTup = kids[f]; 
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.tiles +"}\n"))
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.tile +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(currentTup.frieze))
 			.addContent(new doc.RawText("}"))
