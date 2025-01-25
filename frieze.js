@@ -18,6 +18,13 @@ class TileTup {
 		this.frieze = "";
 	}
 
+	friezeDualTable(){
+
+		let contents = [this.tile, this.dual, this.code, this.dualCode];
+		let tab = new doc.LaTeXTabular(2,2,contents);
+		return tab.build();
+	}
+
 
 }
 
@@ -186,18 +193,12 @@ for (let p = 0; p < 16; p++){
 		//.command("newpage")
 		.addContent(new doc.RawText("\n"))
 		.section("Frieze patterns for family " + parent);
-		// .addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
-		// .addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"));
-
+		
 	
 	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
-		// let friezelist = []	;
-		// for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
-		// 	friezelist.push(kids[f]);
-		// }
-		// let tab = new doc.LaTeXTabular(2,8,friezelist);
+		
 		let currentTup = kids[f]; 
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.tile +"}\n"))
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(currentTup.frieze))
 			.addContent(new doc.RawText("}"))
