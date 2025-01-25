@@ -62,11 +62,11 @@ function parentFromSequence(sequence){
 }
 
 function friezeDualFromSequence(sequence){
-	let dual = "";
+	let dual = [];
 	let length = sequence.length;
 	sequence = Array.from(sequence);
 	for (let i=0; i<length;i++){
-		dual[i] = "" + (Number(sequence[length-i-1])+2)%2;
+		dual += "" + (Number(sequence[length-i-1])+2)%4;
 	} 
 	return dual;
 }
@@ -126,6 +126,8 @@ for (var i = 0; i < 16; i++){
 		tup.dualCode = friezeDualFromSequence(sequence);
 		tup.dualFamily = parentFromSequence(tup.dualCode);
 
+		
+		
 		//build the frieze
 		let friezelist = [];
 		for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
@@ -138,6 +140,7 @@ for (var i = 0; i < 16; i++){
 		tikz.reset();
 		truchetFrom(tup.dualCode,truchetModule.truchet);
 		tup.dual = truchetModule.truchet.tiles.latexGrid().build();
+
 
 		var pindex = parents.indexOf(tup.family);
 		if (pindex == -1){
