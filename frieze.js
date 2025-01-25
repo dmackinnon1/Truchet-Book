@@ -5,6 +5,23 @@ let truchetModule = require('./js/tikZTruchet.js');
 let doc = require('./js/latex-builders.js');
 let tikz = require('./js/tikZBldr.js');
 
+
+class TileTup {
+
+	constructor(){
+		this.tile = "";
+		this.code = "";
+		this.family = "";
+		this.dual = "";
+		this.dualCode = "";
+		this.dualFamily = "";
+		this.frieze = "";
+	}
+
+
+}
+
+
 function getTimestamp () {
   const pad = (n,s=2) => (`${new Array(s).fill(0)}${n}`).slice(-s);
   const d = new Date();
@@ -36,6 +53,17 @@ function parentFromSequence(sequence){
 	} 
 	return parent;
 }
+
+function friezeDualFromSequence(sequence){
+	let dual = "";
+	let length = sequence.length;
+	sequence = Array.from(sequence);
+	for (let i=0; i<length;i++){
+		dual[i] = "" + (Number(sequence[length-i-1])+2)%2;
+	} 
+	return dual;
+}
+
 
 function truchetFrom(sequence, theTruchet){
 	let sarray = Array.from(sequence)
@@ -74,7 +102,7 @@ let parents = [];
 let parents2 = [];
 let children = []; //array of arrays grouped
 let childrenLabels = [];
-
+let tuples = [];
 
 // Create all Truchet tiles from sequences and group them.
 for (var i = 0; i < 16; i++){
@@ -82,16 +110,39 @@ for (var i = 0; i < 16; i++){
 		var sequence = sequences.pop();
 		tikz.reset();
 		truchetFrom(sequence,truchetModule.truchet);
-		raw = truchetModule.truchet.tiles.latexGrid().build();
-		var pindex = parents.indexOf(parentFromSequence(sequence));
+		
+		//get the basics of the tile tupple
+		let tup = new TileTup();
+		tup.tile = truchetModule.truchet.tiles.latexGrid().build();
+		tup.code = sequence.slice();
+		tup.family = parentFromSequence(sequence);
+		tup.dualCode = friezeDualFromSequence(sequence);
+		tup.dualFamily = parentFromSequence(tup.dualCode);
+
+		//build the frieze
+		let friezelist = [];
+		for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
+			friezelist.push(tup.tile.slice());
+		}
+		let tab = new doc.LaTeXTabular(2,8,friezelist);
+		tup.frieze = tab.build();
+
+		//get the frieze dual
+		tikz.reset();
+		truchetFrom(tup.dualCode,truchetModule.truchet);
+		tup.dual = truchetModule.truchet.tiles.latexGrid().build();
+
+		var pindex = parents.indexOf(tup.family);
 		if (pindex == -1){
-			parents.push(parentFromSequence(sequence));
-			parents2.push(parentFromSequence(sequence));
-			children.push([raw]);
+			parents.push(tup.family.slice());
+			parents2.push(tup.family.slice());
+			children.push([tup.tile.slice()]);
 			childrenLabels.push([sequence]);
+			tuples.push([tup]);
 		} else {
-				children[pindex].push(raw);
+				children[pindex].push(tup.tile.slice());
 				childrenLabels[pindex].push(sequence);
+				tuples[pindex].push(tup);
 		}
 					
 	} 
@@ -124,8 +175,8 @@ let ch2File = 'ch2_friezes.tex';
 for (let p = 0; p < 16; p++){
 
 	let parent = parents.pop();
-	let kids = children.pop();
-	let kidLables = childrenLabels.pop();
+	let kids = tuples.pop(); //children.pop();
+	//let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
 
 	//docEnv.section(parent);
@@ -140,14 +191,15 @@ for (let p = 0; p < 16; p++){
 
 	
 	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
-		let friezelist = []	;
-		for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
-			friezelist.push(kids[f]);
-		}
-		let tab = new doc.LaTeXTabular(2,8,friezelist);
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + kids[f] +"}\n"))
+		// let friezelist = []	;
+		// for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
+		// 	friezelist.push(kids[f]);
+		// }
+		// let tab = new doc.LaTeXTabular(2,8,friezelist);
+		let currentTup = kids[f]; 
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.tiles +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
-			.addContent(new doc.RawText(tab.build()))
+			.addContent(new doc.RawText(currentTup.frieze))
 			.addContent(new doc.RawText("}"))
 			.addContent(new doc.RawText("\n"))
 			.command(",")
