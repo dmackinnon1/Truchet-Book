@@ -1,8 +1,16 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-20 22:44:39
+% file generated at 2025-01-25 15:55:53
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont0101\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-0101.gtex}}
+\marginnote[3\baselineskip]{\centering +
+\begin{tabular}{cccc} 
+0101 & 0103 & 0121 & 0123\\ 
+ 0301 & 0303 & 0321 & 0323\\ 
+ 2101 & 2103 & 2121 & 2123\\ 
+ 2301 & 2303 & 2321 & 2323\\ 
+ \end{tabular} 
+}
 {\setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{2}\begin{tabular}{cccc} 
 \begin{tikzpicture}[scale=0.6]
@@ -315,19 +323,7 @@
 \\ 
  \end{tabular} 
 }\,\newline
-\vspace{0.8cm}
-{\Large
-\begin{tabular}{cccc} 
-0101 & 0103 & 0121 & 0123\\ 
- 0301 & 0303 & 0321 & 0323\\ 
- 2101 & 2103 & 2121 & 2123\\ 
- 2301 & 2303 & 2321 & 2323\\ 
- \end{tabular} 
-}
-\,\newline
-\vspace{0.8cm}
-\input{tiles/tileList.gtex}\,\newline\vspace{0.4cm}
-\input{positions}\end{center}
+\end{center}
 
 \newpage
 

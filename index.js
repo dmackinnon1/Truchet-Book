@@ -37,6 +37,29 @@ function parentFromSequence(sequence){
 	return parent;
 }
 
+
+function rotaDualFromSequence(sequence){
+	let dual = [];
+	let length = sequence.length;
+	sequence = Array.from(sequence);
+	for (let i=0; i<length;i++){
+		dual += "" + (Number(sequence[i])+1)%4;
+	} 
+	return dual;
+}
+
+function parentRotaDual(sequence){
+	let pd = parentFromSequence(sequence);
+	let dual = [];
+	let length = pd.length;
+	sequence = Array.from(pd);
+	for (let i=0; i<length;i++){
+		dual += "" + (Number(pd[i])+1)%2;
+	} 
+	return dual;
+}
+
+
 function truchetFrom(sequence, theTruchet){
 	let sarray = Array.from(sequence)
 	theTruchet.tiles.tiles[0][0] = parseInt(sarray[0]);
@@ -174,25 +197,26 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering +\n"+ labelTab.build()+ "}\n"))
 		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
 		.addContent(new doc.RawText(tab.build()))
 		.addContent(new doc.RawText("}"))
 		.command(",")
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
-		.command("vspace","0.8cm",true)
-		.addContent(new doc.RawText("{\\Large\n"))
-		.addContent(new doc.RawText(labelTab.build()))
-		.addContent(new doc.RawText("}\n"))
-		.command(",")
-		.command("newline")
-		.addContent(new doc.RawText("\n"))
-		.command("vspace","0.8cm",true)
-		.command("input",tileDoc)
-		.command(",")
-		.command("newline")
-		.command("vspace","0.4cm",true)
-		.addContent(new doc.RawText("\\input{positions}"));		
+		//.command("vspace","0.8cm",true)
+		// .addContent(new doc.RawText("{\\Large\n"))
+		// .addContent(new doc.RawText(labelTab.build()))
+		// .addContent(new doc.RawText("}\n"))
+		// .command(",")
+		// .command("newline")
+		// .addContent(new doc.RawText("\n"))
+		// .command("vspace","0.8cm",true)
+		// .command("input",tileDoc)
+		// .command(",")
+		// .command("newline")
+		// .command("vspace","0.4cm",true)
+		// .addContent(new doc.RawText("\\input{positions}"));		
 	docEnv.newPage();
 	
 	
