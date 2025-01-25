@@ -1,9 +1,9 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 15:55:53
+% file generated at 2025-01-25 15:58:04
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont1100\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-1100.gtex}}
-\marginnote[3\baselineskip]{\centering +
+\marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
 1100 & 1102 & 1120 & 1122\\ 
  1300 & 1302 & 1320 & 1322\\ 
