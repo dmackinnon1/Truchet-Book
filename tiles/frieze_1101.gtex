@@ -1,14 +1,32 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 15:32:02
+% file generated at 2025-01-25 15:41:07
 
 \section{Frieze patterns for family 1101}
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1011 & 3323\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -27,26 +45,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3323 & 1011\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -364,9 +364,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3011 & 3321\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -385,26 +403,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3321 & 3011\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -722,9 +722,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1211 & 3303\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -743,26 +761,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3303 & 1211\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1080,9 +1080,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3211 & 3301\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -1101,26 +1119,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3301 & 3211\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1438,9 +1438,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1031 & 3123\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -1459,26 +1477,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3123 & 1031\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1796,9 +1796,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3031 & 3121\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -1817,26 +1835,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3121 & 3031\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2154,9 +2154,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1231 & 3103\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -2175,26 +2193,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
 \\ 
+ 3103 & 1231\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2512,28 +2512,8 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3231 & 3101\\ 
- \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
- \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
- \draw[opacity=1,fill=black](0,2)--(1,2)--(1,1); 
- \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
- \draw[opacity=1,fill=black](1,-1)--(1,0)--(2,0); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](1,2)--(1,3)--(2,3); 
- \draw[opacity=1,fill=black](3,0)--(3,-1)--(2,-1); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](3,3)--(3,2)--(2,2); 
- \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
- \draw[opacity=1,fill=black](4,0)--(3,0)--(3,1); 
- \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
- \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
-\end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -2552,7 +2532,27 @@
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
+ \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
+ \draw[opacity=1,fill=black](0,2)--(1,2)--(1,1); 
+ \draw[opacity=1,fill=black](0,3)--(1,3)--(1,2); 
+ \draw[opacity=1,fill=black](1,-1)--(1,0)--(2,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](1,2)--(1,3)--(2,3); 
+ \draw[opacity=1,fill=black](3,0)--(3,-1)--(2,-1); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](3,3)--(3,2)--(2,2); 
+ \draw[opacity=1,fill=black](4,-1)--(3,-1)--(3,0); 
+ \draw[opacity=1,fill=black](4,0)--(3,0)--(3,1); 
+ \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
+ \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
+\end{tikzpicture} 
 \\ 
+ 3101 & 3231\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2875,9 +2875,27 @@
 
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1013 & 1323\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -2896,26 +2914,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1323 & 1013\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3233,9 +3233,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3013 & 1321\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -3254,26 +3272,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1321 & 3013\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3591,9 +3591,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1213 & 1303\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -3612,26 +3630,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1303 & 1213\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3949,9 +3949,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3213 & 1301\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
+ \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -3970,26 +3988,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](1,3)--(2,3)--(2,2); 
- \draw[opacity=1,fill=black](3,-1)--(2,-1)--(2,0); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1301 & 3213\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4307,9 +4307,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1033 & 1123\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -4328,26 +4346,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1123 & 1033\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4665,9 +4665,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3033 & 1121\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -4686,26 +4704,8 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](0,1)--(0,2)--(1,2); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](2,-1)--(1,-1)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](2,3)--(3,3)--(3,2); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](4,1)--(4,0)--(3,0); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1121 & 3033\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5023,9 +5023,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-1233 & 1103\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
+ \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -5044,26 +5062,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](1,0)--(1,1)--(2,1); 
- \draw[opacity=1,fill=black](1,2)--(2,2)--(2,1); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](3,0)--(2,0)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(3,1)--(2,1); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1103 & 1233\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5381,9 +5381,27 @@
 \end{center}
 
 \begin{center}
-\marginnote[2\baselineskip]{\begin{tabular}{cc} 
-3233 & 1101\\ 
- \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+\begin{tikzpicture}[scale=0.25]
+ \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
+ \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
+ \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
+ \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
+ \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
+ \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
+ \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
+ \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
+ \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
+ \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
+ \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
+ \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
+ \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
+ \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
+ \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
+ \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
+ \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
+\end{tikzpicture} 
+ & \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -5402,26 +5420,8 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.25]
- \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
- \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
- \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
- \draw[opacity=1,fill=black](1,2)--(1,1)--(0,1); 
- \draw[opacity=1,fill=black](1,2)--(0,2)--(0,3); 
- \draw[opacity=1,fill=black](1,0)--(2,0)--(2,-1); 
- \draw[opacity=1,fill=black](2,1)--(2,0)--(1,0); 
- \draw[opacity=1,fill=black](2,1)--(1,1)--(1,2); 
- \draw[opacity=1,fill=black](2,2)--(1,2)--(1,3); 
- \draw[opacity=1,fill=black](2,0)--(3,0)--(3,-1); 
- \draw[opacity=1,fill=black](2,1)--(3,1)--(3,0); 
- \draw[opacity=1,fill=black](2,1)--(2,2)--(3,2); 
- \draw[opacity=1,fill=black](3,2)--(2,2)--(2,3); 
- \draw[opacity=1,fill=black](3,0)--(4,0)--(4,-1); 
- \draw[opacity=1,fill=black](3,0)--(3,1)--(4,1); 
- \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
- \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
-\end{tikzpicture} 
 \\ 
+ 1101 & 3233\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}

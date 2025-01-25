@@ -20,7 +20,7 @@ class TileTup {
 
 	friezeDualTable(){
 
-		let contents = [this.tile, this.dual, this.code, this.dualCode];
+		let contents = [this.dualCode, this.code, this.dual, this.tile];
 		let tab = new doc.LaTeXTabular(2,2,contents);
 		return tab.build();
 	}
@@ -201,7 +201,7 @@ for (let p = 0; p < 16; p++){
 	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
 		
 		let currentTup = kids[f]; 
-		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[2\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(currentTup.frieze))
 			.addContent(new doc.RawText("}"))
