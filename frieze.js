@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+/* Generates most diagrams in the second chapter of
+ * Truchet Book. 
+ */
 
 const fs = require('fs');
 let truchetModule = require('./js/tikZTruchet.js');
