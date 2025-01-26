@@ -44,7 +44,7 @@ try {
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
 let foreground = "2123";
-let background = "3331";
+let background = "2130";
 let patternList = [];
 
 tikz.reset();
