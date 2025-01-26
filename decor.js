@@ -43,8 +43,8 @@ try {
 
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
-let foreground = "0010";
-let background = "1010";
+let foreground = "2023";
+let background = "3331";
 let patternList = [];
 
 tikz.reset();
@@ -58,10 +58,14 @@ truchetFrom(foreground,truchetModule.truchet);
 let foreTile = truchetModule.truchet.tiles.latexGrid().build();
 
 
+patternList[5] = foreTile.slice();
 patternList[6] = foreTile.slice();
-patternList[7] = foreTile.slice();
+patternList[9] = foreTile.slice();
 patternList[10] = foreTile.slice();
-patternList[11] = foreTile.slice();
+
+console.log(patternList[0]);
+console.log("-----");
+console.log(patternList[6]);
 
 let tab = new doc.LaTeXTabular(4,4,patternList);
 
