@@ -129,7 +129,7 @@ for (let d=0; d < allForegrounds.length; d++ ){
 
 let ch3File = "designs.tex";
 
-fs.writeFile(ch3File, "", function(err) {
+fs.writeFile(ch3File, ch3Doc.build(), function(err) {
    if(err) {
     	return console.log("There was an error" + err);
         console.log("exiting");
