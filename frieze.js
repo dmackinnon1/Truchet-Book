@@ -178,6 +178,7 @@ for (let p = 0; p < 16; p++){
 	
 	let fam = kids[0].family;
 	if (omitFamilies.indexOf(fam) > -1){
+		console.log(" - ommitting from frieze list: " + fam);
 		continue;
 	}
 
@@ -193,10 +194,19 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("\n"))
 		.section("Frieze patterns for family " + parent + " (secondary, "+ parentFromSequence(friezeDualFromSequence(parent))+")");
 		
-	
+	let omitWithinFamily = [];
 	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
 		
 		let currentTup = kids[f]; 
+
+		let code = currentTup.code;
+			if (omitWithinFamily.indexOf(code) > -1){
+				console.log(" -- ommitting from frieze list: " + code);
+				continue;
+			}
+
+		omitWithinFamily.push(currentTup.dualCode);
+
 		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
 			.addContent(new doc.RawText(currentTup.frieze))
