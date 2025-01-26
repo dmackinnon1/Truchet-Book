@@ -41,52 +41,87 @@ try {
   		console.error(err);
 	}
 
+
+new doc.LaTeXDoc();
+
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
-let foreground = "2123";
-let background = "2130";
-let patternList = [];
 
-tikz.reset();
-truchetFrom(background,truchetModule.truchet);
-let backTile = truchetModule.truchet.tiles.latexGrid().build().slice();
-for (let i=0; i<64; i++){
-	patternList.push(backTile.slice());
+let allForegrounds = ['2123'];
+let allBackgrounds = ['2130'];
+
+for (let d=0; d < allForegrounds.length; d++ ){
+	let patternList = [];
+
+	let background = allBackgrounds[d];
+	let foreground = allForegrounds[d];
+
+	tikz.reset();
+	truchetFrom(background,truchetModule.truchet);
+	let backTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+	for (let i=0; i<64; i++){
+		patternList.push(backTile.slice());
+	}
+	tikz.reset();
+	truchetFrom(foreground,truchetModule.truchet);
+	let foreTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+
+
+	patternList[18] = foreTile.slice();
+	patternList[19] = foreTile.slice();
+	patternList[20] = foreTile.slice();
+	patternList[21] = foreTile.slice();
+
+	patternList[26] = foreTile.slice();
+	patternList[27] = foreTile.slice();
+	patternList[28] = foreTile.slice();
+	patternList[29] = foreTile.slice();
+
+	patternList[34] = foreTile.slice();
+	patternList[35] = foreTile.slice();
+	patternList[36] = foreTile.slice();
+	patternList[37] = foreTile.slice();
+
+	patternList[42] = foreTile.slice();
+	patternList[43] = foreTile.slice();
+	patternList[44] = foreTile.slice();
+	patternList[45] = foreTile.slice();
+
+
+	let tab = new doc.LaTeXTabular(8,8,patternList);
+
+
+	let designFile = folderName+"/"+foreground+ "-" + background +"-design.gtex";
+	let foreFile =  folderName+"/"+foreground+ "-alone.gtex";
+	let backFile =  folderName+"/"+background+ "-alone.gtex";
+	
+	console.log("writing files: "+ designFile);
+	fs.writeFile(designFile, tab.build(), function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(foreFile, foreTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(backFile, backTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
 }
-tikz.reset();
-truchetFrom(foreground,truchetModule.truchet);
-let foreTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 
+let ch3File = "designs.tex";
 
-patternList[18] = foreTile.slice();
-patternList[19] = foreTile.slice();
-patternList[20] = foreTile.slice();
-patternList[21] = foreTile.slice();
-
-patternList[26] = foreTile.slice();
-patternList[27] = foreTile.slice();
-patternList[28] = foreTile.slice();
-patternList[29] = foreTile.slice();
-
-patternList[34] = foreTile.slice();
-patternList[35] = foreTile.slice();
-patternList[36] = foreTile.slice();
-patternList[37] = foreTile.slice();
-
-patternList[42] = foreTile.slice();
-patternList[43] = foreTile.slice();
-patternList[44] = foreTile.slice();
-patternList[45] = foreTile.slice();
-
-
-
-let tab = new doc.LaTeXTabular(8,8,patternList);
-
-
-let designFile = folderName+"/"+foreground+ "-" + background +"-design.gtex";
-
-console.log("writing file: "+ designFile);
-fs.writeFile(designFile, tab.build(), function(err) {
+fs.writeFile(ch3File, "", function(err) {
    if(err) {
     	return console.log("There was an error" + err);
         console.log("exiting");
