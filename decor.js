@@ -42,7 +42,7 @@ try {
 	}
 
 
-new doc.LaTeXDoc();
+let ch3Doc = new doc.LaTeXDoc();
 
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
@@ -117,6 +117,14 @@ for (let d=0; d < allForegrounds.length; d++ ){
 			process.exit(1);
     	}
 	});
+
+
+	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+foreFile+"}\n"));
+	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+backFile+"}\n"));
+	ch3Doc.input(designFile);
+	ch3Doc.addContent(new doc.RawText("\n"))
+			.command("newline")
+			.command("vspace","0.2cm",true);	
 }
 
 let ch3File = "designs.tex";
