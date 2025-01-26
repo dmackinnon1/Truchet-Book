@@ -79,11 +79,8 @@ patternList[44] = foreTile.slice();
 patternList[45] = foreTile.slice();
 
 
-console.log(patternList[0]);
-console.log("-----");
-console.log(patternList[6]);
 
-let tab = new doc.LaTeXTabular(4,4,patternList);
+let tab = new doc.LaTeXTabular(8,8,patternList);
 
 
 let designFile = folderName+"/"+foreground+ "-" + background +"-design.gtex";
