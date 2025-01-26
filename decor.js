@@ -47,8 +47,8 @@ let ch3Doc = new doc.LaTeXDoc();
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
 
-let allForegrounds = ['2123'];
-let allBackgrounds = ['2130'];
+let allForegrounds = ['2123','0113','2311','0231','0213'];
+let allBackgrounds = ['2130','3133','3113','1023','1203'];
 
 for (let d=0; d < allForegrounds.length; d++ ){
 	let patternList = [];
