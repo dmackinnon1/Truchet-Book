@@ -43,19 +43,19 @@ try {
 
 console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
-let foreground = "2023";
+let foreground = "2123";
 let background = "3331";
 let patternList = [];
 
 tikz.reset();
 truchetFrom(background,truchetModule.truchet);
-let backTile = truchetModule.truchet.tiles.latexGrid().build();
+let backTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 for (let i=0; i<16; i++){
 	patternList.push(backTile.slice());
 }
 tikz.reset();
 truchetFrom(foreground,truchetModule.truchet);
-let foreTile = truchetModule.truchet.tiles.latexGrid().build();
+let foreTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 
 
 patternList[5] = foreTile.slice();
