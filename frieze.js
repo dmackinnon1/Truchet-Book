@@ -170,6 +170,7 @@ let ch2Doc = new doc.LaTeXDoc();
 let ch2File = 'ch2_friezes.tex';
 
 let omitFamilies = [];
+let friezeCount = 0;
 
 for (let p = 0; p < 16; p++){
 
@@ -206,6 +207,7 @@ for (let p = 0; p < 16; p++){
 			}
 
 		omitWithinFamily.push(currentTup.dualCode);
+		friezeCount++;
 
 		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
 			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
@@ -246,3 +248,4 @@ for (let p = 0; p < 16; p++){
 });  
 }
 
+console.log("unique freizes: "+ friezeCount);
