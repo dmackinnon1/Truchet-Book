@@ -169,11 +169,20 @@ console.log("creating each frieze family 2-page spread");
 let ch2Doc = new doc.LaTeXDoc();
 let ch2File = 'ch2_friezes.tex';
 
+let omitFamilies = [];
+
 for (let p = 0; p < 16; p++){
 
 	let parent = parents.pop();
 	let kids = tuples.pop(); //children.pop();
-	//let kidLables = childrenLabels.pop();
+	
+	let fam = kids[0].family;
+	if (omitFamilies.indexOf(fam) > -1){
+		continue;
+	}
+
+	omitFamilies.push(kids[0].dualFamily);
+
 	let docEnv = new doc.LaTeXDoc();
 
 	//docEnv.section(parent);
