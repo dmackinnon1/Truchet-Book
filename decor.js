@@ -119,9 +119,11 @@ for (let d=0; d < allForegrounds.length; d++ ){
 	});
 
 	ch3Doc.section("Design using " + foreground + " and " + background);
-	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+foreFile+"}\n" +foreground + "}"));
-	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+backFile+"}\n" +background + "}"));
+	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+foreFile+"}\\\ \n" +foreground + "}"));
+	ch3Doc.addContent(new doc.RawText("\\marginnote{\\centering\\input{"+backFile+"}\\\ \n" +background + "}"));
+	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
 	ch3Doc.input(designFile);
+	ch3Doc.addContent(new doc.RawText("\n \\end{center}\n"));
 	ch3Doc.addContent(new doc.RawText("\n"))
 			.command("vspace","0.2cm",true);	
 }
