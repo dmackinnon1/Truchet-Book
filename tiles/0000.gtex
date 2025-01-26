@@ -1,6 +1,6 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 21:32:45
+% file generated at 2025-01-25 21:38:24
 \marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont0000\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-0000.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
@@ -13,7 +13,7 @@
 }
 {\setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{2}\begin{tabular}{cccc} 
-\begin{tikzpicture}[scale=0.6]
+\begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -32,7 +32,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -51,7 +51,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -70,7 +70,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -90,7 +90,7 @@
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -109,7 +109,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -128,7 +128,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -147,7 +147,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -167,7 +167,7 @@
  \draw[opacity=1,fill=black](4,2)--(3,2)--(3,3); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -186,7 +186,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -205,7 +205,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -224,7 +224,7 @@
  \draw[opacity=1,fill=black](4,1)--(3,1)--(3,2); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -244,7 +244,7 @@
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -263,7 +263,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -282,7 +282,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -301,7 +301,7 @@
  \draw[opacity=1,fill=black](3,2)--(4,2)--(4,1); 
  \draw[opacity=1,fill=black](3,3)--(4,3)--(4,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -327,15 +327,15 @@
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-1111.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
-undefined & undefined & undefined & undefined\\ 
- undefined & undefined & undefined & undefined\\ 
- undefined & undefined & undefined & undefined\\ 
- undefined & undefined & undefined & undefined\\ 
+1111 & 1113 & 1131 & 1133\\ 
+ 1311 & 1313 & 1331 & 1333\\ 
+ 3111 & 3113 & 3131 & 3133\\ 
+ 3311 & 3313 & 3331 & 3333\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{2}\begin{tabular}{cccc} 
-\begin{tikzpicture}[scale=0.6]
+\begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -354,7 +354,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -373,7 +373,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -392,7 +392,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -412,7 +412,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -431,7 +431,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -450,7 +450,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -469,7 +469,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,0)--(1,-1)--(0,-1); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -489,7 +489,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -508,7 +508,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -527,7 +527,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -546,7 +546,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](3,1)--(3,2)--(4,2); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
@@ -566,7 +566,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- \begin{tikzpicture}[scale=0.6]
+ \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -585,7 +585,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -604,7 +604,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 
@@ -623,7 +623,7 @@ undefined & undefined & undefined & undefined\\
  \draw[opacity=1,fill=black](4,2)--(4,1)--(3,1); 
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
- & \begin{tikzpicture}[scale=0.6]
+ & \begin{tikzpicture}[scale=0.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,-1)--(0,0)--(1,0); 
  \draw[opacity=1,fill=black](0,0)--(0,1)--(1,1); 

@@ -144,7 +144,7 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 
 //main tile generation
 console.log("creating tile patterns and parent groupings");
-truchetModule.truchet.start(0.6,4);
+truchetModule.truchet.start(0.5,4);
 
 let sequences = allSequences(4);
 
@@ -189,7 +189,7 @@ for(var i=0; i<8; i++){
 	tup.tileGrid = new doc.LaTeXTabular(4,4,children[pindex]);
 	tup.labelGrid = new doc.LaTeXTabular(4,4,childrenLabels[pindex]);
 	tup.rDTileGrid = new doc.LaTeXTabular(4,4,children[dindex]);
-	tup.rDLabelGrid = new doc.LaTeXTabular(4,4,childrenLabels[pindex]);
+	tup.rDLabelGrid = new doc.LaTeXTabular(4,4,childrenLabels[dindex]);
 
 	tups.push(tup);
 }
