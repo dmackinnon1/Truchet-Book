@@ -59,6 +59,22 @@ function parentRotaDual(sequence){
 	return dual;
 }
 
+class FamTup {
+
+	constructor(){
+		this.family = "";
+		this.tileGrid = "";
+		this.labelGrid ="";
+
+		this.rDFamily = "";
+		this.rDTileGrid = "";
+		this.rDLabelGrid = ""
+		
+	}
+
+
+
+}
 
 function truchetFrom(sequence, theTruchet){
 	let sarray = Array.from(sequence)
@@ -159,6 +175,25 @@ for (var i = 0; i < 16; i++){
 	} 
 }
 
+let mainFamList = ['0000','1000','0100','0010','0001','1100','1010','1001'];
+let tups = [];
+
+for(var i=0; i<8; i++){
+	
+	let tup = new FamTup();
+	tup.family = mainFamList[i];
+	var pindex = parents.indexOf(tup.family);
+	tup.rDFamily = parentRotaDual(tup.family);
+	var dindex = parents.indexOf(tup.rDFamily);
+
+	tup.tileGrid = new doc.LaTeXTabular(4,4,children[pindex]);
+	tup.labelGrid = new doc.LaTeXTabular(4,4,childrenLabels[pindex]);
+	tup.rDTileGrid = new doc.LaTeXTabular(4,4,children[dindex]);
+	tup.rDLabelGrid = new doc.LaTeXTabular(4,4,childrenLabels[pindex]);
+
+	tups.push(tup);
+}
+
 // Create all parent tile patterns from sequences
 console.log("creating parent tiles");
 for (var i = 0; i < 16; i++){	
@@ -182,28 +217,36 @@ console.log("creating each family page");
 let mainDoc = new doc.LaTeXDoc();
 let mainFile = 'main.tex';
 
-for (let p = 0; p < 16; p++){
+for (let p = 0; p < 8; p++){
 
-	let parent = parents.pop();
-	let kids = children.pop();
-	let kidLables = childrenLabels.pop();
+	let tuple = tups[p];
+	//let parent = parents.pop();
+	//let kids = children.pop();
+	//let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
 	
 	//docEnv.section(parent);
 	docEnv.command("vspace","1cm",true);
-	let tab = new doc.LaTeXTabular(4,4,kids);
-	let labelTab = new doc.LaTeXTabular(4,4,kidLables);
+	//let tab = new doc.LaTeXTabular(4,4,kids);
+	//let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
-		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + parent +"\\par}\n"))
-		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + parent+ ".gtex}}\n"))
-		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ labelTab.build()+ "}\n"))
+		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + tuple.family +"\\par}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + tuple.family+ ".gtex}}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.labelGrid.build()+ "}\n"))
 		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
-		.addContent(new doc.RawText(tab.build()))
+		.addContent(new doc.RawText(tuple.tileGrid.build()))
 		.addContent(new doc.RawText("}"))
 		.command(",")
 		.command("newline")
 		.addContent(new doc.RawText("\n"))
+		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + tuple.rDFamily +"\\par}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + tuple.rDFamily+ ".gtex}}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.rDLabelGrid.build()+ "}\n"))
+		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
+		.addContent(new doc.RawText(tuple.rDTileGrid.build()))
+		.addContent(new doc.RawText("}"));		
+
 		//.command("vspace","0.8cm",true)
 		// .addContent(new doc.RawText("{\\Large\n"))
 		// .addContent(new doc.RawText(labelTab.build()))
@@ -220,7 +263,7 @@ for (let p = 0; p < 16; p++){
 	docEnv.newPage();
 	
 	
-	let childFile = folderName+"/"+parent+".gtex";
+	let childFile = folderName+"/"+tuple.family+".gtex";
 	mainDoc.input(childFile);
 
 	fs.writeFile(childFile, docEnv.build(), function(err) {
