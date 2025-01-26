@@ -50,7 +50,7 @@ let patternList = [];
 tikz.reset();
 truchetFrom(background,truchetModule.truchet);
 let backTile = truchetModule.truchet.tiles.latexGrid().build().slice();
-for (let i=0; i<16; i++){
+for (let i=0; i<64; i++){
 	patternList.push(backTile.slice());
 }
 tikz.reset();
@@ -58,10 +58,26 @@ truchetFrom(foreground,truchetModule.truchet);
 let foreTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 
 
-patternList[5] = foreTile.slice();
-patternList[6] = foreTile.slice();
-patternList[9] = foreTile.slice();
-patternList[10] = foreTile.slice();
+patternList[18] = foreTile.slice();
+patternList[19] = foreTile.slice();
+patternList[20] = foreTile.slice();
+patternList[21] = foreTile.slice();
+
+patternList[26] = foreTile.slice();
+patternList[27] = foreTile.slice();
+patternList[28] = foreTile.slice();
+patternList[29] = foreTile.slice();
+
+patternList[34] = foreTile.slice();
+patternList[35] = foreTile.slice();
+patternList[36] = foreTile.slice();
+patternList[37] = foreTile.slice();
+
+patternList[42] = foreTile.slice();
+patternList[43] = foreTile.slice();
+patternList[44] = foreTile.slice();
+patternList[45] = foreTile.slice();
+
 
 console.log(patternList[0]);
 console.log("-----");
