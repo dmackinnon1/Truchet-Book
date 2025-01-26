@@ -1,8 +1,8 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 20:41:48
+% file generated at 2025-01-25 20:57:32
 
-\section{Frieze patterns for family 0010}
+\section{Frieze patterns for family 0010 (secondary, 0100}
 \end{center}
 
 \begin{center}
@@ -47,7 +47,6 @@
 \end{tikzpicture} 
 \\ 
  2232 & 0100\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -406,7 +405,6 @@
 \end{tikzpicture} 
 \\ 
  2230 & 2100\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -765,7 +763,6 @@
 \end{tikzpicture} 
 \\ 
  2212 & 0300\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1124,7 +1121,6 @@
 \end{tikzpicture} 
 \\ 
  2210 & 2300\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1483,7 +1479,6 @@
 \end{tikzpicture} 
 \\ 
  2032 & 0120\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1842,7 +1837,6 @@
 \end{tikzpicture} 
 \\ 
  2030 & 2120\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2201,7 +2195,6 @@
 \end{tikzpicture} 
 \\ 
  2012 & 0320\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2560,7 +2553,6 @@
 \end{tikzpicture} 
 \\ 
  2010 & 2320\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2924,7 +2916,6 @@
 \end{tikzpicture} 
 \\ 
  0232 & 0102\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3283,7 +3274,6 @@
 \end{tikzpicture} 
 \\ 
  0230 & 2102\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3642,7 +3632,6 @@
 \end{tikzpicture} 
 \\ 
  0212 & 0302\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4001,7 +3990,6 @@
 \end{tikzpicture} 
 \\ 
  0210 & 2302\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4360,7 +4348,6 @@
 \end{tikzpicture} 
 \\ 
  0032 & 0122\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4719,7 +4706,6 @@
 \end{tikzpicture} 
 \\ 
  0030 & 2122\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5078,7 +5064,6 @@
 \end{tikzpicture} 
 \\ 
  0012 & 0322\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5437,7 +5422,6 @@
 \end{tikzpicture} 
 \\ 
  0010 & 2322\\ 
- (0010) & (0100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}

@@ -1,8 +1,8 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 20:41:48
+% file generated at 2025-01-25 20:57:32
 
-\section{Frieze patterns for family 0011}
+\section{Frieze patterns for family 0011 (secondary, 1100}
 \end{center}
 
 \begin{center}
@@ -47,7 +47,6 @@
 \end{tikzpicture} 
 \\ 
  2233 & 1100\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -406,7 +405,6 @@
 \end{tikzpicture} 
 \\ 
  2231 & 3100\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -765,7 +763,6 @@
 \end{tikzpicture} 
 \\ 
  2213 & 1300\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1124,7 +1121,6 @@
 \end{tikzpicture} 
 \\ 
  2211 & 3300\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1483,7 +1479,6 @@
 \end{tikzpicture} 
 \\ 
  2033 & 1120\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1842,7 +1837,6 @@
 \end{tikzpicture} 
 \\ 
  2031 & 3120\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2201,7 +2195,6 @@
 \end{tikzpicture} 
 \\ 
  2013 & 1320\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2560,7 +2553,6 @@
 \end{tikzpicture} 
 \\ 
  2011 & 3320\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2924,7 +2916,6 @@
 \end{tikzpicture} 
 \\ 
  0233 & 1102\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3283,7 +3274,6 @@
 \end{tikzpicture} 
 \\ 
  0231 & 3102\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3642,7 +3632,6 @@
 \end{tikzpicture} 
 \\ 
  0213 & 1302\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4001,7 +3990,6 @@
 \end{tikzpicture} 
 \\ 
  0211 & 3302\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4360,7 +4348,6 @@
 \end{tikzpicture} 
 \\ 
  0033 & 1122\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4719,7 +4706,6 @@
 \end{tikzpicture} 
 \\ 
  0031 & 3122\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5078,7 +5064,6 @@
 \end{tikzpicture} 
 \\ 
  0013 & 1322\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5437,7 +5422,6 @@
 \end{tikzpicture} 
 \\ 
  0011 & 3322\\ 
- (0011) & (1100)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}

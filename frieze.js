@@ -21,14 +21,12 @@ class TileTup {
 	friezeDualTable(){
 
 		let contents = [
-			"(" +this.dualFamily +")",
-			"(" +this.family +")",
 			this.dualCode, 
 			this.code, 
 			this.dual, 
 			this.tile,
 			];
-		let tab = new doc.LaTeXTabular(3,2,contents);
+		let tab = new doc.LaTeXTabular(2,2,contents);
 		return tab.build();
 	}
 
@@ -184,7 +182,7 @@ for (let p = 0; p < 16; p++){
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		//.command("newpage")
 		.addContent(new doc.RawText("\n"))
-		.section("Frieze patterns for family " + parent);
+		.section("Frieze patterns for family " + parent + " (secondary, "+ parentFromSequence(friezeDualFromSequence(parent)));
 		
 	
 	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array

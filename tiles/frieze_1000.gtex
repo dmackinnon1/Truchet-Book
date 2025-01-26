@@ -1,8 +1,8 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 20:41:48
+% file generated at 2025-01-25 20:57:32
 
-\section{Frieze patterns for family 1000}
+\section{Frieze patterns for family 1000 (secondary, 0001}
 \end{center}
 
 \begin{center}
@@ -47,7 +47,6 @@
 \end{tikzpicture} 
 \\ 
  3222 & 0001\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -406,7 +405,6 @@
 \end{tikzpicture} 
 \\ 
  3220 & 2001\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -765,7 +763,6 @@
 \end{tikzpicture} 
 \\ 
  3202 & 0201\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1124,7 +1121,6 @@
 \end{tikzpicture} 
 \\ 
  3200 & 2201\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1483,7 +1479,6 @@
 \end{tikzpicture} 
 \\ 
  3022 & 0021\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1842,7 +1837,6 @@
 \end{tikzpicture} 
 \\ 
  3020 & 2021\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2201,7 +2195,6 @@
 \end{tikzpicture} 
 \\ 
  3002 & 0221\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2560,7 +2553,6 @@
 \end{tikzpicture} 
 \\ 
  3000 & 2221\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2924,7 +2916,6 @@
 \end{tikzpicture} 
 \\ 
  1222 & 0003\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3283,7 +3274,6 @@
 \end{tikzpicture} 
 \\ 
  1220 & 2003\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3642,7 +3632,6 @@
 \end{tikzpicture} 
 \\ 
  1202 & 0203\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4001,7 +3990,6 @@
 \end{tikzpicture} 
 \\ 
  1200 & 2203\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4360,7 +4348,6 @@
 \end{tikzpicture} 
 \\ 
  1022 & 0023\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4719,7 +4706,6 @@
 \end{tikzpicture} 
 \\ 
  1020 & 2023\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5078,7 +5064,6 @@
 \end{tikzpicture} 
 \\ 
  1002 & 0223\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5437,7 +5422,6 @@
 \end{tikzpicture} 
 \\ 
  1000 & 2223\\ 
- (1000) & (0001)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}

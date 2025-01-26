@@ -1,8 +1,8 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 20:41:48
+% file generated at 2025-01-25 20:57:32
 
-\section{Frieze patterns for family 1111}
+\section{Frieze patterns for family 1111 (secondary, 1111}
 \end{center}
 
 \begin{center}
@@ -47,7 +47,6 @@
 \end{tikzpicture} 
 \\ 
  3333 & 1111\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -406,7 +405,6 @@
 \end{tikzpicture} 
 \\ 
  3331 & 3111\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -765,7 +763,6 @@
 \end{tikzpicture} 
 \\ 
  3313 & 1311\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1124,7 +1121,6 @@
 \end{tikzpicture} 
 \\ 
  3311 & 3311\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1483,7 +1479,6 @@
 \end{tikzpicture} 
 \\ 
  3133 & 1131\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1842,7 +1837,6 @@
 \end{tikzpicture} 
 \\ 
  3131 & 3131\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2201,7 +2195,6 @@
 \end{tikzpicture} 
 \\ 
  3113 & 1331\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2560,7 +2553,6 @@
 \end{tikzpicture} 
 \\ 
  3111 & 3331\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2924,7 +2916,6 @@
 \end{tikzpicture} 
 \\ 
  1333 & 1113\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3283,7 +3274,6 @@
 \end{tikzpicture} 
 \\ 
  1331 & 3113\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3642,7 +3632,6 @@
 \end{tikzpicture} 
 \\ 
  1313 & 1313\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4001,7 +3990,6 @@
 \end{tikzpicture} 
 \\ 
  1311 & 3313\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4360,7 +4348,6 @@
 \end{tikzpicture} 
 \\ 
  1133 & 1133\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4719,7 +4706,6 @@
 \end{tikzpicture} 
 \\ 
  1131 & 3133\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5078,7 +5064,6 @@
 \end{tikzpicture} 
 \\ 
  1113 & 1333\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5437,7 +5422,6 @@
 \end{tikzpicture} 
 \\ 
  1111 & 3333\\ 
- (1111) & (1111)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
