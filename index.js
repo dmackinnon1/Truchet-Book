@@ -239,6 +239,7 @@ for (let p = 0; p < 8; p++){
 		.addContent(new doc.RawText("}"))
 		.command(",")
 		.command("newline")
+		.command("vspace","0.5cm",true)
 		.addContent(new doc.RawText("\n"))
 		.addContent(new doc.RawText("\\marginnote[-2\\baselineskip]{\\centering\\fontsize{36}{40}\\selectfont" + tuple.rDFamily +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{tiles/parent-" + tuple.rDFamily+ ".gtex}}\n"))
