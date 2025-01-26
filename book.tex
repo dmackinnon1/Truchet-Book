@@ -33,7 +33,7 @@
 
 %\par\smallcaps{tufte-latex.googlecode.com}
 
-\par\textit{Current printing, \monthyear}
+\par\textit{Current printing, \today}
 \end{fullwidth}
 
 % r.5 contents
@@ -125,7 +125,24 @@ We can group the 4x4 Truchet tile patterns with rotational symmetry into familie
 \chapter{Friezes of Truchet patterns}
 
 \noindent
-Each 4x4 Truchet pattern can be treated like a tile and used in a larger pattern. A \textit{frieze} is a horizontal strip of tiles. Laying each of the 256 tiles in a frieze of the same tiles reveals other symmetrical patterns.
+Each 4x4 Truchet pattern can be treated like a tile and used in a larger pattern. A \textit{frieze} is a horizontal strip of the same tile pattern repeated. Friezes of 4x4 Truchet pattern tiles with rotational symmetry can be quite striking, and have some interesting characteristics. 
+
+\vspace{0.5cm}
+\noindent
+In frieze of more than one row of a primary tile reveals a secondary tile pattern that appears as another horizontal strip of 4x4 Truchet tile patterns nestled between the rows of primary tiles. Below, a frieze of 2223 tiles has a secondary pattern of 1000 tiles.
+\,
+
+\vspace{0.3cm}
+\input{sample_frieze}
+
+\vspace{0.3cm}
+\noindent
+Frieze patterns made from tiles of a particular family will have secondary tiles that also have rotational symmetry and that are from the same family. For example, frieze patters from the family 0001 will have secondary patterns from the family 1000. 
+\marginnote{\centering\input{secondary_positions}} 
+
+\vspace{0.5cm}
+\noindent
+You can compute the secondary frieze tile pattern of a given tile by reversing the digits of the tile label and adding 2 to each digit, modulo 4. This is because the label of the secondary frieze tile pattern comes from the top right corner of the primary tile pattern.
 
 \newpage
 
