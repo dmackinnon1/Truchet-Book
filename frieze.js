@@ -20,8 +20,17 @@ class TileTup {
 
 	friezeDualTable(){
 
-		let contents = [this.dualCode, this.code, this.dual, this.tile];
-		let tab = new doc.LaTeXTabular(2,2,contents);
+		let contents = [
+			"(" +this.dualFamily +")",
+			"(" +this.family +")",
+			this.dualCode, 
+			this.code, 
+			this.dual, 
+			this.tile,
+			"{\\small \\textit{primary}}",
+			"{\\small \\textit{secondary}}",
+			];
+		let tab = new doc.LaTeXTabular(2,4,contents);
 		return tab.build();
 	}
 
@@ -157,24 +166,6 @@ for (var i = 0; i < 16; i++){
 					
 	} 
 }
-
-// // Create all parent tile patterns from sequences
-// console.log("creating parent tiles");
-// for (var i = 0; i < 16; i++){	
-// 	var psequence = parents[i];
-// 	var pfile = folderName + "/parent-" + psequence +".gtex";
-// 	tikz.reset();
-// 	truchetFrom(psequence,truchetModule.truchet);
-// 	raw = truchetModule.truchet.tiles.latexGrid(true).build();
-// 	fs.writeFile(pfile, raw, function(err) {
-//     if(err) {
-//         return console.log("There was an error" + err);
-//         console.log("exiting");
-// 		process.exit(1);
-//     }
-// 	}); 				
-	 
-// }
 
 
 console.log("creating each frieze family 2-page spread");
