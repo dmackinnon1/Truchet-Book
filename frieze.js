@@ -27,12 +27,8 @@ class TileTup {
 			this.code, 
 			this.dual, 
 			this.tile,
-			"\\,",
-			"\\,",
-			"{\\footnotesize \\textit{secondary}}",
-			"{\\footnotesize \\textit{primary}}",
 			];
-		let tab = new doc.LaTeXTabular(6,2,contents);
+		let tab = new doc.LaTeXTabular(3,2,contents);
 		return tab.build();
 	}
 
