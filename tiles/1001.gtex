@@ -1,7 +1,7 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 21:43:37
-\marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont1001\par}
+% file generated at 2025-01-25 21:53:06
+\marginnote{\centering\fontsize{36}{40}\selectfont1001\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-1001.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
@@ -322,9 +322,9 @@
 \end{tikzpicture} 
 \\ 
  \end{tabular} 
-}\,\newline\vspace{0.5cm}
+}\,\newline\vspace{1.2cm}
 
-\marginnote[-2\baselineskip]{\centering\fontsize{36}{40}\selectfont0110\par}
+\marginnote{\centering\fontsize{36}{40}\selectfont0110\par}
 \marginnote[3\baselineskip]{\centering\input{tiles/parent-0110.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
