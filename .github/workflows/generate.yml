@@ -21,6 +21,8 @@ jobs:
         run: |
           git update-index --chmod=+x ./index.js
           node ./index.js 
+          git update-index --chmod=+x ./frieze.js
+          node ./frieze.js
       - name: commit 
         run: |
           git add .
