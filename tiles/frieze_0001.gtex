@@ -1,13 +1,14 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-01-25 20:27:26
+% file generated at 2025-01-25 20:32:01
 
 \section{Frieze patterns for family 0001}
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -46,7 +47,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 2223 & 1000 & (0001) & (1000)\\ 
+ 2223 & 1000\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -364,8 +366,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -404,7 +407,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 2221 & 3000 & (0001) & (1000)\\ 
+ 2221 & 3000\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -722,8 +726,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -762,7 +767,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 2203 & 1200 & (0001) & (1000)\\ 
+ 2203 & 1200\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1080,8 +1086,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -1120,7 +1127,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 2201 & 3200 & (0001) & (1000)\\ 
+ 2201 & 3200\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1438,8 +1446,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -1478,7 +1487,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 2023 & 1020 & (0001) & (1000)\\ 
+ 2023 & 1020\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -1796,8 +1806,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -1836,7 +1847,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 2021 & 3020 & (0001) & (1000)\\ 
+ 2021 & 3020\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2154,8 +2166,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -2194,7 +2207,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 2003 & 1220 & (0001) & (1000)\\ 
+ 2003 & 1220\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2512,8 +2526,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -2552,7 +2567,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 2001 & 3220 & (0001) & (1000)\\ 
+ 2001 & 3220\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -2875,8 +2891,9 @@
 
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -2915,7 +2932,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 0223 & 1002 & (0001) & (1000)\\ 
+ 0223 & 1002\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3233,8 +3251,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -3273,7 +3292,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 0221 & 3002 & (0001) & (1000)\\ 
+ 0221 & 3002\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3591,8 +3611,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -3631,7 +3652,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 0203 & 1202 & (0001) & (1000)\\ 
+ 0203 & 1202\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -3949,8 +3971,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](1,0)--(0,0)--(0,1); 
@@ -3989,7 +4012,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 0201 & 3202 & (0001) & (1000)\\ 
+ 0201 & 3202\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4307,8 +4331,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -4347,7 +4372,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 0023 & 1022 & (0001) & (1000)\\ 
+ 0023 & 1022\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -4665,8 +4691,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -4705,7 +4732,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 0021 & 3022 & (0001) & (1000)\\ 
+ 0021 & 3022\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5023,8 +5051,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -5063,7 +5092,8 @@
  \draw[opacity=1,fill=black](3,2)--(3,3)--(4,3); 
 \end{tikzpicture} 
 \\ 
- 0003 & 1222 & (0001) & (1000)\\ 
+ 0003 & 1222\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}
@@ -5381,8 +5411,9 @@
 \end{center}
 
 \begin{center}
-\marginnote[\baselineskip]{\begin{tabular}{cccc} 
-{\small \textit{secondary}} & {\small \textit{primary}} & \begin{tikzpicture}[scale=0.25]
+\marginnote[\baselineskip]{\begin{tabular}{cc} 
+{\small \textit{secondary}} & {\small \textit{primary}}\\ 
+ \begin{tikzpicture}[scale=0.25]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](0,0)--(1,0)--(1,-1); 
  \draw[opacity=1,fill=black](0,1)--(1,1)--(1,0); 
@@ -5421,7 +5452,8 @@
  \draw[opacity=1,fill=black](4,3)--(4,2)--(3,2); 
 \end{tikzpicture} 
 \\ 
- 0001 & 3222 & (0001) & (1000)\\ 
+ 0001 & 3222\\ 
+ (0001) & (1000)\\ 
  \end{tabular} 
 }
 {\setlength{\tabcolsep}{0pt}

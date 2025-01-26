@@ -30,7 +30,7 @@ class TileTup {
 			"{\\small \\textit{primary}}",
 			"{\\small \\textit{secondary}}",
 			];
-		let tab = new doc.LaTeXTabular(2,4,contents);
+		let tab = new doc.LaTeXTabular(4,2,contents);
 		return tab.build();
 	}
 
