@@ -132,7 +132,7 @@ class FamRel{
 			"skew (-)",
 			"skew (+)",
 			"opposite",	
-			"signature",
+			"\, ",
 			this.dual,
 			this.skewPositive, 
 			this.skewNegative, 

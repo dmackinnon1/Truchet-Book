@@ -96,5 +96,5 @@
 \end{tikzpicture} 
 \\ 
  0001 & 1110 & 1011 & 1101 & 1000\\ 
- signature & opposite & skew (+) & skew (-) & dual\\ 
+ ,  & opposite & skew (+) & skew (-) & dual\\ 
  \end{tabular} 
