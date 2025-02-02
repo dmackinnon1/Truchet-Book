@@ -30,6 +30,7 @@ function allSequences(max){
 	return list;
 }
 
+
 function parentFromSequence(sequence){
 	let parent = "";
 	let length = sequence.length;
@@ -55,13 +56,44 @@ function parentRotaDual(sequence){
 	let pd = parentFromSequence(sequence);
 	let dual = [];
 	let length = pd.length;
-	sequence = Array.from(pd);
+	//sequence = Array.from(pd);
 	for (let i=0; i<length;i++){
 		dual += "" + (Number(pd[i])+1)%2;
 	} 
 	return dual;
 }
 
+function shuffle(sequence){
+	let seqArray =  Array.from(sequence);
+	let shuffled = [0,0,0,0];
+	shuffled[0] = seqArray[2];
+	shuffled[1] = seqArray[0];
+	shuffled[2] = seqArray[3];
+	shuffled[3] = seqArray[1];
+	let result = "";
+	for (let i=0; i< seqArray.length;i++){
+		result += "" + shuffled[i];
+	} 
+	return result;
+}
+
+function increment(sequence){
+
+	let seqArray =  Array.from(sequence);
+	let next = [0,0,0,0];
+	let result = "";
+	
+	for (let i=0; i<sequence.length;i++){
+		next[i] = (Number(seqArray[i]) + 1)%4;
+	} 
+	for (let i=0; i<sequence.length;i++){
+		result += "" + next[i]; 
+	} 
+
+	return result;
+}
+
+//object for main family pages
 class FamTup {
 
 	constructor(){
@@ -75,9 +107,50 @@ class FamTup {
 		
 	}
 
+}
+//object for related families
+class FamRel{
+
+	constructor(){
+		this.family = "";
+		this.familyDiagram = ""
+		this.opp = "";
+		this.oppDiagram = "";
+		this.skewPositive = "";
+		this.skewPositiveDiagram = "";
+		this.dual = "";
+		this.dualDiagram= "";
+		this.skewNegative = "";
+		this.skewNegativeDiagram = "";
+
+	}
+
+	table(){
+
+		let contents = [
+			"dual",
+			"skew negative",
+			"skew positive",
+			"opposite",	
+			"signature",
+			this.dual,
+			this.skewPositive, 
+			this.skewNegative, 
+			this.opp, 
+			this.family,
+			this.dualDiagram,
+			this.skewPositiveDiagram, 
+			this.skewPositiveDiagram, 
+			this.oppDiagram, 
+			this.familyDiagram,
+			];
+		let tab = new doc.LaTeXTabular(5,3,contents);
+		return tab.build();
+	}
 
 
 }
+
 
 function truchetFrom(sequence, theTruchet){
 	let sarray = Array.from(sequence)
@@ -249,21 +322,7 @@ for (let p = 0; p < 8; p++){
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.rDLabelGrid.build()+ "}\n"))
 		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
 		.addContent(new doc.RawText(tuple.rDTileGrid.build()))
-		.addContent(new doc.RawText("}"));		
-
-		//.command("vspace","0.8cm",true)
-		// .addContent(new doc.RawText("{\\Large\n"))
-		// .addContent(new doc.RawText(labelTab.build()))
-		// .addContent(new doc.RawText("}\n"))
-		// .command(",")
-		// .command("newline")
-		// .addContent(new doc.RawText("\n"))
-		// .command("vspace","0.8cm",true)
-		// .command("input",tileDoc)
-		// .command(",")
-		// .command("newline")
-		// .command("vspace","0.4cm",true)
-		// .addContent(new doc.RawText("\\input{positions}"));		
+		.addContent(new doc.RawText("}"));			
 	docEnv.newPage();
 	
 	
@@ -339,3 +398,59 @@ fs.writeFile(parentTable, tab3.build(), function(err) {
 		process.exit(1);
     }
 }); 
+
+console.log("creating a set of family relation files");
+
+plist = allSequences(2); 
+truchetModule.truchet.start(0.25,4);
+let pRels = [];
+
+for (var i = 0; i < plist.length; i++){	
+	var psequence = plist[i];
+	var prel = new FamRel();
+	prel.family = psequence;
+	prel.opp = parentFromSequence(increment(increment(psequence)));
+	prel.oppDiagram = "";
+	prel.skewPositive = parentFromSequence(increment(shuffle(psequence)));
+	prel.skewPositiveDiagram = "";
+	prel.dual = parentFromSequence(increment(shuffle(prel.skewPositive)));
+	prel.dualDiagram= "";
+	prel.skewNegative = parentFromSequence(increment(shuffle(prel.dual)));
+	prel.skewNegativeDiagram = "";
+
+	tikz.reset();
+	truchetFrom(prel.family,truchetModule.truchet);
+	prel.familyDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+	tikz.reset();
+	truchetFrom(prel.opp,truchetModule.truchet);
+	prel.oppDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
+
+	tikz.reset();
+	truchetFrom(prel.skewPositive,truchetModule.truchet);
+	prel.skewPositiveDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
+
+	tikz.reset();
+	truchetFrom(prel.dual,truchetModule.truchet);
+	prel.dualDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+	tikz.reset();
+	truchetFrom(prel.skewNegative,truchetModule.truchet);
+	prel.skewPositiveDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+	let relFile =  folderName+"/"+psequence+ "-relations.gtex";
+	
+	fs.writeFile(relFile, prel.table(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
+}
+
+
+
+
+
