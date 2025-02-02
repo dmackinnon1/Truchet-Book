@@ -140,7 +140,7 @@ class FamRel{
 			this.family,
 			this.dualDiagram,
 			this.skewNegativeDiagram, 
-			this.akewPositiveDiagram, 
+			this.skewPositiveDiagram, 
 			this.oppDiagram, 
 			this.familyDiagram,
 			];
