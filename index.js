@@ -409,13 +409,13 @@ for (var i = 0; i < plist.length; i++){
 	var psequence = plist[i];
 	var prel = new FamRel();
 	prel.family = psequence;
-	prel.opp = parentFromSequence((increment(psequence)));
+	prel.opp = parentFromSequence((increment(psequence.slice())));
 	prel.oppDiagram = "";
-	prel.skewPositive = parentFromSequence(increment(shuffle(psequence)));
+	prel.skewPositive = parentFromSequence(increment(shuffle(psequence.slice())));
 	prel.skewPositiveDiagram = "";
-	prel.dual = parentFromSequence(increment(shuffle(prel.skewPositive)));
+	prel.dual = parentFromSequence(increment(increment(shuffle(shuffle(psequence.slice())))));
 	prel.dualDiagram= "";
-	prel.skewNegative = parentFromSequence(increment(increment(shuffle(shuffle(psequence)))));
+	prel.skewNegative = parentFromSequence(increment(increment(increment(shuffle(shuffle(shuffle(psequence.slice())))))));
 	prel.skewNegativeDiagram = "";
 
 	tikz.reset();
