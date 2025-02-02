@@ -436,7 +436,7 @@ for (var i = 0; i < plist.length; i++){
 
 	tikz.reset();
 	truchetFrom(prel.skewNegative,truchetModule.truchet);
-	prel.skewNegative  = truchetModule.truchet.tiles.latexGrid(true).build();	
+	prel.skewNegativeDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
 
 	let relFile =  folderName+"/"+psequence+ "-relations.gtex";
 	
