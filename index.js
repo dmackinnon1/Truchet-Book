@@ -415,7 +415,7 @@ for (var i = 0; i < plist.length; i++){
 	prel.skewPositiveDiagram = "";
 	prel.dual = parentFromSequence(increment(shuffle(prel.skewPositive)));
 	prel.dualDiagram= "";
-	prel.skewNegative = parentFromSequence(increment(shuffle(prel.dual)));
+	prel.skewNegative = parentFromSequence(increment(increment(shuffle(shuffle(psequence)))));
 	prel.skewNegativeDiagram = "";
 
 	tikz.reset();
