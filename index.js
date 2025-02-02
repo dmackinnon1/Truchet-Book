@@ -148,6 +148,35 @@ class FamRel{
 		return tab.build();
 	}
 
+	init(psequence) {
+		this.family = psequence;
+		this.opp = parentFromSequence((increment(psequence.slice()))); //one increment
+		this.skewPositive = parentFromSequence(increment(shuffle(psequence.slice()))); //one inc and one shuffle
+		this.dual = parentFromSequence(increment(increment(shuffle(shuffle(psequence.slice()))))); //2 incs 2 shuffles
+		this.skewNegative = parentFromSequence(increment(increment(increment(shuffle(shuffle(shuffle(psequence.slice()))))))); //3 of each
+	
+		tikz.reset();
+		truchetFrom(this.family,truchetModule.truchet);
+		this.familyDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+		tikz.reset();
+		truchetFrom(this.opp,truchetModule.truchet);
+		this.oppDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
+
+		tikz.reset();
+		truchetFrom(this.skewPositive,truchetModule.truchet);
+		this.skewPositiveDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
+
+		tikz.reset();
+		truchetFrom(this.dual,truchetModule.truchet);
+		this.dualDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+		tikz.reset();
+		truchetFrom(this.skewNegative,truchetModule.truchet);
+		this.skewNegativeDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
+
+	}
+
 
 }
 
@@ -403,41 +432,12 @@ console.log("creating a set of family relation files");
 
 plist = allSequences(2); 
 truchetModule.truchet.start(0.25,4);
-let pRels = [];
 
 for (var i = 0; i < plist.length; i++){	
 	var psequence = plist[i];
 	var prel = new FamRel();
-	prel.family = psequence;
-	prel.opp = parentFromSequence((increment(psequence.slice())));
-	prel.oppDiagram = "";
-	prel.skewPositive = parentFromSequence(increment(shuffle(psequence.slice())));
-	prel.skewPositiveDiagram = "";
-	prel.dual = parentFromSequence(increment(increment(shuffle(shuffle(psequence.slice())))));
-	prel.dualDiagram= "";
-	prel.skewNegative = parentFromSequence(increment(increment(increment(shuffle(shuffle(shuffle(psequence.slice())))))));
-	prel.skewNegativeDiagram = "";
-
-	tikz.reset();
-	truchetFrom(prel.family,truchetModule.truchet);
-	prel.familyDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
-
-	tikz.reset();
-	truchetFrom(prel.opp,truchetModule.truchet);
-	prel.oppDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
-
-	tikz.reset();
-	truchetFrom(prel.skewPositive,truchetModule.truchet);
-	prel.skewPositiveDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
-
-	tikz.reset();
-	truchetFrom(prel.dual,truchetModule.truchet);
-	prel.dualDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
-
-	tikz.reset();
-	truchetFrom(prel.skewNegative,truchetModule.truchet);
-	prel.skewNegativeDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
-
+	prel.init(psequence);
+	
 	let relFile =  folderName+"/"+psequence+ "-relations.gtex";
 	
 	fs.writeFile(relFile, prel.table(), function(err) {
