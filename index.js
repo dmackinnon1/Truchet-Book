@@ -144,7 +144,7 @@ class FamRel{
 			this.oppDiagram, 
 			this.familyDiagram,
 			];
-		let tab = new doc.LaTeXTabular(5,3,contents);
+		let tab = new doc.LaTeXTabular(3,5,contents);
 		return tab.build();
 	}
 
