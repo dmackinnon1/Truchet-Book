@@ -129,8 +129,8 @@ class FamRel{
 
 		let contents = [
 			"dual",
-			"skew negative",
-			"skew positive",
+			"skew (-)",
+			"skew (+)",
 			"opposite",	
 			"signature",
 			this.dual,
