@@ -116,10 +116,10 @@ for (let d=0; d < allForegrounds.length; d++ ){
 	});
 
 	if (foreground == background){
-		ch3Doc.section("Design using " + foreground);
+		ch3Doc.subsection("Design using " + foreground);
 	}
 	else{
-		ch3Doc.section("Design using " + foreground + " and " + background);
+		ch3Doc.subsection("Design using " + foreground + " and " + background);
 	}
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
@@ -158,10 +158,10 @@ designSection(allForegrounds, allForegrounds, ch3File);
 allForegrounds = ['2222','2002','2332','2112','3223','3003','3333','3113'];
 allBackgrounds = ['0000','0220','0110','0330','1001','1221','1111','1331'];
 ch3File = "op-dual-designs.tex";
-designSection(allForegrounds, allForegrounds, ch3File);
+designSection(allForegrounds, allBackgrounds, ch3File);
 
 //some duals
 allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
 allBackgrounds = ['3200','1220','2302','3201','3110','1330','3301','1323'];
 ch3File = "designs.tex";
-designSection(allForegrounds, allForegrounds, ch3File);
+designSection(allForegrounds, allBackgrounds, ch3File);

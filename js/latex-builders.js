@@ -64,6 +64,11 @@ class LaTeXEnv {
 		this.addContent(s);
 		return this;
 	}
+	subsection(title){
+		let s = new LaTeXCommand("subsection", title, true);
+		this.addContent(s);
+		return this;
+	}
 }
 
 class LaTeXCommand{
@@ -151,6 +156,12 @@ class LaTeXDoc {
 
 	section(title){
 		let s = new LaTeXCommand("section", title, true);
+		this.addContent(s);
+		return this;
+	}
+
+	subsection(title){
+		let s = new LaTeXCommand("subsection", title, true);
 		this.addContent(s);
 		return this;
 	}
