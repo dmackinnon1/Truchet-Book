@@ -133,7 +133,8 @@ Related families and tiles can be obtained from applying simple mappings on the 
 \begin{align*}        \text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{4};\\
     \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{4};\\
     \text{dual} : (a,b,c,d) &\mapsto (d+2, c+2, b+ 2, a+2) \pmod{4};\\
-    \text{skew}- : (a,b,c,d) &\mapsto (b+3, d+3, a+ 3, c+3) \pmod{4};
+    \text{skew}- : (a,b,c,d) &\mapsto (b+3, d+3, a+ 3, c+3) \pmod{4};\\
+    \text{opposite} : (a,b,c,d) &\mapsto (a+2, b+2, c+2, d+2) \pmod{4};
 \end{align*}
 
 \vspace{0.5cm}
@@ -156,14 +157,14 @@ On the following pages each family will be shown along with its corresponding \t
 % }
 % \input{tiles/bigTable.gtex}
 % \end{center}
-\chapter{Friezes of Truchet patterns}
+\chapter{Uniform friezes}
 
 \noindent
-Each $4x4$ Truchet pattern can be treated like a tile and used in a larger pattern. A \textit{frieze} is a horizontal strip of the same tile pattern repeated. Friezes of $4x4$ Truchet pattern tiles with rotational symmetry can be quite striking, and have some interesting characteristics. 
+Each $4x4$ Truchet pattern can be treated like a tile and used in a larger pattern. A uniform \textit{frieze} is a horizontal strip of the same tile pattern repeated. Friezes of $4x4$ Truchet pattern tiles with rotational symmetry can be quite striking, and have some interesting characteristics. 
 
 \vspace{0.5cm}
 \noindent
-In frieze of more than one row of a primary tile reveals a secondary tile pattern that appears as another horizontal strip of 4x4 Truchet tile patterns nestled between the rows of primary tiles. Below, a frieze of 2223 tiles has a secondary pattern of 1000 tiles.
+A frieze of more than one row of a primary tile reveals a secondary tile pattern that appears as another horizontal strip of $4x4$ Truchet tile patterns nestled between the rows of primary tiles. Below, a frieze of 2223 tiles has a secondary pattern of 1000 tiles.
 \,
 
 \vspace{0.5cm}
@@ -171,16 +172,20 @@ In frieze of more than one row of a primary tile reveals a secondary tile patter
 
 \vspace{0.5cm}
 \noindent
-Frieze patterns made from tiles of a particular family will have secondary tiles that also have rotational symmetry and that are from the same family. For example, frieze patters from the family 0001 will have secondary patterns from the family 1000. 
-\marginnote{\centering\input{secondary_positions}} 
+The secondary tile in a frieze pattern is the pattern that has been referred to previously as the \textit{dual} of the original pattern. The dual of a tile pattern is the pattern formed by taking the top right quadrant of the original tile as the prototile of the new tile.
 
 \vspace{0.5cm}
 \noindent
-You can compute the secondary frieze tile pattern of a given tile by reversing the digits of the tile label and adding 2 to each digit, modulo 4. This is because the label of the secondary frieze tile pattern comes from the top right corner of the primary tile pattern. 
+Some tiles are self-dual, and frieze patterns formed by self-dual tiles show a much more uniform pattern, as the extra rows of tiles seemingly nestled between the rows of the original tile are made up of the same original tile. Friezes of self-dual tiles have a third \textit{tertiary} tile pattern with $90^{\circ}$ rotational symmetry that appears to overlap between adjacent tiles of the original tile. These tertiary tile patterns are the \textit{skew} of the original tile pattern. Some self-dual friezes are also self-skew, leading to even more uniform patterns.
 
 \vspace{0.5cm}
 \noindent
-If tile \textit{t} is the primary tile in a frieze pattern and \textit{s} is the secondary, then \textit{t} will be the secondary tile in the frieze pattern formed by \textit{s}. This effectively reduces the total number of unique frieze patterns to 136, these patterns are shown on the pages that follow.
+We can consider the uniform friezes formed by the dual tiles as the same pattern. There are $6$ pairs of families where the original and dual are not the same, and these pairs of families yield $16$ patterns each. The $4$ remaining families contain some self-dual patterns, and some patterns that are \textit{opp-dual} (the secondary tile is the opposite tile of the original), also reducing the number of patterns. These $4$ remaining families provide $10$ distinct frieze patterns each. This means that the $256$ tile patterns generate $136$ distinct friezes. 
+
+\vspace{0.5cm}
+\noindent
+
+\noindent
 \newpage
 
 \input{ch2_friezes}
