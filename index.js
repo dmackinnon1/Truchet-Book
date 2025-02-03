@@ -430,6 +430,9 @@ fs.writeFile(parentTable, tab3.build(), function(err) {
 
 console.log("creating a set of family relation files");
 
+let selfDuals = new doc.LaTeXDoc();
+let notSelfDuals = new doc.LaTeXDoc();
+
 plist = allSequences(2); 
 truchetModule.truchet.start(0.25,4);
 
@@ -439,6 +442,19 @@ for (var i = 0; i < plist.length; i++){
 	prel.init(psequence);
 	
 	let relFile =  folderName+"/"+psequence+ "-relations.gtex";
+
+	if (prel.family== prel.dual){
+		selfDuals.input(relFile)
+		.command(",")
+		.command("newline")
+		.command("vspace","1.2cm",true);
+
+	} else {
+		notSelfDuals.input(relFile)
+		.command(",")
+		.command("newline")
+		.command("vspace","1.2cm",true);
+	}
 	
 	fs.writeFile(relFile, prel.table(), function(err) {
     if(err) {
@@ -446,11 +462,24 @@ for (var i = 0; i < plist.length; i++){
         console.log("exiting");
 		process.exit(1);
     }
-}); 
-
-}
-
+	}); 
+}	
 
 
+// console.log("creating a family relations page");
 
+fs.writeFile("selfDuals.tex", selfDuals.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 
 
+fs.writeFile("notSelfDuals.tex", notSelfDuals.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 
