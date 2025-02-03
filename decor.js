@@ -122,7 +122,10 @@ for (let d=0; d < allForegrounds.length; d++ ){
 		ch3Doc.subsection("Design using " + foreground + " and " + background);
 	}
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
-	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
+	
+	if(foreground != background){
+		ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
+	}
 	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
 	ch3Doc.input(designFile);
 	ch3Doc.addContent(new doc.RawText("\n \\end{center}\n"));
@@ -168,7 +171,7 @@ designSection(allForegrounds, allBackgrounds, ch3File);
 
 
 //contrasting
-allForegrounds = ['2312','0312','0221','2201','0120'];
-allBackgrounds = ['2319','0132','1203','2012','2012'];
+allForegrounds = ['2312','0312','0221','2201','0120','2003','2330','0312'];
+allBackgrounds = ['2310','0132','1203','2012','2012','2220','2130','0310'];
 ch3File = "contrasting-designs.tex";
 designSection(allForegrounds, allBackgrounds, ch3File);
