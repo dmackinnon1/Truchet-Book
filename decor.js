@@ -141,15 +141,15 @@ fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
 
 
 //uniform patterns
-let allForegrounds = ['2200','2020','0202','0022','2130','0312','3201','1023','3311','3131','1313','1133'];
-let allBackgrounds = ['2200','2020','0202','0022','2130','0312','3201','1023','3311','3131','1313','1133'];
+let allForegrounds = ['2200','0202','2130','3201','3311'];
+let allBackgrounds = ['2200','0202','2130','3201','3311'];
 let ch3File = "uniform-designs.tex";
 designSection(allForegrounds, allForegrounds, ch3File);
 
 
 //uniform patterns
-allForegrounds = ['2310','0132','3021','1203'];
-allBackgrounds = ['2310','0132','3021','1203'];
+allForegrounds = ['2310','3021'];
+allBackgrounds = ['2310','3021'];
 ch3File = "strongly-uniform-designs.tex";
 designSection(allForegrounds, allForegrounds, ch3File);
 
@@ -162,6 +162,13 @@ designSection(allForegrounds, allBackgrounds, ch3File);
 
 //some duals
 allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
-allBackgrounds = ['3200','1220','2302','3201','3110','1330','3301','1323'];
+allBackgrounds = ['3200','1220','2302','3210','3110','1330','3301','1323'];
 ch3File = "designs.tex";
+designSection(allForegrounds, allBackgrounds, ch3File);
+
+
+//contrasting
+allForegrounds = ['2312','0312','0221','2201','0120'];
+allBackgrounds = ['2319','0132','1203','2012','2012'];
+ch3File = "contrasting-designs.tex";
 designSection(allForegrounds, allBackgrounds, ch3File);
