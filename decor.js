@@ -42,14 +42,11 @@ try {
 	}
 
 
-let ch3Doc = new doc.LaTeXDoc();
-
-console.log("building pattern 1");
 truchetModule.truchet.start(0.25,4);
 
-let allForegrounds = ['2123','0113','2311','0231','0213','2003','2330','0312','3120','1012','0113'];
-let allBackgrounds = ['2130','3133','3113','1023','1203','2220','2130','0310','2302','3210','1332'];
+function designSection(allForegrounds, allBackgrounds, sectionFile){
 
+let ch3Doc = new doc.LaTeXDoc();
 for (let d=0; d < allForegrounds.length; d++ ){
 	let patternList = [];
 
@@ -118,7 +115,12 @@ for (let d=0; d < allForegrounds.length; d++ ){
     	}
 	});
 
-	ch3Doc.section("Design using " + foreground + " and " + background);
+	if (foreground == background){
+		ch3Doc.section("Design using " + foreground);
+	}
+	else{
+		ch3Doc.section("Design using " + foreground + " and " + background);
+	}
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
 	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
@@ -127,12 +129,39 @@ for (let d=0; d < allForegrounds.length; d++ ){
 	ch3Doc.addContent(new doc.RawText("\n"))
 }
 
-let ch3File = "designs.tex";
-
-fs.writeFile(ch3File, ch3Doc.build(), function(err) {
+fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
    if(err) {
     	return console.log("There was an error" + err);
         console.log("exiting");
 		process.exit(1);
     }
 });
+
+}
+
+
+//uniform patterns
+let allForegrounds = ['2200','2020','0202','0022','2130','0312','3201','1023','3311','3131','1313','1133'];
+let allBackgrounds = ['2200','2020','0202','0022','2130','0312','3201','1023','3311','3131','1313','1133'];
+let ch3File = "uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
+
+
+//uniform patterns
+allForegrounds = ['2310','0132','3021','1203'];
+allBackgrounds = ['2310','0132','3021','1203'];
+ch3File = "strongly-uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
+
+
+//op-duals
+allForegrounds = ['2222','2002','2332','2112','3223','3003','3333','3113'];
+allBackgrounds = ['0000','0220','0110','0330','1001','1221','1111','1331'];
+ch3File = "op-dual-designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
+
+//some duals
+allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
+allBackgrounds = ['3200','1220','2302','3201','3110','1330','3301','1323'];
+ch3File = "designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
