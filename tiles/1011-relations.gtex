@@ -96,5 +96,5 @@
 \end{tikzpicture} 
 \\ 
  1011 & 0100 & 1000 & 0001 & 1101\\ 
- ,  & opposite & skew (+) & skew (-) & dual\\ 
+ ,  & companion & skew (+) & skew (-) & dual\\ 
  \end{tabular} 

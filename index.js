@@ -131,7 +131,7 @@ class FamRel{
 			"dual",
 			"skew (-)",
 			"skew (+)",
-			"opposite",	
+			"companion",	
 			"\, ",
 			this.dual,
 			this.skewPositive, 
