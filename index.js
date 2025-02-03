@@ -132,7 +132,7 @@ class FamRel{
 			"skew (-)",
 			"skew (+)",
 			"companion",	
-			"\, ",
+			" ",
 			this.dual,
 			this.skewPositive, 
 			this.skewNegative, 
@@ -155,10 +155,12 @@ class FamRel{
 		this.dual = parentFromSequence(increment(increment(shuffle(shuffle(psequence.slice()))))); //2 incs 2 shuffles
 		this.skewNegative = parentFromSequence(increment(increment(increment(shuffle(shuffle(shuffle(psequence.slice()))))))); //3 of each
 	
+		truchetModule.truchet.start(0.4,4);
 		tikz.reset();
 		truchetFrom(this.family,truchetModule.truchet);
 		this.familyDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
 
+		truchetModule.truchet.start(0.25,4);
 		tikz.reset();
 		truchetFrom(this.opp,truchetModule.truchet);
 		this.oppDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();
@@ -434,7 +436,6 @@ let selfDuals = new doc.LaTeXDoc();
 let notSelfDuals = new doc.LaTeXDoc();
 
 plist = allSequences(2); 
-truchetModule.truchet.start(0.25,4);
 
 for (var i = 0; i < plist.length; i++){	
 	var psequence = plist[i];

@@ -1,5 +1,5 @@
 \begin{tabular}{ccccc} 
-\begin{tikzpicture}[scale=0.25]
+\begin{tikzpicture}[scale=0.4]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw [ultra thick] (0,0)--(1,-1); 
  \draw [ultra thick] (0,1)--(1,0); 
@@ -96,5 +96,5 @@
 \end{tikzpicture} 
 \\ 
  0011 & 1100 & 1010 & 0101 & 1100\\ 
- ,  & companion & skew (+) & skew (-) & dual\\ 
+   & companion & skew (+) & skew (-) & dual\\ 
  \end{tabular} 
