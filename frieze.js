@@ -9,6 +9,35 @@ let doc = require('./js/latex-builders.js');
 let tikz = require('./js/tikZBldr.js');
 
 
+function shuffle(sequence){
+	let seqArray =  Array.from(sequence);
+	let shuffled = [0,0,0,0];
+	shuffled[0] = seqArray[2];
+	shuffled[1] = seqArray[0];
+	shuffled[2] = seqArray[3];
+	shuffled[3] = seqArray[1];
+	let result = "";
+	for (let i=0; i< seqArray.length;i++){
+		result += "" + shuffled[i];
+	} 
+	return result;
+}
+
+function increment(sequence){
+	let seqArray =  Array.from(sequence);
+	let next = [0,0,0,0];
+	let result = "";
+	
+	for (let i=0; i<sequence.length;i++){
+		next[i] = (Number(seqArray[i]) + 1)%4;
+	} 
+	for (let i=0; i<sequence.length;i++){
+		result += "" + next[i]; 
+	} 
+
+	return result;
+}
+
 class TileTup {
 
 	constructor(){
@@ -23,13 +52,33 @@ class TileTup {
 
 	friezeDualTable(){
 
-		let contents = [
-			this.dualCode, 
-			this.code, 
-			this.dual, 
-			this.tile,
+		let contents = [];
+		let tab = "";
+		if(this.code == this.dualCode){
+			let skew = increment(shuffle(this.code));
+			tikz.reset();
+			truchetFrom(skew,truchetModule.truchet);
+			let skewPick = truchetModule.truchet.tiles.latexGrid().build();
+			contents = [
+				skew,
+				this.dualCode, 
+				this.code, 
+				skewPick,
+				this.dual, 
+				this.tile,
 			];
-		let tab = new doc.LaTeXTabular(2,2,contents);
+		tab = new doc.LaTeXTabular(2,3,contents);
+			
+		} else {
+
+			contents = [
+				this.dualCode, 
+				this.code, 
+				this.dual, 
+				this.tile,
+				];
+			tab = new doc.LaTeXTabular(2,2,contents);
+		}
 		return tab.build();
 	}
 
