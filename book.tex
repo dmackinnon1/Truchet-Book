@@ -59,7 +59,7 @@ This booklet presents a complete listing of $4x4$ Truchet tile patterns with $90
 \vspace{0.5cm}
 \noindent
 Each $4x4$
-Truchet tile pattern with rotational symmetry has a core $2x2$ pattern in one of its quadrants that is rotated to produce the overall pattern. \marginnote{\centering\input{positions}} In this booklet, the core pattern is assumed to be in the lower left. Each pattern can identified as a sequence of $4$ digits $abcd$ that list the rotational positions of each tile in the lower left quadrant.
+Truchet tile pattern with rotational symmetry has a core $2x2$ pattern in one of its quadrants that is rotated to produce the overall pattern. \marginnote{\centering\input{positions}} In this booklet, the core pattern, or prototile, is assumed to be in the lower left. Each pattern can identified as a sequence of $4$ digits $(a,b,c,d)$, or more succinctly, $abcd$, that list the rotational positions of each tile in the lower left quadrant. This sequence $abcd$ will be referred to as the \textit{signature} of the tile pattern.
 
 \vspace{2cm}
 
@@ -105,7 +105,9 @@ We can group the $4x4$ Truchet tile patterns with rotational symmetry into famil
 {\begin{center} \textit{The 0110 pattern family}\end{center}}
 }
 
+\vspace{0.5cm}
 
+\noindent
 For a given family, there is corresponding \textit{companion} family, the family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$.  There are also two \textit{skew} families, formed by taking the upper left and lower right quadrants of an original family tile pattern as a founding pattern and a \textit{dual} family, formed by taking the upper right quadrant as a founding patterns. A family is always different than its companion, and each family has a distinct companion, but it can happen that skew and duals can coincide. Self-dual families, where the dual family is the same as the original are of particular interest in the frieze patterns of the next chapter.
 
 \section{Self-Dual families}
@@ -114,6 +116,29 @@ For a given family, there is corresponding \textit{companion} family, the family
 \section{Non self-dual families}
 \input{notSelfDuals}
 
+\section{Family and tile pattern mappings}
+
+\marginnote{\centering\input{tiles/tileList2.gtex}} 
+Related families and tiles can be obtained from applying simple mappings on the signature of the tile pattern.
+
+\subsection{Family mappings}
+\begin{align*}        \text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{2};\\
+    \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{2};\\
+    \text{dual} : (a,b,c,d) &\mapsto (d+2, c+2, b+ 2, a+2) \pmod{2};\\
+    \text{skew}- : (a,b,c,d) &\mapsto (b+3, d+3, a+ 3, c+3) \pmod{2};
+\end{align*}
+
+\subsection{Tile pattern mappings}
+\marginnote{\centering\input{positions}}
+\begin{align*}        \text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{4};\\
+    \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{4};\\
+    \text{dual} : (a,b,c,d) &\mapsto (d+2, c+2, b+ 2, a+2) \pmod{4};\\
+    \text{skew}- : (a,b,c,d) &\mapsto (b+3, d+3, a+ 3, c+3) \pmod{4};
+\end{align*}
+
+\vspace{0.5cm}
+
+\noindent
 On the following pages each family will be shown along with its corresponding \textit{companion} family, the family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$. 
 
 \newpage
