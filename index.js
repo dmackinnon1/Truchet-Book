@@ -1,12 +1,18 @@
 #!/usr/bin/env node
-/* Generates most diagrams in the introduction and first
- * chapter of Truchet Book.
- */
+
 
 const fs = require('fs');
 let truchetModule = require('./js/tikZTruchet.js');
 let doc = require('./js/latex-builders.js');
 let tikz = require('./js/tikZBldr.js');
+
+/**
+ * 
+ *  Utility functions
+ * 
+ * 
+ */
+
 
 function getTimestamp () {
   const pad = (n,s=2) => (`${new Array(s).fill(0)}${n}`).slice(-s);
@@ -176,10 +182,7 @@ class FamRel{
 		tikz.reset();
 		truchetFrom(this.skewNegative,truchetModule.truchet);
 		this.skewNegativeDiagram  = truchetModule.truchet.tiles.latexGrid(true).build();	
-
 	}
-
-
 }
 
 
@@ -207,6 +210,12 @@ try {
 	}	catch (err) {
   		console.error(err);
 	}
+
+/**
+ * 
+ *  Creating some images used in the introduction.
+ * 
+ */
 
 console.log("creating single tile images");
 //create image for tile rotations
@@ -248,6 +257,11 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
     }
 }); 
 
+/**
+ * 
+ * Chapter 1 - Time families
+ * 
+ */
 
 //main tile generation
 console.log("creating tile patterns and parent groupings");
@@ -327,15 +341,9 @@ let mainFile = 'main.tex';
 for (let p = 0; p < 8; p++){
 
 	let tuple = tups[p];
-	//let parent = parents.pop();
-	//let kids = children.pop();
-	//let kidLables = childrenLabels.pop();
 	let docEnv = new doc.LaTeXDoc();
 	
-	//docEnv.section(parent);
 	docEnv.command("vspace","1cm",true);
-	//let tab = new doc.LaTeXTabular(4,4,kids);
-	//let labelTab = new doc.LaTeXTabular(4,4,kidLables);
 	docEnv.env().begin("center")
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote{\\centering\\fontsize{36}{40}\\selectfont" + tuple.family +"\\par}\n"))
@@ -484,3 +492,4 @@ fs.writeFile("notSelfDuals.tex", notSelfDuals.build(), function(err) {
 		process.exit(1);
     }
 	}); 
+
