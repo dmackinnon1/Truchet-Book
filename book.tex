@@ -27,29 +27,12 @@
 \thispagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{\baselineskip}
-%Copyright \copyright\ \the\year\ \thanklessauthor
-
-%\par\smallcaps{Published by \thanklesspublisher}
-
-%\par\smallcaps{tufte-latex.googlecode.com}
 
 \par\textit{Current printing, \today}
 \end{fullwidth}
 
-% r.5 contents
-%\tableofcontents
-
-%\listoffigures
-
-%\listoftables
-
-% r.7 dedication
 \cleardoublepage
 
-
-
-% % r.9 introduction
-% \cleardoublepage
 \chapter*{Introduction}
 
 \noindent
@@ -59,7 +42,7 @@ This booklet presents a complete listing of $4x4$ Truchet tile patterns with $90
 \vspace{0.5cm}
 \noindent
 Each $4x4$
-Truchet tile pattern with rotational symmetry has a core $2x2$ pattern in one of its quadrants that is rotated to produce the overall pattern. \marginnote{\centering\input{positions}} In this booklet, the core pattern, or prototile, is assumed to be in the lower left. Each pattern can identified as a sequence of $4$ digits $(a,b,c,d)$, or more succinctly, $abcd$, that list the rotational positions of each tile in the lower left quadrant. This sequence $abcd$ will be referred to as the \textit{signature} of the tile pattern.
+Truchet tile pattern with rotational symmetry has a core $2x2$ pattern in one of its quadrants that is rotated to produce the overall pattern. \marginnote{\centering\input{intro_files/positions}} In this booklet, the core pattern, or prototile, is assumed to be in the lower left. Each pattern can identified as a sequence of $4$ digits $(a,b,c,d)$, or more succinctly, $abcd$, that list the rotational positions of each tile in the lower left quadrant. This sequence $abcd$ will be referred to as the \textit{signature} of the tile pattern.
 
 \vspace{2cm}
 
@@ -101,7 +84,7 @@ We can group the $4x4$ Truchet tile patterns with rotational symmetry into famil
 {
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{2}
-\input{example_family}
+\input{intro_files/example_family}
 {\begin{center} \textit{The 0110 pattern family}\end{center}}
 }
 
@@ -129,7 +112,7 @@ Related families and tiles can be obtained from applying simple mappings on the 
 \end{align*}
 
 \subsection{Tile pattern mappings}
-\marginnote{\centering\input{positions}}
+\marginnote{\centering\input{intro_files/positions}}
 \begin{align*}        
     \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{4};\\
     \text{dual} : (a,b,c,d) &\mapsto (d+2, c+2, b+ 2, a+2) \pmod{4};\\
@@ -168,7 +151,7 @@ A frieze of more than one row of a primary tile reveals a secondary tile pattern
 \,
 
 \vspace{0.5cm}
-\input{sample_frieze}
+\input{ch2_files/sample_frieze}
 
 \vspace{0.5cm}
 \noindent
