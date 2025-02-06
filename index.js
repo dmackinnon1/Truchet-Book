@@ -36,6 +36,19 @@ function allSequences(max){
 	return list;
 }
 
+function truchetFrom(sequence, theTruchet){
+	let sarray = Array.from(sequence)
+	theTruchet.tiles.tiles[0][0] = parseInt(sarray[0]);
+	theTruchet.tiles.applyRules(0,0);
+	theTruchet.tiles.tiles[0][1] = parseInt(sarray[1]);
+	theTruchet.tiles.applyRules(0,1);
+	theTruchet.tiles.tiles[1][0] = parseInt(sarray[2]);
+	theTruchet.tiles.applyRules(1,0);
+	theTruchet.tiles.tiles[1][1] = parseInt(sarray[3]);
+	theTruchet.tiles.applyRules(1,1);
+}
+
+
 
 function parentFromSequence(sequence){
 	let parent = "";
@@ -65,6 +78,16 @@ function parentRotaDual(sequence){
 	//sequence = Array.from(pd);
 	for (let i=0; i<length;i++){
 		dual += "" + (Number(pd[i])+1)%2;
+	} 
+	return dual;
+}
+
+function friezeDualFromSequence(sequence){
+	let dual = [];
+	let length = sequence.length;
+	sequence = Array.from(sequence);
+	for (let i=0; i<length;i++){
+		dual += "" + (Number(sequence[length-i-1])+2)%4;
 	} 
 	return dual;
 }
@@ -186,21 +209,25 @@ class FamRel{
 }
 
 
-function truchetFrom(sequence, theTruchet){
-	let sarray = Array.from(sequence)
-	theTruchet.tiles.tiles[0][0] = parseInt(sarray[0]);
-	theTruchet.tiles.applyRules(0,0);
-	theTruchet.tiles.tiles[0][1] = parseInt(sarray[1]);
-	theTruchet.tiles.applyRules(0,1);
-	theTruchet.tiles.tiles[1][0] = parseInt(sarray[2]);
-	theTruchet.tiles.applyRules(1,0);
-	theTruchet.tiles.tiles[1][1] = parseInt(sarray[3]);
-	theTruchet.tiles.applyRules(1,1);
-}
+
+/**
+ * 
+ *  INTRODUCTION 
+ * 
+ */
+
+console.log("---------------------------");
+console.log("Introduction: Truchet tiles");
+console.log("---------------------------");
+//create image for tile rotations
+truchetModule.truchet.start(1,1);
+let bigTiles = ['a','b','c','d'];
+let bigTiles2 = ['a','b','c','d'];
+let raw = "";
 
 
 //set up folder for files
-const folderName = 'tiles';
+let folderName = 'intro_generated_files';
 console.log("building at " + getTimestamp ());
 console.log("creating folder if needed");
 try {
@@ -210,19 +237,6 @@ try {
 	}	catch (err) {
   		console.error(err);
 	}
-
-/**
- * 
- *  Creating some images used in the introduction.
- * 
- */
-
-console.log("creating single tile images");
-//create image for tile rotations
-truchetModule.truchet.start(1,1);
-let bigTiles = ['a','b','c','d'];
-let bigTiles2 = ['a','b','c','d'];
-let raw = "";
 
 
 let tileDoc = folderName +"/"+'tileList2.gtex'; //folderName +"/"+
@@ -259,12 +273,29 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 
 /**
  * 
- * Chapter 1 - Time families
+ * CHAPTER 1- Pattern families
  * 
  */
 
-//main tile generation
+console.log("---------------------------");
+console.log("Chapter 1: Pattern families");
+console.log("---------------------------");
 console.log("creating tile patterns and parent groupings");
+
+
+//set up folder for files
+folderName = 'ch1_generated_files';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
+
+
 truchetModule.truchet.start(0.5,4);
 
 let sequences = allSequences(4);
@@ -336,7 +367,7 @@ for (var i = 0; i < 16; i++){
 
 console.log("creating each family page");
 let mainDoc = new doc.LaTeXDoc();
-let mainFile = 'main.tex';
+let mainFile = 'ch1-families.tex';
 
 for (let p = 0; p < 8; p++){
 
@@ -477,7 +508,7 @@ for (var i = 0; i < plist.length; i++){
 
 // console.log("creating a family relations page");
 
-fs.writeFile("selfDuals.tex", selfDuals.build(), function(err) {
+fs.writeFile("ch1_selfDuals.tex", selfDuals.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
@@ -485,11 +516,384 @@ fs.writeFile("selfDuals.tex", selfDuals.build(), function(err) {
     }
 	}); 
 
-fs.writeFile("notSelfDuals.tex", notSelfDuals.build(), function(err) {
+fs.writeFile("ch1_notSelfDuals.tex", notSelfDuals.build(), function(err) {
     if(err) {
         return console.log("There was an error" + err);
         console.log("exiting");
 		process.exit(1);
     }
 	}); 
+
+
+/**
+ * 
+ * CHAPTER 2 -- Uniform friezes
+ * 
+ */
+
+console.log("--------------------------");
+console.log("Chapter 2: Uniform friezes");
+console.log("--------------------------");
+
+//set up folder for files
+folderName = 'ch2_generated_files';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  		}
+	}	catch (err) {
+  		console.error(err);
+}
+
+parents = [];
+parents2 = [];
+children = []; //array of arrays grouped
+childrenLabels = [];
+let tuples = [];
+
+class TileTup {
+
+	constructor(){
+		this.tile = "";
+		this.code = "";
+		this.family = "";
+		this.dual = "";
+		this.dualCode = "";
+		this.dualFamily = "";
+		this.frieze = "";
+	}
+
+	friezeDualTable(){
+
+		let contents = [];
+		let tab = "";
+		if(this.code == this.dualCode){
+			let skew = increment(shuffle(this.code));
+			tikz.reset();
+			truchetFrom(skew,truchetModule.truchet);
+			let skewPick = truchetModule.truchet.tiles.latexGrid().build();
+			contents = [
+				skew,
+				this.dualCode, 
+				this.code, 
+				skewPick,
+				this.dual, 
+				this.tile,
+			];
+		tab = new doc.LaTeXTabular(2,3,contents);
+			
+		} else {
+
+			contents = [
+				this.dualCode, 
+				this.code, 
+				this.dual, 
+				this.tile,
+				];
+			tab = new doc.LaTeXTabular(2,2,contents);
+		}
+		return tab.build();
+	}
+
+}
+
+//main tile generation
+console.log("creating tile patterns and parent groupings");
+truchetModule.truchet.start(0.25,4);
+
+sequences = allSequences(4);
+
+
+// Create all Truchet tiles from sequences and group them.
+for (var i = 0; i < 16; i++){
+	for (var j = 0; j < 16; j ++) {
+		var sequence = sequences.pop();
+		tikz.reset();
+		truchetFrom(sequence,truchetModule.truchet);
+		
+		//get the basics of the tile tupple
+		let tup = new TileTup();
+		tup.tile = truchetModule.truchet.tiles.latexGrid().build();
+		tup.code = sequence.slice();
+		tup.family = parentFromSequence(sequence);
+		tup.dualCode = friezeDualFromSequence(sequence);
+		tup.dualFamily = parentFromSequence(tup.dualCode);
+
+		
+		
+		//build the frieze
+		let friezelist = [];
+		for (let x= 0; x < 16; x++){ //duplicate each kid 16 times
+			friezelist.push(tup.tile.slice());
+		}
+		let tab = new doc.LaTeXTabular(2,8,friezelist);
+		tup.frieze = tab.build();
+
+		//get the frieze dual
+		tikz.reset();
+		truchetFrom(tup.dualCode,truchetModule.truchet);
+		tup.dual = truchetModule.truchet.tiles.latexGrid().build();
+
+
+		var pindex = parents.indexOf(tup.family);
+		if (pindex == -1){
+			parents.push(tup.family.slice());
+			parents2.push(tup.family.slice());
+			children.push([tup.tile.slice()]);
+			childrenLabels.push([sequence]);
+			tuples.push([tup]);
+		} else {
+				children[pindex].push(tup.tile.slice());
+				childrenLabels[pindex].push(sequence);
+				tuples[pindex].push(tup);
+		}
+					
+	} 
+}
+
+
+console.log("creating each frieze family 2-page spread");
+
+let ch2Doc = new doc.LaTeXDoc();
+let ch2File = 'ch2_friezes.tex';
+
+let omitFamilies = [];
+let friezeCount = 0;
+
+for (let p = 0; p < 16; p++){
+
+	let parent = parents.pop();
+	let kids = tuples.pop(); //children.pop();
+	
+	let fam = kids[0].family;
+	if (omitFamilies.indexOf(fam) > -1){
+		console.log(" - ommitting from frieze list: " + fam);
+		continue;
+	}
+
+	omitFamilies.push(kids[0].dualFamily);
+
+	let docEnv = new doc.LaTeXDoc();
+
+	//docEnv.section(parent);
+	docEnv.command("vspace","1cm",true);
+	docEnv.env().begin("center")
+		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
+		//.command("newpage")
+		.addContent(new doc.RawText("\n"))
+		.section("Frieze patterns for family " + parent + " (secondary, "+ parentFromSequence(friezeDualFromSequence(parent))+")");
+		
+	let omitWithinFamily = [];
+	for (let f=0; f< 16; f++){ //iterating over each chiled in the kids array
+		
+		let currentTup = kids[f]; 
+
+		let code = currentTup.code;
+			if (omitWithinFamily.indexOf(code) > -1){
+				console.log(" -- ommitting from frieze list: " + code);
+				continue;
+			}
+
+		omitWithinFamily.push(currentTup.dualCode);
+		friezeCount++;
+
+		docEnv.env().begin("center").addContent(new doc.RawText("\\marginnote[\\baselineskip]{" + currentTup.friezeDualTable() +"}\n"))
+			.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{0pt}\n\\renewcommand{\\arraystretch}{0}"))
+			.addContent(new doc.RawText(currentTup.frieze))
+			.addContent(new doc.RawText("}"))
+			.addContent(new doc.RawText("\n"))
+			.command(",")
+			.addContent(new doc.RawText("\n"))
+			.command("newline")
+			.command("vspace","0.2cm",true);	
+			if (f==7){
+				docEnv.addContent(new doc.RawText("\n"))
+				.command("newpage")
+				.addContent(new doc.RawText("\n"));
+			}
+		}
+		
+	docEnv.newPage();
+	
+	
+	let childFile = folderName+"/frieze_"+parent+".gtex";
+	ch2Doc.input(childFile);
+
+	fs.writeFile(childFile, docEnv.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	});
+
+	fs.writeFile(ch2File, ch2Doc.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+});  
+}
+
+console.log("unique freizes: "+ friezeCount);
+
+/**
+ * 
+ * CHAPTER 3 - Some designs
+ * 
+ * 
+ */
+console.log("-----------------------");
+console.log("Chapter 3: Some designs");
+console.log("-----------------------");
+
+//set up folder for files
+folderName = 'ch3_generated_files';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
+
+truchetModule.truchet.start(0.25,4);
+
+function designSection(allForegrounds, allBackgrounds, sectionFile){
+
+let ch3Doc = new doc.LaTeXDoc();
+for (let d=0; d < allForegrounds.length; d++ ){
+	let patternList = [];
+
+	let background = allBackgrounds[d];
+	let foreground = allForegrounds[d];
+
+	tikz.reset();
+	truchetFrom(background,truchetModule.truchet);
+	let backTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+	for (let i=0; i<64; i++){
+		patternList.push(backTile.slice());
+	}
+	tikz.reset();
+	truchetFrom(foreground,truchetModule.truchet);
+	let foreTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+
+
+	patternList[18] = foreTile.slice();
+	patternList[19] = foreTile.slice();
+	patternList[20] = foreTile.slice();
+	patternList[21] = foreTile.slice();
+
+	patternList[26] = foreTile.slice();
+	patternList[27] = foreTile.slice();
+	patternList[28] = foreTile.slice();
+	patternList[29] = foreTile.slice();
+
+	patternList[34] = foreTile.slice();
+	patternList[35] = foreTile.slice();
+	patternList[36] = foreTile.slice();
+	patternList[37] = foreTile.slice();
+
+	patternList[42] = foreTile.slice();
+	patternList[43] = foreTile.slice();
+	patternList[44] = foreTile.slice();
+	patternList[45] = foreTile.slice();
+
+
+	let tab = new doc.LaTeXTabular(8,8,patternList);
+
+
+	let designFile = folderName+"/"+foreground+ "-" + background +"-design.gtex";
+	let foreFile =  folderName+"/"+foreground+ "-alone.gtex";
+	let backFile =  folderName+"/"+background+ "-alone.gtex";
+	
+	console.log("writing files: "+ designFile);
+	fs.writeFile(designFile, tab.build(), function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(foreFile, foreTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(backFile, backTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+
+	if (foreground == background){
+		ch3Doc.subsection("Design using " + foreground);
+	}
+	else{
+		ch3Doc.subsection("Design using " + foreground + " and " + background);
+	}
+	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
+	
+	if(foreground != background){
+		ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
+	}
+	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
+	ch3Doc.input(designFile);
+	ch3Doc.addContent(new doc.RawText("\n \\end{center}\n"));
+	ch3Doc.addContent(new doc.RawText("\n"))
+}
+
+fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
+   if(err) {
+    	return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+});
+
+}
+
+
+//uniform patterns
+let allForegrounds = ['2200','0202','2130','3201','3311'];
+let allBackgrounds = ['2200','0202','2130','3201','3311'];
+let ch3File = "ch3_uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
+
+
+//uniform patterns
+allForegrounds = ['2310','3021'];
+allBackgrounds = ['2310','3021'];
+ch3File = "ch3_strongly-uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch3File);
+
+
+//op-duals
+allForegrounds = ['2222','2002','2332','2112','3223','3003','3333','3113'];
+allBackgrounds = ['0000','0220','0110','0330','1001','1221','1111','1331'];
+ch3File = "ch3_op-dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch3File);
+
+//some duals
+allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
+allBackgrounds = ['3200','1220','2302','3210','3110','1330','3301','1323'];
+ch3File = "ch3_dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch3File);
+
+
+//contrasting
+allForegrounds = ['2312','0312','0221','2201','0120','2003','2330','0312'];
+allBackgrounds = ['2310','0132','1203','2012','2012','2220','2130','0310'];
+ch3File = "ch3_contrasting-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch3File);
+
 
