@@ -367,7 +367,7 @@ for (var i = 0; i < 16; i++){
 
 console.log("creating each family page");
 let mainDoc = new doc.LaTeXDoc();
-let mainFile = 'ch1-families.tex';
+let mainFile = 'ch1_families.tex';
 
 for (let p = 0; p < 8; p++){
 
