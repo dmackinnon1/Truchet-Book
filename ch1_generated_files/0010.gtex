@@ -1,8 +1,8 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-02-06 15:29:33
+% file generated at 2025-02-06 15:50:17
 \marginnote{\centering\fontsize{36}{40}\selectfont0010\par}
-\marginnote[3\baselineskip]{\centering\input{tiles/parent-0010.gtex}}
+\marginnote[3\baselineskip]{\centering\input{ch1_generated_files/parent-0010.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
 0010 & 0012 & 0030 & 0032\\ 
@@ -325,7 +325,7 @@
 }\,\newline\vspace{1.2cm}
 
 \marginnote{\centering\fontsize{36}{40}\selectfont1101\par}
-\marginnote[3\baselineskip]{\centering\input{tiles/parent-1101.gtex}}
+\marginnote[3\baselineskip]{\centering\input{ch1_generated_files/parent-1101.gtex}}
 \marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
 1101 & 1103 & 1121 & 1123\\ 
