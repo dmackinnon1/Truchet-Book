@@ -769,7 +769,7 @@ function designSection3(allMainTiles, sectionFile){
 let ch3Doc = new doc.LaTeXDoc();
 for (let d=0; d < allMainTiles.length; d++ ){
 
-	truchetModule.truchet.start(0.8,4);
+	truchetModule.truchet.start(0.6,4);
 	let patternList = [];
 	let mainCode = allMainTiles[d];
 
@@ -779,11 +779,11 @@ for (let d=0; d < allMainTiles.length; d++ ){
 		patternList.push(mainTile.slice());
 	}
 
-	truchetModule.truchet.start(0.5,4);
+	truchetModule.truchet.start(0.4,4);
 	truchetFrom(mainCode,truchetModule.truchet);
 	mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 
-	truchetModule.truchet.start(0.5,4);
+	truchetModule.truchet.start(0.4,4);
 	let skewCode = increment(shuffle(mainCode));
 	truchetFrom(skewCode,truchetModule.truchet);
 	let skewTile = truchetModule.truchet.tiles.latexGrid().build().slice();
@@ -819,8 +819,11 @@ for (let d=0; d < allMainTiles.length; d++ ){
     	}
 	});
 
-	ch3Doc.subsection("Four " + mainCode);
-	
+	if (mainCode != skewCode){
+		ch3Doc.subsection(mainCode + " with "+ skewCode);
+	} else {
+		ch3Doc.subsection(mainCode);
+	}
 
 	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+mainFile+"}\\newline \n" +mainCode + "}"));
 	
