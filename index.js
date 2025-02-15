@@ -753,7 +753,7 @@ console.log("Chapter 3: Emergent tiles");
 console.log("-------------------------");
 
 //set up folder for files
-folderName = 'ch4_generated_files';
+folderName = 'ch3_generated_files';
 console.log("building at " + getTimestamp ());
 console.log("creating folder if needed");
 try {
@@ -765,19 +765,14 @@ try {
 	}
 
 
-
-
 function designSection3(allMainTiles, sectionFile){
-
 let ch3Doc = new doc.LaTeXDoc();
 for (let d=0; d < allMainTiles.length; d++ ){
 
 	truchetModule.truchet.start(0.8,4);
 	let patternList = [];
-
 	let mainCode = allMainTiles[d];
 
-	tikz.reset();
 	truchetFrom(mainCode,truchetModule.truchet);
 	let mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 	for (let i=0; i<4; i++){
@@ -785,12 +780,10 @@ for (let d=0; d < allMainTiles.length; d++ ){
 	}
 
 	truchetModule.truchet.start(0.5,4);
-
-	tikz.reset();
 	truchetFrom(mainCode,truchetModule.truchet);
 	mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
 
-	tikz.reset();
+	truchetModule.truchet.start(0.5,4);
 	let skewCode = increment(shuffle(mainCode));
 	truchetFrom(skewCode,truchetModule.truchet);
 	let skewTile = truchetModule.truchet.tiles.latexGrid().build().slice();
