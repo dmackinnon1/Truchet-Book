@@ -765,13 +765,14 @@ try {
 	}
 
 
-truchetModule.truchet.start(0.8,4);
 
 
 function designSection3(allMainTiles, sectionFile){
 
 let ch3Doc = new doc.LaTeXDoc();
 for (let d=0; d < allMainTiles.length; d++ ){
+
+	truchetModule.truchet.start(0.8,4);
 	let patternList = [];
 
 	let mainCode = allMainTiles[d];
