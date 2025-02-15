@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=0.4]
+\begin{tikzpicture}[scale=0.35]
  \draw [step=1cm,gray,very thin](0,-1) grid (4,3); 
  \draw[opacity=1,fill=black](1,-1)--(0,-1)--(0,0); 
  \draw[opacity=1,fill=black](1,1)--(1,0)--(0,0); 
