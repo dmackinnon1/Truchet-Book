@@ -740,18 +740,137 @@ for (let p = 0; p < 16; p++){
 
 console.log("unique freizes: "+ friezeCount);
 
+
 /**
  * 
- * CHAPTER 3 - Some designs
+ * CHAPTER 3 - Emergent tiles
+ * 
+ * 
+ */
+
+console.log("-------------------------");
+console.log("Chapter 3: Emergent tiles");
+console.log("-------------------------");
+
+//set up folder for files
+folderName = 'ch4_generated_files';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
+
+
+truchetModule.truchet.start(0.8,4);
+
+
+function designSection3(allMainTiles, sectionFile){
+
+let ch3Doc = new doc.LaTeXDoc();
+for (let d=0; d < allMainTiles.length; d++ ){
+	let patternList = [];
+
+	let mainCode = allMainTiles[d];
+
+	tikz.reset();
+	truchetFrom(mainCode,truchetModule.truchet);
+	let mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+	for (let i=0; i<4; i++){
+		patternList.push(mainTile.slice());
+	}
+
+	truchetModule.truchet.start(0.5,4);
+
+	tikz.reset();
+	truchetFrom(mainCode,truchetModule.truchet);
+	mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+
+	tikz.reset();
+	let skewCode = increment(shuffle(mainCode));
+	truchetFrom(skewCode,truchetModule.truchet);
+	let skewTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+
+
+	let tab = new doc.LaTeXTabular(2,2,patternList);
+
+
+	let designFile = folderName+"/"+ mainCode +"-design.gtex";
+	let mainFile =  folderName+"/"+mainCode+ "-alone.gtex";
+	let skewFile =  folderName+"/"+skewCode+ "-alone.gtex";
+	
+	console.log("writing files: "+ designFile);
+	fs.writeFile(designFile, tab.build(), function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(mainFile, mainTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(skewFile, skewTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+
+	ch3Doc.subsection("Four " + mainCode);
+	
+
+	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+mainFile+"}\\newline \n" +mainCode + "}"));
+	
+	if (skewCode != mainCode) {
+		ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+skewFile+"}\\newline \n" +skewCode + "}"));
+	}
+	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
+	ch3Doc.input(designFile);
+	ch3Doc.addContent(new doc.RawText("\n \\end{center}\n"));
+	ch3Doc.addContent(new doc.RawText("\n"))
+}
+
+fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
+   if(err) {
+    	return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+});
+
+}
+
+//uniform patterns
+let allMainTiles = ['2200','2020','0202','0022','2130', '0312','3201','1023','3311','3131','1313','1133'];
+let ch3File = "ch3_selfdual_weak.tex";
+designSection3(allMainTiles, ch3File);
+
+allMainTiles = ['2310','0132','3021','1203'];
+ch3File = "ch3_selfdual_strong.tex";
+designSection3(allMainTiles, ch3File);
+
+
+/**
+ * 
+ * CHAPTER 4 - Some designs
  * 
  * 
  */
 console.log("-----------------------");
-console.log("Chapter 3: Some designs");
+console.log("Chapter 4: Some designs");
 console.log("-----------------------");
 
 //set up folder for files
-folderName = 'ch3_generated_files';
+folderName = 'ch4_generated_files';
 console.log("building at " + getTimestamp ());
 console.log("creating folder if needed");
 try {
@@ -766,7 +885,7 @@ truchetModule.truchet.start(0.25,4);
 
 function designSection(allForegrounds, allBackgrounds, sectionFile){
 
-let ch3Doc = new doc.LaTeXDoc();
+let ch4Doc = new doc.LaTeXDoc();
 for (let d=0; d < allForegrounds.length; d++ ){
 	let patternList = [];
 
@@ -836,23 +955,23 @@ for (let d=0; d < allForegrounds.length; d++ ){
 	});
 
 	if (foreground == background){
-		ch3Doc.subsection("Design using " + foreground);
+		ch4Doc.subsection("Design using " + foreground);
 	}
 	else{
-		ch3Doc.subsection("Design using " + foreground + " and " + background);
+		ch4Doc.subsection("Design using " + foreground + " and " + background);
 	}
-	ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
+	ch4Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
 	
 	if(foreground != background){
-		ch3Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
+		ch4Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
 	}
-	ch3Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
-	ch3Doc.input(designFile);
-	ch3Doc.addContent(new doc.RawText("\n \\end{center}\n"));
-	ch3Doc.addContent(new doc.RawText("\n"))
+	ch4Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
+	ch4Doc.input(designFile);
+	ch4Doc.addContent(new doc.RawText("\n \\end{center}\n"));
+	ch4Doc.addContent(new doc.RawText("\n"))
 }
 
-fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
+fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
    if(err) {
     	return console.log("There was an error" + err);
         console.log("exiting");
@@ -866,34 +985,34 @@ fs.writeFile(sectionFile, ch3Doc.build(), function(err) {
 //uniform patterns
 let allForegrounds = ['2200','0202','2130','3201','3311'];
 let allBackgrounds = ['2200','0202','2130','3201','3311'];
-let ch3File = "ch3_uniform-designs.tex";
-designSection(allForegrounds, allForegrounds, ch3File);
+let ch4File = "ch4_uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch4File);
 
 
 //uniform patterns
 allForegrounds = ['2310','3021'];
 allBackgrounds = ['2310','3021'];
-ch3File = "ch3_strongly-uniform-designs.tex";
-designSection(allForegrounds, allForegrounds, ch3File);
+ch4File = "ch4_strongly-uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch4File);
 
 
 //op-duals
 allForegrounds = ['2222','2002','2332','2112','3223','3003','3333','3113'];
 allBackgrounds = ['0000','0220','0110','0330','1001','1221','1111','1331'];
-ch3File = "ch3_op-dual-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch3File);
+ch4File = "ch4_op-dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch4File);
 
 //some duals
 allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
 allBackgrounds = ['3200','1220','2302','3210','3110','1330','3301','1323'];
-ch3File = "ch3_dual-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch3File);
+ch4File = "ch4_dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch4File);
 
 
 //contrasting
 allForegrounds = ['2312','0312','0221','2201','0120','2003','2330','0312'];
 allBackgrounds = ['2310','0132','1203','2012','2012','2220','2130','0310'];
-ch3File = "ch3_contrasting-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch3File);
+ch4File = "ch4_contrasting-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch4File);
 
 
