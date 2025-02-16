@@ -1,7 +1,7 @@
 \documentclass{tufte-book}
 \input{preamble.tex}
-\usetikzlibrary{external}
-\tikzexternalize
+% \usetikzlibrary{external}
+% \tikzexternalize
 
 % Book metadata
 \title{Truchet}
@@ -200,53 +200,54 @@ If the original protitle has four-fold symmetry,  $2\times 2$ patterns made with
 
 \chapter{Semicircle Truchet tile patterns}
 
-\input{ch4_generated_files/tileList2.gtex}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{2}
+\input{ch4_generated_files/tileList.gtex}
 
+% \chapter{Some designs}
+% This chapter presents some designs made using one or two types of the $4\times 4$ Truchet tile patterns with four-fold rotational symmetry.
 
-\chapter{Some designs}
-This chapter presents some designs made using one or two types of the $4\times 4$ Truchet tile patterns with four-fold rotational symmetry.
+% \section{Self-dual designs}
+% These designs extend the friezes of self-dual patterns to create patterns where copies of the main tile appear as secondary tiles. The other patterns you can see are provided by the tertiary skew tile patterns that seem to overlap betwen the adjacent pairs of tiles.
 
-\section{Self-dual designs}
-These designs extend the friezes of self-dual patterns to create patterns where copies of the main tile appear as secondary tiles. The other patterns you can see are provided by the tertiary skew tile patterns that seem to overlap betwen the adjacent pairs of tiles.
+% {
+% \setlength{\tabcolsep}{0pt}
+% \renewcommand{\arraystretch}{0}
+% \input{ch5_uniform-designs}
+% }
 
-{
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{0}
-\input{ch5_uniform-designs}
-}
+% \section{Strongly uniform designs}
 
-\section{Strongly uniform designs}
+% These self-dual tiles are also self-skew, so the pattern that emerges from placing them together is strongly uniform.
+% {
+% \setlength{\tabcolsep}{0pt}
+% \renewcommand{\arraystretch}{0}
+% \input{ch5_strongly-uniform-designs}
+% }
 
-These self-dual tiles are also self-skew, so the pattern that emerges from placing them together is strongly uniform.
-{
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{0}
-\input{ch5_strongly-uniform-designs}
-}
+% \section{Op-dual designs}
+% These designs include two primary tiles, One tile type is placed in the center of the design in a $4\times 4$ square, and a second tile type is used to create a $2$-tile wide border around the central square. The tiles chosen are opposites of each other, and they are also opp-dual tiles, so we see secondary effects where each tile type appears in between the rows of the other.
+% {
+% \setlength{\tabcolsep}{0pt}
+% \renewcommand{\arraystretch}{0}
+% \input{ch5_op-dual-designs}
+% }
 
-\section{Op-dual designs}
-These designs include two primary tiles, One tile type is placed in the center of the design in a $4\times 4$ square, and a second tile type is used to create a $2$-tile wide border around the central square. The tiles chosen are opposites of each other, and they are also opp-dual tiles, so we see secondary effects where each tile type appears in between the rows of the other.
-{
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{0}
-\input{ch5_op-dual-designs}
-}
+% \section{Designs with duals}
+% Like the previous section, these patterns feature a square of one tile type surrounded by another. These tiles are duals of each other, but are not opposite.
+% {
+% \setlength{\tabcolsep}{0pt}
+% \renewcommand{\arraystretch}{0}
+% \input{ch5_dual-designs}
+% }
 
-\section{Designs with duals}
-Like the previous section, these patterns feature a square of one tile type surrounded by another. These tiles are duals of each other, but are not opposite.
-{
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{0}
-\input{ch5_dual-designs}
-}
-
-\section{Contrasting designs}
-The tiles in these square and frame patterns were chosen for their contrast with one another.
-{
-\setlength{\tabcolsep}{0pt}
-\renewcommand{\arraystretch}{0}
-\input{ch5_contrasting-designs}
-}
+% \section{Contrasting designs}
+% The tiles in these square and frame patterns were chosen for their contrast with one another.
+% {
+% \setlength{\tabcolsep}{0pt}
+% \renewcommand{\arraystretch}{0}
+% \input{ch5_contrasting-designs}
+% }
 \backmatter
 \nocite{*}
 \bibliography{references}
