@@ -137,16 +137,16 @@ constructor(topLeft, rotation=0, size=1,color="black"){
 		s+= "\\draw[fill=black] (A) rectangle (C);";
 
 		if (this.rotation==0){
-			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.north east) circle ("+radius+");}] (A) rectangle (C);\n";
-		}
-		if (this.rotation==1){
-			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south east) circle ("+radius+");}] (A) rectangle (C);\n";
-		}
-		if (this.rotation==2){
 			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south west) circle ("+radius+");}] (A) rectangle (C);\n";
 		}
-		if (this.rotation==3){
+		if (this.rotation==1){
 			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.north west) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==2){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.north east) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==3){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south east) circle ("+radius+");}] (A) rectangle (C);\n";
 		}
 		return s;
 

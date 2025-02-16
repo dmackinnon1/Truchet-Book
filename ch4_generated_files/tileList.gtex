@@ -3,28 +3,28 @@
  \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
  \coordinate (A) at (0,0);
 \coordinate (C) at (1,-1);
-\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.north east) circle (1);}] (A) rectangle (C);
+\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.south west) circle (1);}] (A) rectangle (C);
 \end{tikzpicture} 
 
 0 & \begin{tikzpicture}[scale=1.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
  \coordinate (A) at (0,0);
 \coordinate (C) at (1,-1);
-\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.south east) circle (1);}] (A) rectangle (C);
+\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.north west) circle (1);}] (A) rectangle (C);
 \end{tikzpicture} 
 
 1 & \begin{tikzpicture}[scale=1.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
  \coordinate (A) at (0,0);
 \coordinate (C) at (1,-1);
-\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.south west) circle (1);}] (A) rectangle (C);
+\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.north east) circle (1);}] (A) rectangle (C);
 \end{tikzpicture} 
 
 2 & \begin{tikzpicture}[scale=1.5]
  \draw [step=1cm,gray,very thin](0,-1) grid (1,0); 
  \coordinate (A) at (0,0);
 \coordinate (C) at (1,-1);
-\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.north west) circle (1);}] (A) rectangle (C);
+\draw[fill=black] (A) rectangle (C);\draw[path picture={\draw[fill=white] (path picture bounding box.south east) circle (1);}] (A) rectangle (C);
 \end{tikzpicture} 
 
 3\\ 
