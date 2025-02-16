@@ -4,6 +4,8 @@ let tikz = require('./tikZBldr.js');
 var truchet = {};
 truchet.tiles = null;
 truchet.border = false;
+truchet.circles=false;
+
 
 truchet.start = function(size, rows) {
 	tikz.scale = size;

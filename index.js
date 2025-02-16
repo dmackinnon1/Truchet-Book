@@ -856,9 +856,23 @@ ch3File = "ch3_selfdual_strong.tex";
 designSection3(allMainTiles, ch3File);
 
 
+
+
 /**
  * 
  * CHAPTER 4 - Some designs
+ * 
+ * 
+ */
+console.log("-----------------------");
+console.log("Chapter 4: Curved tiles");
+console.log("-----------------------");
+
+
+
+/**
+ * 
+ * CHAPTER 44- Some designs
  * 
  * 
  */
@@ -867,7 +881,7 @@ console.log("Chapter 4: Some designs");
 console.log("-----------------------");
 
 //set up folder for files
-folderName = 'ch4_generated_files';
+folderName = 'ch5_generated_files';
 console.log("building at " + getTimestamp ());
 console.log("creating folder if needed");
 try {
@@ -882,7 +896,7 @@ truchetModule.truchet.start(0.25,4);
 
 function designSection(allForegrounds, allBackgrounds, sectionFile){
 
-let ch4Doc = new doc.LaTeXDoc();
+let ch5Doc = new doc.LaTeXDoc();
 for (let d=0; d < allForegrounds.length; d++ ){
 	let patternList = [];
 
@@ -952,23 +966,23 @@ for (let d=0; d < allForegrounds.length; d++ ){
 	});
 
 	if (foreground == background){
-		ch4Doc.subsection("Design using " + foreground);
+		ch5Doc.subsection("Design using " + foreground);
 	}
 	else{
-		ch4Doc.subsection("Design using " + foreground + " and " + background);
+		ch5Doc.subsection("Design using " + foreground + " and " + background);
 	}
-	ch4Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
+	ch5Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+foreFile+"}\\newline \n" +foreground + "}"));
 	
 	if(foreground != background){
-		ch4Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
+		ch5Doc.addContent(new doc.RawText("\\marginnote[2\\baselineskip]{\\centering\\input{"+backFile+"}\\newline \n" +background + "}"));
 	}
-	ch4Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
-	ch4Doc.input(designFile);
-	ch4Doc.addContent(new doc.RawText("\n \\end{center}\n"));
-	ch4Doc.addContent(new doc.RawText("\n"))
+	ch5Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
+	ch5Doc.input(designFile);
+	ch5Doc.addContent(new doc.RawText("\n \\end{center}\n"));
+	ch5Doc.addContent(new doc.RawText("\n"))
 }
 
-fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
+fs.writeFile(sectionFile, ch5Doc.build(), function(err) {
    if(err) {
     	return console.log("There was an error" + err);
         console.log("exiting");
@@ -982,34 +996,34 @@ fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
 //uniform patterns
 let allForegrounds = ['2200','0202','2130','3201','3311'];
 let allBackgrounds = ['2200','0202','2130','3201','3311'];
-let ch4File = "ch4_uniform-designs.tex";
-designSection(allForegrounds, allForegrounds, ch4File);
+let ch5File = "ch5_uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch5File);
 
 
 //uniform patterns
 allForegrounds = ['2310','3021'];
 allBackgrounds = ['2310','3021'];
-ch4File = "ch4_strongly-uniform-designs.tex";
-designSection(allForegrounds, allForegrounds, ch4File);
+ch5File = "ch5_strongly-uniform-designs.tex";
+designSection(allForegrounds, allForegrounds, ch5File);
 
 
 //op-duals
 allForegrounds = ['2222','2002','2332','2112','3223','3003','3333','3113'];
 allBackgrounds = ['0000','0220','0110','0330','1001','1221','1111','1331'];
-ch4File = "ch4_op-dual-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch4File);
+ch5File = "ch5_op-dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch5File);
 
 //some duals
 allForegrounds = ['2201','2003','0210','2301','2331','2113','3211','1013'];
 allBackgrounds = ['3200','1220','2302','3210','3110','1330','3301','1323'];
-ch4File = "ch4_dual-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch4File);
+ch5File = "ch5_dual-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch5File);
 
 
 //contrasting
 allForegrounds = ['2312','0312','0221','2201','0120','2003','2330','0312'];
 allBackgrounds = ['2310','0132','1203','2012','2012','2220','2130','0310'];
-ch4File = "ch4_contrasting-designs.tex";
-designSection(allForegrounds, allBackgrounds, ch4File);
+ch5File = "ch5_contrasting-designs.tex";
+designSection(allForegrounds, allBackgrounds, ch5File);
 
 
