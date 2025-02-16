@@ -62,6 +62,11 @@ class TikZBuilder {
 		let topLeft = new TikZPoint(x1, y1,r);
 		this.components.push(new TikZRightDiagonal(topLeft,r,scale));
 	}
+
+	drawSemiCircle(x1, y1, r=0,scale=1){
+		let topLeft = new TikZPoint(x1, y1,r);
+		this.components.push(new TiKZWhiteSemiCircle(topLeft,r,scale));
+	}
 }
 
 //\draw[opacity=0.5,fill=gray] (0,0)--(0,1)--(1,1)--(0,0);

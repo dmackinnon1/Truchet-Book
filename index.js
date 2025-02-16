@@ -860,7 +860,7 @@ designSection3(allMainTiles, ch3File);
 
 /**
  * 
- * CHAPTER 4 - Some designs
+ * CHAPTER 4 - Curved tiles
  * 
  * 
  */
@@ -868,6 +868,53 @@ console.log("-----------------------");
 console.log("Chapter 4: Curved tiles");
 console.log("-----------------------");
 
+truchetModule.truchet.circles=true;
+
+folderName = 'ch4_generated_files';
+console.log("building at " + getTimestamp ());
+console.log("creating folder if needed");
+try {
+  		if (!fs.existsSync(folderName)) {
+    	fs.mkdirSync(folderName);
+  	}
+	}	catch (err) {
+  		console.error(err);
+	}
+
+tileDoc = folderName +"/"+'tileList2.gtex'; //folderName +"/"+
+
+bigTiles = ['a','b','c','d'];
+bigTiles2 = ['a','b','c','d'];
+
+for (let t1 = 0; t1 <4; t1 ++){
+	truchetModule.truchet.tiles.tiles[0][0] = t1;
+	raw = truchetModule.truchet.tiles.latexGrid().build();
+	raw += "\n" + t1;
+	tikz.reset();
+	bigTiles[4-t1] = raw;
+	bigTiles2[4-t1] = raw
+}
+
+bigTilesRow = new doc.LaTeXTabular(2,2,bigTiles);//1,4
+
+fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
+bigTilesRow = new doc.LaTeXTabular(1,4,bigTiles2);//1,4
+tileDoc = folderName +"/"+'tileList.gtex';
+
+fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
 
 
 /**
@@ -879,6 +926,8 @@ console.log("-----------------------");
 console.log("-----------------------");
 console.log("Chapter 4: Some designs");
 console.log("-----------------------");
+
+truchetModule.truchet.circles=false;
 
 //set up folder for files
 folderName = 'ch5_generated_files';
