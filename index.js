@@ -918,6 +918,72 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
 }); 
 
 
+function designSection4(allMainTiles, sectionFile){
+let ch4Doc = new doc.LaTeXDoc();
+for (let d=0; d < allMainTiles.length; d++ ){
+
+	truchetModule.truchet.start(0.65,4);
+	let patternList = [];
+	let mainCode = allMainTiles[d];
+
+	truchetFrom(mainCode,truchetModule.truchet);
+	let mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+	for (let i=0; i<4; i++){
+		patternList.push(mainTile.slice());
+	}
+
+	truchetModule.truchet.start(0.35,4);
+	truchetFrom(mainCode,truchetModule.truchet);
+	mainTile = truchetModule.truchet.tiles.latexGrid().build().slice();
+
+
+	let tab = new doc.LaTeXTabular(2,2,patternList);
+
+	let designFile = folderName+"/"+ mainCode +"-design.gtex";
+	let mainFile =  folderName+"/"+mainCode+ "-alone.gtex";
+	
+	console.log("writing files: "+ designFile);
+	fs.writeFile(designFile, tab.build(), function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+	fs.writeFile(mainFile, mainTile, function(err) {
+   		if(err) {
+    		return console.log("There was an error" + err);
+        	console.log("exiting");
+			process.exit(1);
+    	}
+	});
+
+	ch4Doc.subsection(mainCode);
+	
+	ch4Doc.addContent(new doc.RawText("\\marginnote[\\baselineskip]{\\centering\\input{"+mainFile+"}\\newline \n" +mainCode + "}"));
+	
+	ch4Doc.addContent(new doc.RawText("\n \\begin{center}\n"));
+	ch4Doc.input(designFile);
+	ch4Doc.addContent(new doc.RawText("\n \\end{center}\n"));
+	ch4Doc.addContent(new doc.RawText("\n"))
+}
+
+fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
+   if(err) {
+    	return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+});
+
+}
+
+//uniform patterns
+allMainTiles = ['2200','0202','2130','3201','2023','2012','2313','0113'];
+let ch4File = "ch4_curved_selections.tex";
+designSection3(allMainTiles, ch4File);
+
+
 /**
  * 
  * CHAPTER 44- Some designs
@@ -925,7 +991,7 @@ fs.writeFile(tileDoc, bigTilesRow.build(), function(err) {
  * 
  */
 console.log("-----------------------");
-console.log("Chapter 4: Some designs");
+console.log("Chapter 5: Some designs");
 console.log("-----------------------");
 
 truchetModule.truchet.circles=false;
