@@ -883,6 +883,7 @@ try {
 
 tileDoc = folderName +"/"+'tileList2.gtex'; //folderName +"/"+
 
+truchetModule.truchet.start(1.5,1);
 bigTiles = ['a','b','c','d'];
 bigTiles2 = ['a','b','c','d'];
 
