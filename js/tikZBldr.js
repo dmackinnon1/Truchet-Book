@@ -54,7 +54,8 @@ class TikZBuilder {
 	}
 	drawTriangle(x1, y1, r=0,scale=1){
 		let topLeft = new TikZPoint(x1, y1,r);
-		this.components.push(new TikZRightTriangle(topLeft,r,scale));
+	   this.components.push(new TikZRightTriangle(topLeft,r,scale));
+		//this.components.push(new TiKZBlackSemiCircle(topLeft,r,scale));
 	}
 
 	drawDiagonal(x1, y1, r=0,scale=1){
@@ -97,6 +98,57 @@ constructor(topLeft, rotation=0, size=1,color="black"){
 	}
 
 }
+
+class TiKZWhiteSemiCircle{
+
+constructor(topLeft, rotation=0, size=1,color="black"){
+		this.color = color;
+		this.size= size;
+		this.topLeft = topLeft;
+		this.rotation = rotation;
+		}
+	
+	build(){
+		let dash = "--";
+		let topLeft = this.topLeft;
+		
+		topLeft.setLabel("A");
+		let topRight = new TikZPoint(topLeft.x + this.size, topLeft.y);
+		topRight.setLabel("B");
+		
+		let bottomRight = new TikZPoint(topLeft.x + this.size, topLeft.y - this.size);
+		bottomRight.setLabel("C");
+		
+		let bottomLeft = new TikZPoint(topLeft.x, topLeft.y - this.size);
+		bottomLeft.setLabel("D");
+		
+		let s = "";
+		s += topLeft.coordinateDef() + "\n";
+		s += bottomRight.coordinateDef() + "\n";
+	
+		let radius = this.size;
+
+	
+		s+= "\\draw[fill=black] (A) rectangle (C);";
+
+		if (this.rotation==0){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.north east) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==1){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south east) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==2){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south west) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==3){
+			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.north west) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		return s;
+
+	}
+
+}
+
 
 class TikZRightDiagonal{
 
@@ -177,10 +229,24 @@ class TikZPoint {
 	constructor(x,y){
 		this.x = x;
 		this.y = y;
+		this.label = null;
+	}
+
+	setLabel(l){
+		this.label = l;
+	}
+
+	coordinateDef(){
+		return "\\coordinate ("+this.label +") at " + this.build() +";";
+	}
+
+	coordinate(){
+		return "(" + this.label + ")";
 	}
 
 	build(){
 		return "(" + this.x + "," + this.y + ")";
+
 	}
 
 }
