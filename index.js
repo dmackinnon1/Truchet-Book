@@ -981,7 +981,7 @@ fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
 //uniform patterns
 allMainTiles = ['2200','0202','2130','3201','2023','2012','2313','0113'];
 let ch4File = "ch4_curved_selections.tex";
-designSection3(allMainTiles, ch4File);
+designSection4(allMainTiles, ch4File);
 
 
 /**
