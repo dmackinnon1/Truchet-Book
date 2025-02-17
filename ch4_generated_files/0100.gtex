@@ -1,9 +1,9 @@
 \vspace{1cm}
 \begin{center}
-% file generated at 2025-02-16 21:48:24
+% file generated at 2025-02-16 22:06:40
 \marginnote{\centering\fontsize{36}{40}\selectfont0100\par}
 \marginnote[3\baselineskip]{\centering\input{ch4_generated_files/parent-0100.gtex}}
-\marginnote[3\baselineskip]{\centering \large
+\marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
 0100 & 0102 & 0120 & 0122\\ 
  0300 & 0302 & 0320 & 0322\\ 
@@ -838,7 +838,7 @@
 
 \marginnote{\centering\fontsize{36}{40}\selectfont1011\par}
 \marginnote[3\baselineskip]{\centering\input{ch4_generated_files/parent-1011.gtex}}
-\marginnote[3\baselineskip]{\centering \large
+\marginnote[3\baselineskip]{\centering \Large
 \begin{tabular}{cccc} 
 1011 & 1013 & 1031 & 1033\\ 
  1211 & 1213 & 1231 & 1233\\ 

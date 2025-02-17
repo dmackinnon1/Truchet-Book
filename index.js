@@ -1073,7 +1073,7 @@ for (let p = 0; p < 8; p++){
 		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
 		.addContent(new doc.RawText("\\marginnote{\\centering\\fontsize{36}{40}\\selectfont" + tuple.family +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{" + folderName+ "/parent-" + tuple.family+ ".gtex}}\n"))
-		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\large\n"+ tuple.labelGrid.build()+ "}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.labelGrid.build()+ "}\n"))
 		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
 		.addContent(new doc.RawText(tuple.tileGrid.build()))
 		.addContent(new doc.RawText("}"))
@@ -1083,7 +1083,7 @@ for (let p = 0; p < 8; p++){
 		.addContent(new doc.RawText("\n"))
 		.addContent(new doc.RawText("\\marginnote{\\centering\\fontsize{36}{40}\\selectfont" + tuple.rDFamily +"\\par}\n"))
 		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{" + folderName+ "/parent-" + tuple.rDFamily+ ".gtex}}\n"))
-		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\large\n"+ tuple.rDLabelGrid.build()+ "}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.rDLabelGrid.build()+ "}\n"))
 		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
 		.addContent(new doc.RawText(tuple.rDTileGrid.build()))
 		.addContent(new doc.RawText("}"));			
