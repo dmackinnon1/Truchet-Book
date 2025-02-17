@@ -67,6 +67,11 @@ class TikZBuilder {
 		let topLeft = new TikZPoint(x1, y1,r);
 		this.components.push(new TiKZWhiteSemiCircle(topLeft,r,scale));
 	}
+	drawCurveInSquare(x1, y1, r=0,scale=1){
+		let topLeft = new TikZPoint(x1, y1,r);
+		this.components.push(new TikZCurveInSquare(topLeft,r,scale));
+	}
+	
 }
 
 //\draw[opacity=0.5,fill=gray] (0,0)--(0,1)--(1,1)--(0,0);
@@ -147,6 +152,57 @@ constructor(topLeft, rotation=0, size=1,color="black"){
 		}
 		if (this.rotation==3){
 			s += "\\draw[path picture={\\draw[fill=white] (path picture bounding box.south east) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		return s;
+
+	}
+
+}
+
+
+class TikZCurveInSquare{
+
+constructor(topLeft, rotation=0, size=1,color="black"){
+		this.color = color;
+		this.size= size;
+		this.topLeft = topLeft;
+		this.rotation = rotation;
+		}
+	
+	build(){
+		let dash = "--";
+		let topLeft = this.topLeft;
+		
+		topLeft.setLabel("A");
+		let topRight = new TikZPoint(topLeft.x + this.size, topLeft.y);
+		topRight.setLabel("B");
+		
+		let bottomRight = new TikZPoint(topLeft.x + this.size, topLeft.y - this.size);
+		bottomRight.setLabel("C");
+		
+		let bottomLeft = new TikZPoint(topLeft.x, topLeft.y - this.size);
+		bottomLeft.setLabel("D");
+		
+		let s = "";
+		s += topLeft.coordinateDef() + "\n";
+		s += bottomRight.coordinateDef() + "\n";
+	
+		let radius = this.size;
+
+	
+		s+= "\\draw[] (A) rectangle (C);";
+
+		if (this.rotation==0){
+			s += "\\draw[path picture={\\draw[] (path picture bounding box.south west) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==1){
+			s += "\\draw[path picture={\\draw[] (path picture bounding box.north west) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==2){
+			s += "\\draw[path picture={\\draw[] (path picture bounding box.north east) circle ("+radius+");}] (A) rectangle (C);\n";
+		}
+		if (this.rotation==3){
+			s += "\\draw[path picture={\\draw[] (path picture bounding box.south east) circle ("+radius+");}] (A) rectangle (C);\n";
 		}
 		return s;
 

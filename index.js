@@ -979,14 +979,141 @@ fs.writeFile(sectionFile, ch4Doc.build(), function(err) {
 }
 
 //uniform patterns
-allMainTiles = ['2200','0313','2130','3201','2023','2012','2313','0113'];
+//allMainTiles = ['2200','0313','2130','3201','2023','2012','2313','0113'];
+allMainTiles=['0313'];
 let ch4File = "ch4_curved_selections.tex";
 designSection4(allMainTiles, ch4File);
 
 
 /**
+ * All curved families
  * 
- * CHAPTER 44- Some designs
+ */
+
+truchetModule.truchet.start(0.5,4);
+
+ sequences = allSequences(4);
+
+ parents = [];
+ parents2 = [];
+ children = []; //array of arrays grouped
+ childrenLabels = [];
+
+
+// Create all Truchet tiles from sequences and group them.
+for (var i = 0; i < 16; i++){
+	for (var j = 0; j < 16; j ++) {
+		var sequence = sequences.pop();
+		tikz.reset();
+		truchetFrom(sequence,truchetModule.truchet);
+		raw = truchetModule.truchet.tiles.latexGrid().build();
+		var pindex = parents.indexOf(parentFromSequence(sequence));
+		if (pindex == -1){
+			parents.push(parentFromSequence(sequence));
+			parents2.push(parentFromSequence(sequence));
+			children.push([raw]);
+			childrenLabels.push([sequence]);
+		} else {
+				children[pindex].push(raw);
+				childrenLabels[pindex].push(sequence);
+		}
+					
+	} 
+}
+
+ mainFamList = ['0000','1000','0100','0010','0001','1100','1010','1001'];
+ tups = [];
+
+for(var i=0; i<8; i++){
+	
+	let tup = new FamTup();
+	tup.family = mainFamList[i];
+	var pindex = parents.indexOf(tup.family);
+	tup.rDFamily = parentRotaDual(tup.family);
+	var dindex = parents.indexOf(tup.rDFamily);
+
+	tup.tileGrid = new doc.LaTeXTabular(4,4,children[pindex]);
+	tup.labelGrid = new doc.LaTeXTabular(4,4,childrenLabels[pindex]);
+	tup.rDTileGrid = new doc.LaTeXTabular(4,4,children[dindex]);
+	tup.rDLabelGrid = new doc.LaTeXTabular(4,4,childrenLabels[dindex]);
+
+	tups.push(tup);
+}
+
+// Create all parent tile patterns from sequences
+console.log("creating parent tiles");
+for (var i = 0; i < 16; i++){	
+	var psequence = parents[i];
+	var pfile = folderName + "/parent-" + psequence +".gtex";
+	tikz.reset();
+	truchetFrom(psequence,truchetModule.truchet);
+	raw = truchetModule.truchet.tiles.latexGrid(true).build();
+	fs.writeFile(pfile, raw, function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 				
+	 
+}
+
+
+console.log("creating each family page");
+mainDoc = new doc.LaTeXDoc();
+mainFile = 'ch4_families.tex';
+
+for (let p = 0; p < 8; p++){
+
+	let tuple = tups[p];
+	let docEnv = new doc.LaTeXDoc();
+	
+	docEnv.command("vspace","1cm",true);
+	docEnv.env().begin("center")
+		.addContent(new doc.RawText("% file generated at " + getTimestamp() + "\n"))
+		.addContent(new doc.RawText("\\marginnote{\\centering\\fontsize{36}{40}\\selectfont" + tuple.family +"\\par}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{" + folderName+ "/parent-" + tuple.family+ ".gtex}}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.labelGrid.build()+ "}\n"))
+		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
+		.addContent(new doc.RawText(tuple.tileGrid.build()))
+		.addContent(new doc.RawText("}"))
+		.command(",")
+		.command("newline")
+		.command("vspace","1.2cm",true)
+		.addContent(new doc.RawText("\n"))
+		.addContent(new doc.RawText("\\marginnote{\\centering\\fontsize{36}{40}\\selectfont" + tuple.rDFamily +"\\par}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering\\input{" + folderName+ "/parent-" + tuple.rDFamily+ ".gtex}}\n"))
+		.addContent(new doc.RawText("\\marginnote[3\\baselineskip]{\\centering \\Large\n"+ tuple.rDLabelGrid.build()+ "}\n"))
+		.addContent(new doc.RawText("{\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{2}"))
+		.addContent(new doc.RawText(tuple.rDTileGrid.build()))
+		.addContent(new doc.RawText("}"));			
+	docEnv.newPage();
+	
+	
+	let childFile = folderName+"/"+tuple.family+".gtex";
+	mainDoc.input(childFile);
+
+	fs.writeFile(childFile, docEnv.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+	}); 
+}
+
+fs.writeFile(mainFile, mainDoc.build(), function(err) {
+    if(err) {
+        return console.log("There was an error" + err);
+        console.log("exiting");
+		process.exit(1);
+    }
+}); 
+
+
+/**
+ * 
+ * CHAPTER 5- Some designs
  * 
  * 
  */

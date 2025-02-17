@@ -127,7 +127,12 @@ class Tiles {
 	latexTile(i,j,k,builder, diagonal=false){
 
 		if(truchet.circles == true){
+
+			if(diagonal){
+				builder.drawCurveInSquare(i,j,k);
+			} else {
 			builder.drawSemiCircle(i,j,k);
+			}
 			return;
 		}
 
