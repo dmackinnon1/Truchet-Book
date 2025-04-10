@@ -39,11 +39,11 @@
 \chapter*{Introduction}
 
 \noindent
-\marginnote{\centering\input{intro_generated_files/tileList2.gtex}}A plain square has four-fold rotational symmetry: it looks the same after rotating it by $90^{\circ}$. Decorating a square can change its appearance and break this symmetry, so that the square looks different when rotated. Traditionally, Truchet squares are divided by a diagonal line, and coloured with two colours, with one colour on either side of the diagonal. A Truchet square lacks rotational symmetry and can be rotated to one of four distinguishable positions. \marginnote[3\baselineskip]{\centering\input{intro_files/positions}}Patterns are formed by placing squares next to each other, rotating individual squares to create repeated motifs. Among the more pleasing patterns that can be made with Truchet squares are ones that express some of symmetry that the individual squares lack. The asymmetrical decoration in a Truchet square provides something that can be balanced and that can provide an opportunity for restored symmetry in a larger pattern. 
+\marginnote{\centering\input{intro_generated_files/tileList2.gtex}}A plain square has four-fold rotational symmetry: it looks the same after being rotated by $90^{\circ}$. Decorating a square can change its appearance and break this symmetry, so that the square looks different when rotated. Traditionally, Truchet squares are rendered asymmetrical by being divided by a diagonal line and coloured differently on either side of the diagonal. With this decoration, a Truchet square loses the plain square's rotational symmetry and can be rotated to four distinguishable positions. \marginnote[3\baselineskip]{\centering\input{intro_files/positions}}Patterns can be formed by tiling a surface with Truchet squares, rotating individual squares into different positions to create repeated motifs. Among the more pleasing patterns that can be made with Truchet squares are ones that express a restored symmetry that the individual squares lack.
 
 \vspace{0.3cm}
 \noindent
-This booklet presents a complete listing of $4\times 4$ Truchet patterns with four-fold ($90^{\circ}$) rotational symmetry ($256$ patterns).  Treating these $4\times 4$ patterns as tiles themselves allows for larger decorative patterns to be constructed from them. For example, a uniform frieze made from a single $4\times 4$ tile can actually produce interesting secondary patterns which help illustrate some interesting relationships that exist among the tile patterns.  
+This booklet presents a complete listing of $4\times 4$ Truchet tiling patterns with four-fold ($90^{\circ}$) rotational symmetry ($256$ patterns).  Treating these $4\times 4$ patterns as tiles themselves allows for larger decorative patterns to be constructed from them. For example, a uniform frieze made from a single $4\times 4$ tile can actually produce interesting secondary patterns which help illustrate some interesting relationships that exist among the tile patterns.  
 
 \vspace{0.3cm}
 \noindent
@@ -76,7 +76,7 @@ For a given family, there is corresponding \textit{companion} family, the family
 \chapter{Family and tile pattern mappings}
 
 \noindent
-For each family, in addition to the companion family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$,  there are also two \textit{skew} families, formed by taking the upper left and lower right quadrants of an original family tile pattern as a founding pattern and a \textit{dual} family, formed by taking the upper right quadrant as a founding patterns. A family is always different than its companion, and each family has a distinct companion, but it can happen that skew and duals can coincide. Self-dual families, where the dual family is the same as the original are of particular interest in the frieze patterns of the next chapter.
+For each family, in addition to the companion family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$,  there are also two \textit{skew} families, formed by taking the upper left and lower right quadrants of an original family tile pattern as a founding pattern and a \textit{dual} family, formed by taking the upper right quadrant as a founding pattern. A family is always different than its companion, but it can happen that the family and its skews or duals can coincide. Self-dual families, where the dual family is the same as the original, contain some interesting cases of the frieze patterns explored in the next chapter.
 
 \section{Self-Dual families}
 \input{ch1_selfDuals}
@@ -86,17 +86,26 @@ For each family, in addition to the companion family of patterns formed by rotat
 
 \newpage
 
+\section{Family and tile mappings}
+\marginnote{\centering\input{intro_generated_files/tileList2.gtex}} Both individual tiles and their families can be described by their signatures. The signature of the family of a tile can be found by considering the tile's signature $\pmod{2}$.
+
+\begin{align*}        
+\text{family}:& \, t \rightarrow F\\
+\text{family}:& \, (a,b,c,d) \mapsto (a, b, c, d) \pmod{2}\\
+\end{align*}
 
 \subsection{Family mappings}
-\marginnote{\centering\input{intro_generated_files/tileList2.gtex}} Related families and tiles can be obtained from applying simple mappings on the signature of the tile pattern.
+Related families can be obtained from applying simple mappings on the signature a pattern family $F$.
 
-\begin{align*}        \text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{2};\\
+\begin{align*}        
+\text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{2};\\
     \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{2};\\
     \text{dual} : (a,b,c,d) &\mapsto (d, c, b, a) \pmod{2};\\
     \text{skew}- : (a,b,c,d) &\mapsto (b+1, d+1, a+ 1, c+1) \pmod{2};
 \end{align*}
 
 \subsection{Tile pattern mappings}
+Similarly, related tile patterns can be obtained from applying simple mappings on the signature a pattern $t$.
 \marginnote{\centering\input{intro_files/positions}}
 \begin{align*}        
     \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{4};\\
@@ -140,7 +149,7 @@ $$t = t^d \implies t^+ = t^-$$
 \end{theorem}
 
 \begin{theorem}
-If a tile is self-skew $t=t^+$ or $t=t^-$ then its prototile has four-fold rotational symmetry, $t$ is self-dual, and $t^+ = t^-$. 
+If a tile is self-skew ($t=t^+$ or $t=t^-$) then its prototile has four-fold rotational symmetry, $t$ is self-dual, and $t^+ = t^-$. 
 \end{theorem}
 
 \begin{theorem}
@@ -185,7 +194,7 @@ Some tiles are self-dual, and frieze patterns formed by self-dual tiles show a m
 
 \vspace{0.5cm}
 \noindent
-We can consider the uniform friezes formed by the dual tiles as the same pattern. There are $6$ pairs of families where the original and dual are not the same, and these pairs of families yield $16$ patterns each. The $4$ remaining families contain some self-dual patterns, and some patterns that are \textit{op-dual} (the secondary tile is the opposite tile of the original), also reducing the number of patterns. These $4$ remaining families provide $10$ distinct frieze patterns each. This means that the $256$ tile patterns generate $136$ distinct friezes. 
+We can consider the uniform friezes formed by the dual tiles as the same frieze pattern. There are $6$ pairs of families where the original and dual are not the same, and these pairs of families yield $16$ patterns each. The $4$ remaining families contain some self-dual patterns, and some patterns that are \textit{op-dual} (the secondary tile is the opposite tile of the original), also reducing the number of patterns. These $4$ remaining families provide $10$ distinct frieze patterns each. This means that the $256$ tile patterns generate $136$ distinct friezes. 
 
 \vspace{0.5cm}
 \noindent
