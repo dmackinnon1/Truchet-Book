@@ -53,7 +53,7 @@ Truchet tile pattern with rotational symmetry has a core $2\times 2$ pattern in 
 \chapter{Pattern families}
 
 \noindent
-We can group the $4\times 4$ Truchet tile patterns with rotational symmetry into families where  tile patterns are considered to be in the same family if they would look the same without colour -- if each corresponding Truchet square shares the same diagonal direction. The sequence that represents the family of a tile pattern can be found by taking the signature of the tile pattern \textit{modulo} $2$. So, for example, the $16$ tile patterns below are all members of the $0110$ family. 
+We can group $4\times 4$ Truchet tile patterns with rotational symmetry into families where tile patterns are in the same family if they are identical with the colouring removed, leaving behind just the diagonal line in each square. The squares that make up a colourless family pattern have two-fold rotational symmetry, so the signature that represents the family of a tile pattern can be found by taking the signature of the tile pattern \textit{modulo} $2$. For example, the $16$ tile patterns below are all members of the $0110$ family.  
 
 \vspace{1.2cm}
 
@@ -69,14 +69,14 @@ We can group the $4\times 4$ Truchet tile patterns with rotational symmetry into
 \vspace{0.5cm}
 
 \noindent
-For a given family, there is corresponding \textit{companion} family, the family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$. On the following pages each family will be shown along with its corresponding \textit{companion} family, providing a complete listing of all $4\times 4$ Truchet tile patterns with rotational symmetry.
+For a given family, there is  \textit{companion} family, the family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$. In this way, the companion family represents a set of patterns that are ``as different as possible'' from the original family. On the following pages each family will be shown along with its \textit{companion} family, providing a complete listing of all $4\times 4$ Truchet tile patterns with rotational symmetry.
 \newpage
 \input{ch1_families}
 
 \chapter{Family and tile pattern mappings}
 
 \noindent
-For each family, in addition to the companion family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$,  there are also two \textit{skew} families, formed by taking the upper left and lower right quadrants of an original family tile pattern as a founding pattern and a \textit{dual} family, formed by taking the upper right quadrant as a founding pattern. A family is always different than its companion, but it can happen that the family and its skews or duals can coincide. Self-dual families, where the dual family is the same as the original, contain some interesting cases of the frieze patterns explored in the next chapter.
+For each family, in addition to the companion family of patterns formed by rotating each square in a member of the original family by $90^{\circ}$,  there are also two \textit{skew} families, formed by taking the upper left and lower right quadrants of an original family tile pattern as a founding prototile pattern and a \textit{dual} family, formed by taking the upper right quadrant as a founding prototile pattern. A family is always different than its companion, but it can happen that the family and its skews or duals can coincide. Self-dual families, where the dual family is the same as the original, contain some interesting cases of the frieze patterns explored in the next chapter.
 
 \section{Self-Dual families}
 \input{ch1_selfDuals}
@@ -87,15 +87,15 @@ For each family, in addition to the companion family of patterns formed by rotat
 \newpage
 
 \section{Family and tile mappings}
-\marginnote{\centering\input{intro_generated_files/tileList2.gtex}} Both individual tiles and their families can be described by their signatures. The signature of the family of a tile can be found by considering the tile's signature $\pmod{2}$.
+\marginnote{\centering\input{intro_generated_files/tileList2.gtex}} If $\mathcal{T}$ is the set of $4\times 4$ Truchet patters with four-fold rotational symmetry, and $\mathcal{F}$ is the set of $4x4$ Truchet tile families, the relationship between tile patterns and their families is a mapping $\mathcal{T} \rightarrow \mathcal{F}$. Both individual $4\times 4$ Truchet tiles patterns and their families can be described by their signatures. As previously mentioned, the signature of the family of a tile can be found by considering the tile's signature $\pmod{2}$.
 
-\begin{align*}        
-\text{family}:& \, t \rightarrow F\\
+\begin{align*}    
+\text{family}:& \, t \mapsto F\\
 \text{family}:& \, (a,b,c,d) \mapsto (a, b, c, d) \pmod{2}\\
 \end{align*}
 
 \subsection{Family mappings}
-Related families can be obtained from applying simple mappings on the signature a pattern family $F$.
+Related families ($\mathcal{F}\longrightarrow\mathcal{F}$) can be obtained from applying simple operations on the signature a pattern family $F$.
 
 \begin{align*}        
 \text{companion}: (a,b,c,d) &\mapsto (a+1, b+1, c+ 1, d+1) \pmod{2};\\
@@ -105,7 +105,7 @@ Related families can be obtained from applying simple mappings on the signature 
 \end{align*}
 
 \subsection{Tile pattern mappings}
-Similarly, related tile patterns can be obtained from applying simple mappings on the signature a pattern $t$.
+Mappings between related tile patterns ($\mathcal{T}\longrightarrow\mathcal{T}$) can be described in terms of simple operations on the signature of a pattern $t$.
 \marginnote{\centering\input{intro_files/positions}}
 \begin{align*}        
     \text{skew}+ : (a,b,c,d) &\mapsto (c+1, a+1, d+ 1, b+1) \pmod{4};\\
@@ -120,13 +120,34 @@ Similarly, related tile patterns can be obtained from applying simple mappings o
 For a tile pattern $t$ in a family $F$ ($t\in F$), we will write $t^d$, $t^+$, $t^-$, and  $t^{op}$ for the dual, positive skew, negative skew, and opposite of $t$, respectively. Simlarly for the family $F$ we will write $F^d$, $F^+$, $F^-$, and  $F^{c}$ for the dual, positive skew, negative skew, and companion of $F$. Some simple theorems that describe the relationships among these concepts are fun to state and easy to prove.
 
 \begin{theorem}
-A tile $t$ is self-dual if and only if its prototile has two-fold rotational symmetry.      
+A tile $t$ is self-dual ($t = t^d$) if and only if its prototile has two-fold rotational symmetry.      
+\end{theorem}
+
+\begin{theorem}
+A tile is self-skew ($t=t^+$ or $t=t^-$) if and only if its prototile has four-fold rotational symmetry.
+\end{theorem}
+
+\begin{theorem}
+If a tile $t$ is self-skew ($t=t^+$ or $t=t^-$) then $t$ is also self-dual ($t = t^d$).
 \end{theorem}
 
 \begin{theorem}
 The dual of a tile is a member of the dual of the original tile's family.
 $$t\in F \implies t^d \in F^d$$  
 \end{theorem}
+
+\begin{marginfigure}
+\[
+\begin{tikzcd}
+	{\mathcal{T}} & {\mathcal{T}} \\
+	{\mathcal{F}} & {\mathcal{F}}
+	\arrow["{\small\text{dual}}", from=1-1, to=1-2]
+	\arrow["{\small\text{family}}"', from=1-1, to=2-1]
+	\arrow["{\small\text{family}}", from=1-2, to=2-2]
+	\arrow["{\small\text{dual}}"', from=2-1, to=2-2]
+\end{tikzcd}
+\]
+\end{marginfigure}
 
 \begin{theorem}
 A self-dual tile is a member of a self dual family. 
@@ -144,32 +165,68 @@ $$F = F^d \implies F^c = F^{cd}$$
 \end{theorem}
 
 \begin{theorem}
-For a self-dual tile, the positive and negative skew tiles are equal. 
-$$t = t^d \implies t^+ = t^-$$
+A tile is self-dual if and only if its  positive and negative skew tiles are equal. 
+$$t = t^d \iff t^+ = t^-$$
 \end{theorem}
 
-\begin{theorem}
-If a tile is self-skew ($t=t^+$ or $t=t^-$) then its prototile has four-fold rotational symmetry, $t$ is self-dual, and $t^+ = t^-$. 
-\end{theorem}
+% \begin{theorem}
+% If a tile is self-dual ($t = t^d$), then its prototile has two-fold rotational symmetry.
+% \end{theorem}
+
+% \begin{theorem}
+% If a tile is self-skew ($t=t^+$ or $t=t^-$) then its prototile has four-fold rotational symmetry, $t$ is self-dual, and $t^+ = t^-$. 
+% \end{theorem}
 
 \begin{theorem}
 The opposite of a tile $t$ is in the same family as $t$. 
 $$t\in F \implies t^{op} \in F$$
 \end{theorem}
-
+\begin{marginfigure}[-7cm]
+\[
+\begin{tikzcd}
+	{\mathcal{T}} & {\mathcal{T}} \\
+	& {\mathcal{F}}
+	\arrow["{\small\text{op}}", from=1-1, to=1-2]
+	\arrow["{\small\text{family}}"', from=1-1, to=2-2]
+	\arrow["{\small\text{family}}", from=1-2, to=2-2]
+\end{tikzcd}
+\]
+\end{marginfigure}
 \begin{theorem}
 The dual of a tile's dual is the original tile. 
 $$(t^d)^d = t$$
 \end{theorem}
+\begin{marginfigure}[-5cm]
+\[\begin{tikzcd}
+	{\mathcal{T}} & {\mathcal{T}} \\
+	& {\mathcal{T}}
+	\arrow["{\small\text{dual}}", from=1-1, to=1-2]
+	\arrow["{{\small 1_\mathcal{T}}}"', from=1-1, to=2-2]
+	\arrow["{\small\text{dual}}", from=1-2, to=2-2]
+\end{tikzcd}\]
+\end{marginfigure}
 
 \begin{theorem}
 The dual of a tile's opposite is the opposite of the tile's dual. 
 $$(t^{op})^d = (t^d)^{op}$$
 \end{theorem}
-
+\begin{marginfigure}[-3cm]
+\[
+\begin{tikzcd}
+	{\mathcal{T}} & {\mathcal{T}} \\
+	{\mathcal{T}} & {\mathcal{T}}
+	\arrow["{\small\text{dual}}", from=1-1, to=1-2]
+	\arrow["{\small\text{op}}"', from=1-1, to=2-1]
+	\arrow["{\small\text{op}}", from=1-2, to=2-2]
+	\arrow["{\small\text{dual}}"', from=2-1, to=2-2]
+\end{tikzcd}
+\]
+\end{marginfigure}
+\begin{theorem}
+There are $256$ $4\times 4$ Truchet patterns with four-fold rotational symmetry in $16$ families of $16$ patterns each. There are four self-dual families, each with four self-dual tiles. Two of the self-dual families include two self-skew tiles each.  
+\end{theorem}
 
 \newpage
-
 
 \chapter{Uniform friezes}
 
@@ -209,7 +266,7 @@ We can consider the uniform friezes formed by the dual tiles as the same frieze 
 \noindent
 Self-dual tiles are the $4\times 4$ Truchet tile patterns whose $2\times 2$ prototile has two-fold ($180^{\circ}$) rotational symmetry. Because of the two-fold rotational symmetry of the prototile, its appearance in the third quadrant of the $4\times 4$ tile is identical to its appearance in the initial quadrant. So the dual tile that emerges when placing four of the tiles together in a larger $2\times 2$ tile array is another copy of the original tile, appearing in the center of the  larger $2\times 2$ pattern. 
 
-\section{Prototiles with two-fold symmetry}
+\section{Self-dual tiles that are not self-skew}
 
 If the original protitle has strict two-fold symmetry,  $2\times 2$ patterns made with the four-fold rotationally symmetrical Truchet tile also display another distinct emergent four-fold rotationally symmetrical Truchet tile, which we are calling the \textit{tertiary} tile. 
 
@@ -221,7 +278,7 @@ In these patterns, it appears that there are five copies of the primary tile (fo
 \renewcommand{\arraystretch}{0}
 \input{ch3_selfdual_weak}
 }
-\section{Prototiles with four-fold symmetry}
+\section{Self-skew tiles}
 
 \noindent
 If the original protitle has four-fold symmetry, in $2\times 2$ patterns made with the tertiary tile is another copy of the original four-fold rotationally symmetrical Truchet tile. In this the pattern becomes very uniform, a $4\times4$ repeating pattern of the underlying prototile.
