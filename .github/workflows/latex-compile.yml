@@ -28,10 +28,11 @@ jobs:
         run: "latexmk --pdflatex book.tex"
       - name: Store build timestamp
         run: echo "BUILD_TIME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-      - name: change file name
-        run: "mv book.pdf book$BUILD_TIME.pdf"
+      - name: set version
+        run: echo $BUILD_TIME > version.txt
       - name: adding new pdfs
         run: |
-          git add book$BUILD_TIME.pdf
+          git add book.pdf
+          git add version.txt
           git commit -m 'adding new pdfs, github action'
           git push
